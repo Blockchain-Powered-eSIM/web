@@ -33,6 +33,59 @@
     --ring: 0 0% 3.9%;
 
     --radius: 0.5rem;
+
+    --sky-200: 193, 75%, 89%;
+    --sky-600: 258, 25%, 51%;
+    --sky-800: 259, 37%, 31%;
+    --ocean: 191, 73%, 67%;
+
+    --cashmere-50: 26, 78%, 96%;
+    --cashmere-100: 26, 76%, 92%;
+    --cashmere-200: 25, 72%, 79%;
+    --cashmere-300: 24, 72%, 72%;
+    --cashmere-400: 20, 71%, 61%;
+    --cashmere-500: 17, 71%, 53%;
+    --cashmere-600: 14, 67%, 48%;
+    --cashmere-700: 11, 66%, 40%;
+    --cashmere-800: 8, 58%, 34%;
+    --cashmere-900: 8, 55%, 28%;
+    --cashmere-950: 5, 59%, 15%;
+
+    --pearl-lusta-50: 26, 78%, 96%;
+    --pearl-lusta-100: 26, 76%, 92%;
+    --pearl-lusta-200: 25, 72%, 79%;
+    --pearl-lusta-300: 24, 72%, 72%;
+    --pearl-lusta-400: 20, 71%, 61%;
+    --pearl-lusta-500: 17, 71%, 53%;
+    --pearl-lusta-600: 14, 67%, 48%;
+    --pearl-lusta-700: 11, 66%, 40%;
+    --pearl-lusta-800: 8, 58%, 34%;
+    --pearl-lusta-900: 8, 55%, 28%;
+    --pearl-lusta-950: 5, 59%, 15%;
+
+    --pearl-blush-50: 26, 78%, 96%;
+    --pearl-blush-100: 26, 76%, 92%;
+    --pearl-blush-200: 25, 72%, 79%;
+    --pearl-blush-300: 24, 72%, 72%;
+    --pearl-blush-400: 20, 71%, 61%;
+    --pearl-blush-500: 17, 71%, 53%;
+    --pearl-blush-600: 14, 67%, 48%;
+    --pearl-blush-700: 11, 66%, 40%;
+    --pearl-blush-800: 8, 58%, 34%;
+    --pearl-blush-900: 8, 55%, 28%;
+    --pearl-blush-950: 5, 59%, 15%;
+
+    --tangerine-50: 26, 78%, 96%;
+    --tangerine-100: 26, 76%, 92%;
+    --tangerine-200: 25, 72%, 79%;
+    --tangerine-300: 24, 72%, 72%;
+    --tangerine-400: 20, 71%, 61%;
+    --tangerine-500: 17, 71%, 53%;
+    --tangerine-600: 14, 67%, 48%;
+    --tangerine-700: 11, 66%, 40%;
+    --tangerine-800: 8, 58%, 34%;
+    --tangerine-900: 8, 55%, 28%;
+    --tangerine-950: 5, 59%, 15%;
   }
 
   .dark {

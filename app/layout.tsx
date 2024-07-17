@@ -1,17 +1,20 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { Inter as FontSans } from "next/font/google";
+import { Anybody as FontSans } from "next/font/google";
 
 import { cookieToInitialState } from "wagmi";
 
 import { config } from "@/config";
 import Web3ModalProvider from "@/context";
 import { cn } from "@/lib/utils";
+import { NavBar } from "@/components/global/nav-bar";
+import { Footer } from "@/components/global/footer";
 
 const fontSans = FontSans({
 	subsets: ["latin"],
-	variable: "--font-sans",
+	display: "swap",
+	variable: "--font-anybody",
 });
 
 export const metadata: Metadata = {
@@ -29,13 +32,15 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={cn(
-					"min-h-screen bg-background font-sans antialiased",
+					"min-h-screen bg-background font-sans antialiased flex flex-col",
 					fontSans.variable,
 				)}
 			>
-				<Web3ModalProvider initialState={initialState}>
-					{children}
-				</Web3ModalProvider>
+				{/* <Web3ModalProvider initialState={initialState}> */}
+				<NavBar />
+				<div className="flex-1">{children}</div>
+				<Footer />
+				{/* </Web3ModalProvider> */}
 			</body>
 		</html>
 	);

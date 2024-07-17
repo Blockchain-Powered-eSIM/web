@@ -20,9 +20,15 @@ const config = {
 		},
 		extend: {
 			fontFamily: {
-				sans: ["var(--font-sans)", ...fontFamily.sans],
+				sans: ["var(--font-anybody)", ...fontFamily.sans],
 			},
 			colors: {
+				sky: {
+					200: "var(--sky-200)",
+					600: "var(--sky-600)",
+					800: "var(--sky-800)",
+				},
+				ocean: "var(--ocean)",
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",
