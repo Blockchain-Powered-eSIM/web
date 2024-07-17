@@ -10,8 +10,10 @@ export default function Home() {
 			<Hero />
 			<Setup />
 			<Features />
-			<Faqs />
-			<RoadMap />
+			<div className="bg-night-purple-800">
+				<Faqs />
+				<RoadMap />
+			</div>
 		</main>
 	);
 }

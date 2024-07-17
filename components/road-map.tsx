@@ -23,18 +23,25 @@ const roadMapData = [
 
 const RoadMap = () => {
 	return (
-		<section>
-			<h2>Road Ahead</h2>
-			{roadMapData.map((roadMap) => (
-				<div key={roadMap.title} className="">
-					<h3>{roadMap.title}</h3>
-					<ul>
-						{roadMap.milestones.map((milestone) => (
-							<li key={milestone}>{milestone}</li>
-						))}
-					</ul>
-				</div>
-			))}
+		<section className="container text-white">
+			<div className="flex flex-col gap-5">
+				<h2 className="text-4xl font-bold text-center uppercase">
+					{" "}
+					- Road Ahead -{" "}
+				</h2>
+				{roadMapData.map((roadMap) => (
+					<div key={roadMap.title} className="text-center flex flex-col gap-4">
+						<h3 className="text-4xl font-bold">{roadMap.title}</h3>
+						<ul className="flex flex-col gap-3">
+							{roadMap.milestones.map((milestone) => (
+								<li key={milestone} className="text-xl font-light">
+									{milestone}
+								</li>
+							))}
+						</ul>
+					</div>
+				))}
+			</div>
 		</section>
 	);
 };

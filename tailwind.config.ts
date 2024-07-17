@@ -20,7 +20,7 @@ const config = {
 		},
 		extend: {
 			fontFamily: {
-				sans: ["var(--font-anybody)", ...fontFamily.sans],
+				sans: ["var(--font-lexend)", ...fontFamily.sans],
 			},
 			colors: {
 				"beach-sky": "hsl(var(--beach-sky-200))",
@@ -28,7 +28,7 @@ const config = {
 					600: "hsl(var(--night-purple-600))",
 					800: "hsl(var(--night-purple-800))",
 				},
-				ocean: "hsl(var(--ocean-200))",
+				ocean: "hsl(var(--ocean))",
 				cashmere: {
 					50: "hsl(var(--cashmere-50))",
 					100: "hsl(var(--cashmere-100))",
@@ -41,6 +41,19 @@ const config = {
 					800: "hsl(var(--cashmere-800))",
 					900: "hsl(var(--cashmere-900))",
 					950: "hsl(var(--cashmere-950))",
+				},
+				"esim-black": {
+					50: "hsl(var(--esim-black-50))",
+					100: "hsl(var(--esim-black-100))",
+					200: "hsl(var(--esim-black-200))",
+					300: "hsl(var(--esim-black-300))",
+					400: "hsl(var(--esim-black-400))",
+					500: "hsl(var(--esim-black-500))",
+					600: "hsl(var(--esim-black-600))",
+					700: "hsl(var(--esim-black-700))",
+					800: "hsl(var(--esim-black-800))",
+					900: "hsl(var(--esim-black-900))",
+					950: "hsl(var(--esim-black-950))",
 				},
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",

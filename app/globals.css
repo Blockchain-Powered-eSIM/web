@@ -85,6 +85,18 @@
     --tangerine-800: 8, 58%, 34%;
     --tangerine-900: 8, 55%, 28%;
     --tangerine-950: 5, 59%, 15%;
+
+    --esim-black-50: 0, 0%, 96%;
+    --esim-black-100: 0, 0%, 91%;
+    --esim-black-200: 0, 0%, 82%;
+    --esim-black-300: 0, 0%, 69%;
+    --esim-black-400: 0, 0%, 53%;
+    --esim-black-500: 0, 0%, 43%;
+    --esim-black-600: 0, 0%, 48%;
+    --esim-black-700: 0, 0%, 38%;
+    --esim-black-800: 0, 0%, 27%;
+    --esim-black-900: 0, 0%, 24%;
+    --esim-black-950: 0, 0%, 2%;
   }
 
   .dark {

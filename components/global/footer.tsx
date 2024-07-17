@@ -2,17 +2,54 @@ import React from "react";
 import Image from "next/image";
 
 import Logo from "@/assets/logo.svg";
+import LogoMark from "@/assets/logomark.svg";
+
+import Discord from "@/assets/icons/discord.svg";
+import GitHub from "@/assets/icons/github.svg";
+import Docs from "@/assets/icons/docs.svg";
+
+const footerData = [
+	{
+		icon: Discord,
+		title: "Discord",
+		href: "#",
+	},
+	{
+		icon: GitHub,
+		title: "GitHub",
+		href: "#",
+	},
+	{
+		Docs: Docs,
+		title: "Docs",
+		href: "#",
+	},
+];
 
 const Footer = () => {
 	return (
-		<div>
-			<Image src={Logo} alt="Logo" width={100} height={100} />
-			<ul>
-				<li>Link1</li>
-				<li>Link2</li>
-				<li>Link3</li>
-			</ul>
-		</div>
+		<footer className="container bg-esim-black-950 text-white px-12 pt-20 pb-6">
+			<div className="flex flex-col items-center gap-4">
+				<Image src={Logo} alt="Kokio Logo" width={200} height={200} />
+				<ul className="flex flex-wrap gap-8 justify-center">
+					{footerData.map((footer) => (
+						<li key={footer.title} className="flex items-center gap-2">
+							<div className=" relative h-10 w-10">
+								<Image src={footer.icon} alt={footer.title} fill />
+							</div>
+							<a href={footer.href} className="text-lg font-light">
+								{footer.title}
+							</a>
+						</li>
+					))}
+				</ul>
+				<div className="text-sm flex items-center gap-2">
+					<small>Copyright ©</small>
+					<Image src={LogoMark} alt="Logo Mark for Kokio" />
+					<small>Kokio 2024</small>
+				</div>
+			</div>
+		</footer>
 	);
 };
 Footer.displayName = "Footer";

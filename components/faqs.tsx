@@ -46,16 +46,22 @@ const faqsData = [
 
 const Faqs = () => {
 	return (
-		<section>
-			<h2>Frequently Asked Questions</h2>
-			<dl>
-				{faqsData.map((faq) => (
-					<div key={faq.question} className="">
-						<dt>{faq.question}</dt>
-						<dd>{faq.answer}</dd>
-					</div>
-				))}
-			</dl>
+		<section className="container">
+			<div className="rounded-3xl px-8 py-14 bg-black">
+				<h2 className="text-4xl font-bold text-cashmere-500 mb-8">
+					Frequently Asked Questions
+				</h2>
+				<dl className="flex flex-col gap-14">
+					{faqsData.map((faq) => (
+						<div key={faq.question} className="flex flex-col gap-2">
+							<dt className="text-2xl font-bold text-cashmere-300">
+								{faq.question}
+							</dt>
+							<dd className="text-white text-lg font-light">{faq.answer}</dd>
+						</div>
+					))}
+				</dl>
+			</div>
 		</section>
 	);
 };
