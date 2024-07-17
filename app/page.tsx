@@ -6,7 +6,7 @@ import { Setup } from "@/components/setup";
 
 export default function Home() {
 	return (
-		<main className="flex flex-col items-center justify-between p-24">
+		<main className="flex flex-col">
 			<Hero />
 			<Setup />
 			<Features />
