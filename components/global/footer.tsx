@@ -8,7 +8,7 @@ import Discord from "@/assets/icons/discord.svg";
 import GitHub from "@/assets/icons/github.svg";
 import Docs from "@/assets/icons/docs.svg";
 
-const footerData = [
+export const socialLinks = [
 	{
 		icon: Discord,
 		title: "Discord",
@@ -32,10 +32,15 @@ const Footer = () => {
 			<div className="flex flex-col items-center gap-10">
 				<Image src={Logo} alt="Kokio Logo" width={200} height={200} />
 				<ul className="flex flex-wrap gap-8 justify-center">
-					{footerData.map((footer) => (
+					{socialLinks.map((footer) => (
 						<li key={footer.title} className="flex items-center gap-2">
-							<div className=" relative h-10 w-10">
-								<Image src={footer.icon} alt={footer.title} fill />
+							<div className=" relative h-10 w-10 text-white">
+								<Image
+									src={footer.icon}
+									alt={footer.title}
+									fill
+									className="fill-current"
+								/>
 							</div>
 							<a href={footer.href} className="text-lg font-light">
 								{footer.title}

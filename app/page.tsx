@@ -5,7 +5,7 @@ import { Hero } from "@/components/hero";
 import { RoadMap } from "@/components/road-map";
 import { Setup } from "@/components/setup";
 
-import BeachTransition from "@/assets/beach-transition.svg";
+import BeachTransition from "@/assets/transition1.svg";
 import Pyramids from "@/assets/pyramids.svg";
 
 export default function Home() {
