@@ -57,7 +57,9 @@ const Faqs = () => {
 							<dt className="text-2xl font-bold text-cashmere-300">
 								{faq.question}
 							</dt>
-							<dd className="text-white text-lg font-light">{faq.answer}</dd>
+							<dd className="text-esim-black-50 text-lg font-light">
+								{faq.answer}
+							</dd>
 						</div>
 					))}
 				</dl>

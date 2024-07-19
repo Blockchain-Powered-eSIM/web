@@ -23,7 +23,7 @@ const roadMapData = [
 
 const RoadMap = () => {
 	return (
-		<section className="container text-white bg-night-purple-800 -mt-1 py-12">
+		<section className="container text-esim-black-50 bg-night-purple-800 -mt-1 py-12">
 			<div className="flex flex-col gap-5">
 				<h2 className="text-4xl font-bold text-center uppercase">
 					{" "}

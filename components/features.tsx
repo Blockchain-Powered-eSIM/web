@@ -43,7 +43,7 @@ const featuresData = [
 
 const Features = () => {
 	return (
-		<section className="flex flex-col text-white -mt-1">
+		<section className="flex flex-col text-esim-black-50 -mt-1">
 			<div className="relative h-[116px] w-full overflow-hidden">
 				<Image
 					src={PyramidTransition}

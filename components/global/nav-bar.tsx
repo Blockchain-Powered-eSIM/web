@@ -13,7 +13,7 @@ import {
 const NavBar = () => {
 	return (
 		<div className="container w-full">
-			<NavigationMenu className="rounded-full p-6 bg-white">
+			<NavigationMenu className="rounded-full p-6 bg-esim-black-50">
 				<NavigationMenuList>
 					<NavigationMenuItem>
 						<Link href="/" legacyBehavior passHref>
