@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-import BeachTransition from "@/assets/beach-transition.svg";
 import BeachBall from "@/assets/beach-ball.svg";
 
 const setupData = [
@@ -24,13 +23,10 @@ const setupData = [
 
 const Setup = () => {
 	return (
-		<section className="bg-ocean">
-			<div className="relative h-[200px] w-full">
-				<Image src={BeachTransition} alt="Beach" fill />
-			</div>
-			<div className="container flex flex-col text-center gap-28">
+		<section className="z-20 overflow-hidden -mt-1">
+			<div className="container flex flex-col text-center gap-28 bg-ocean py-10 -my-1">
 				<h2 className="text-5xl font-bold">Simple Setup, Fun Trip Ahead.</h2>
-				<div className="relative h-48 w-full">
+				<div className="relative h-48 w-full object-cover">
 					<Image src={BeachBall} alt="Beach ball and bucket" fill />
 				</div>
 				<dl className="flex flex-col gap-20 px-8">

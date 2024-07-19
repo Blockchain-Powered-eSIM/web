@@ -6,6 +6,7 @@ import Meditate from "@/assets/icons/meditate.svg";
 import Wallet from "@/assets/icons/wallet.svg";
 import Shield from "@/assets/icons/shield.svg";
 import ThumbsUp from "@/assets/icons/thumbs-up.svg";
+import PyramidTransition from "@/assets/pyraids-transition.svg";
 
 const featuresData = [
 	{
@@ -42,7 +43,15 @@ const featuresData = [
 
 const Features = () => {
 	return (
-		<section className="flex flex-col bg-night-purple-600 text-white">
+		<section className="flex flex-col text-white -mt-1">
+			<div className="relative h-[116px] w-full overflow-hidden">
+				<Image
+					src={PyramidTransition}
+					alt="Transition lines separating features"
+					fill
+					className="object-cover"
+				/>
+			</div>
 			<div className="container flex flex-col text-center gap-20">
 				{featuresData.map((feature) => (
 					<div

@@ -7,7 +7,7 @@ import Beach from "@/assets/beach-scene.svg";
 
 const Hero = () => {
 	return (
-		<section className="pt-14">
+		<section className="pt-14 flex flex-col">
 			<div className="container flex flex-col text-center gap-16 pb-12">
 				<div className="flex flex-col gap-4">
 					<h1 className="text-5xl font-bold">
@@ -22,9 +22,12 @@ const Hero = () => {
 				</div>
 				<Button size="xl">Sign Up For beta</Button>
 			</div>
-			<div className="relative h-[650px] w-full">
-				<Image src={Beach} alt="Beach" fill />
-			</div>
+			<Image
+				src={Beach}
+				alt="Cartoon hand holding a mobile phone looking at the beach"
+				sizes="100vw"
+				className="w-full h-auto"
+			/>
 		</section>
 	);
 };

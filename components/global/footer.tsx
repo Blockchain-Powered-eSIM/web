@@ -29,7 +29,7 @@ const footerData = [
 const Footer = () => {
 	return (
 		<footer className="container bg-esim-black-950 text-white px-12 pt-20 pb-6">
-			<div className="flex flex-col items-center gap-4">
+			<div className="flex flex-col items-center gap-10">
 				<Image src={Logo} alt="Kokio Logo" width={200} height={200} />
 				<ul className="flex flex-wrap gap-8 justify-center">
 					{footerData.map((footer) => (
