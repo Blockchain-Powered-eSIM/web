@@ -30,21 +30,22 @@ const NavBar = () => {
 							<DialogTitle className="flex justify-start -mt-2">
 								<Image src={Logo} alt="Logo" width={100} height={100} />
 							</DialogTitle>
-							<DialogDescription className="flex flex-col gap-6 pt-4">
-								{siteConfig.socials.map((social) => (
-									<a
-										key={social.title}
-										href={social.href}
-										className="flex items-center gap-1"
-									>
-										<div className="relative h-8 w-8">
-											<Image src={social.icon} alt={social.title} fill />
-										</div>
-										<span className="text-lg font-light">{social.title}</span>
-									</a>
-								))}
-							</DialogDescription>
+							<DialogDescription />
 						</DialogHeader>
+						<div className="flex flex-col gap-6">
+							{siteConfig.socials.map((social) => (
+								<a
+									key={social.title}
+									href={social.href}
+									className="flex items-center gap-1"
+								>
+									<div className="relative h-8 w-8">
+										<Image src={social.icon} alt={social.title} fill />
+									</div>
+									<span className="text-lg font-light">{social.title}</span>
+								</a>
+							))}
+						</div>
 					</DialogContent>
 				</Dialog>
 			</nav>

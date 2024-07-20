@@ -22,7 +22,7 @@ export default function Home() {
 			</div>
 			<Setup />
 			<div className="bg-night-purple-800 -z-20">
-				<div className="relative flex flex-col -z-10">
+				<div className="relative flex flex-col bg-esim-black-950/25 -z-10">
 					<div className="z-10">
 						<Features />
 					</div>

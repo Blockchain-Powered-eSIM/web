@@ -20,7 +20,9 @@ const Hero = () => {
 						seamless connectivity across over 200 destinations worldwide.
 					</p>
 				</div>
-				<Button size="xl">Sign Up For beta</Button>
+				<Button size="xl" className="bg-cashmere-500 hover:bg-cashmere-500/90">
+					Sign Up For beta
+				</Button>
 			</div>
 			<Image
 				src={Beach}

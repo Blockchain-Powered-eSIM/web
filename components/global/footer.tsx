@@ -7,6 +7,7 @@ import LogoMark from "@/assets/logomark.svg";
 import Discord from "@/assets/icons/discord.svg";
 import GitHub from "@/assets/icons/github.svg";
 import Docs from "@/assets/icons/docs.svg";
+import SignUpDialog from "../sign-up-dialog";
 
 export const socialLinks = [
 	{
@@ -28,7 +29,7 @@ export const socialLinks = [
 
 const Footer = () => {
 	return (
-		<footer className="container bg-esim-black-950 text-esim-black-50 px-12 pt-20 pb-6">
+		<footer className="container bg-esim-black-950 text-esim-black-50 pt-20 pb-6">
 			<div className="flex flex-col items-center gap-10">
 				<Image src={Logo} alt="Kokio Logo" width={200} height={200} />
 				<ul className="flex flex-wrap gap-8 justify-center">
@@ -48,6 +49,7 @@ const Footer = () => {
 						</li>
 					))}
 				</ul>
+				<SignUpDialog />
 				<div className="text-sm flex items-center gap-2">
 					<small>Copyright ©</small>
 					<Image src={LogoMark} alt="Logo Mark for Kokio" />
