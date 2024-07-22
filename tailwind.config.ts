@@ -1,4 +1,4 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
+const { fontFamily, fontSize } = require("tailwindcss/defaultTheme");
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -21,6 +21,9 @@ const config = {
 		extend: {
 			fontFamily: {
 				sans: ["var(--font-lexend)", ...fontFamily.sans],
+			},
+			fontSize: {
+				"6xl": ["4.5rem", { lineHeight: "1" }],
 			},
 			colors: {
 				"beach-sky": "hsl(var(--beach-sky-200))",

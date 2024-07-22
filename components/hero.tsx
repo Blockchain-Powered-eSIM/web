@@ -8,9 +8,9 @@ import Beach from "@/assets/beach-scene.svg";
 const Hero = () => {
 	return (
 		<section className="pt-14 flex flex-col">
-			<div className="container flex flex-col text-center gap-16 pb-12">
+			<div className="container flex flex-col text-center items-center gap-16 pb-12">
 				<div className="flex flex-col gap-4">
-					<h1 className="text-5xl font-bold">
+					<h1 className="text-5xl md:text-6xl font-bold">
 						Experience the Future of Global Connectivity
 					</h1>
 					<p className="text-xl">
@@ -20,7 +20,10 @@ const Hero = () => {
 						seamless connectivity across over 200 destinations worldwide.
 					</p>
 				</div>
-				<Button size="xl" className="bg-cashmere-500 hover:bg-cashmere-500/90">
+				<Button
+					size="xl"
+					className="bg-cashmere-500 hover:bg-cashmere-500/90 max-w-72"
+				>
 					Sign Up For beta
 				</Button>
 			</div>

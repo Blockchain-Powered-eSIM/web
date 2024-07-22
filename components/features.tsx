@@ -43,20 +43,12 @@ const featuresData = [
 
 const Features = () => {
 	return (
-		<section className="flex flex-col text-esim-black-50 -mt-1 bg-night-purple-600">
-			<div className="relative h-[116px] w-full overflow-hidden">
-				<Image
-					src={PyramidTransition}
-					alt="Transition lines separating features"
-					fill
-					className="object-cover"
-				/>
-			</div>
-			<div className="container flex flex-col text-center gap-20">
+		<section className="flex justify-center text-esim-black-50 -mt-1 bg-night-purple-600 container pt-24">
+			<div className="flex flex-col md:max-w-[25rem] text-center gap-20">
 				{featuresData.map((feature) => (
 					<div
 						key={feature.title}
-						className="flex flex-col items-center px-8 gap-6"
+						className="flex flex-col items-center px-8 gap-6 z-20"
 					>
 						<div className="relative h-16 w-16">
 							<Image
