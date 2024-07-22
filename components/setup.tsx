@@ -23,17 +23,17 @@ const setupData = [
 
 const Setup = () => {
 	return (
-		<section className="container z-20 -mt-1 bg-ocean">
-			<div className="flex flex-col text-center gap-28 py-10 md:mx-8">
+		<section className="z-20 -mt-1 bg-ocean flex justify-center">
+			<div className="container flex flex-col text-center gap-28 py-10 md:mx-8">
 				<h2 className="text-6xl font-bold md:text-6xl">
 					Simple Setup, Fun Trip Ahead.
 				</h2>
 				<div className="relative h-48 w-full object-cover">
 					<Image src={BeachBall} alt="Beach ball and bucket" fill />
 				</div>
-				<dl className="flex flex-col gap-20 px-8 md:px-28">
+				<dl className="flex flex-col gap-20 px-8 md:px-28 lg:flex-row lg:justify-between lg:px-4">
 					{setupData.map((setup) => (
-						<div key={setup.title} className="flex flex-col gap-4">
+						<div key={setup.title} className="flex flex-col gap-4 lg:flex-1">
 							<dt className="text-4xl font-bold">{setup.title}</dt>
 							<dd className="text-xl font-light">{setup.description}</dd>
 						</div>
