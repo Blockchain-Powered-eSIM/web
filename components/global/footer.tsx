@@ -29,8 +29,8 @@ export const socialLinks = [
 
 const Footer = () => {
 	return (
-		<footer className="container bg-esim-black-950 text-esim-black-50 pt-20 pb-6 -mt-1">
-			<div className="flex flex-col items-center gap-10">
+		<footer className="flex flex-col bg-esim-black-950 text-esim-black-50 pt-20 pb-6 -mt-1 gap-6">
+			<div className="container flex flex-col items-center gap-10 lg:flex-row lg:justify-center">
 				<Image src={Logo} alt="Kokio Logo" width={200} height={200} />
 				<ul className="flex flex-wrap gap-8 justify-center">
 					{socialLinks.map((footer) => (
@@ -50,11 +50,11 @@ const Footer = () => {
 					))}
 				</ul>
 				<SignUpDialog />
-				<div className="text-sm flex items-center gap-2">
-					<small>Copyright ©</small>
-					<Image src={LogoMark} alt="Logo Mark for Kokio" />
-					<small>Kokio 2024</small>
-				</div>
+			</div>
+			<div className="flex justify-center text-sm items-center gap-2">
+				<small>Copyright ©</small>
+				<Image src={LogoMark} alt="Logo Mark for Kokio" />
+				<small>Kokio 2024</small>
 			</div>
 		</footer>
 	);

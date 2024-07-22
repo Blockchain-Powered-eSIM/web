@@ -11,9 +11,9 @@ import Pyramids from "@/assets/pyramids.svg";
 
 export default function Home() {
 	return (
-		<main className="flex flex-col">
+		<main className="flex flex-col z-30">
 			<Hero />
-			<div className="flex flex-col -mt-60">
+			<div className="flex flex-col -mt-60 lg:-mt-[90rem]">
 				<Image
 					src={BeachTransition}
 					alt="Beach"
@@ -37,9 +37,9 @@ export default function Home() {
 						src={Pyramids}
 						alt="Person taking picture of Pyramids with phone"
 						sizes="100vw"
-						className="w-full -mt-[54rem] md:-mt-[114rem] h-auto"
+						className="w-full -mt-[54rem] md:-mt-[114rem] lg:-mt-[240rem] h-auto"
 					/>
-					<div className="-mt-[104rem] md:-mt-[214rem]">
+					<div className="-mt-[104rem] md:-mt-[214rem] lg:-mt-[500rem]">
 						<Faqs />
 						<RoadMap />
 					</div>
