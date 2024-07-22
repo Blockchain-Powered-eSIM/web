@@ -1,17 +1,26 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { Inter as FontSans } from "next/font/google";
+import { Anybody, Lexend } from "next/font/google";
 
 import { cookieToInitialState } from "wagmi";
 
 import { config } from "@/config";
 import Web3ModalProvider from "@/context";
 import { cn } from "@/lib/utils";
+import { NavBar } from "@/components/global/nav-bar";
+import { Footer } from "@/components/global/footer";
 
-const fontSans = FontSans({
+const anybody = Anybody({
 	subsets: ["latin"],
-	variable: "--font-sans",
+	display: "swap",
+	variable: "--font-anybody",
+});
+
+const lexend = Lexend({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-lexend",
 });
 
 export const metadata: Metadata = {
@@ -26,16 +35,21 @@ export default function RootLayout({
 }>) {
 	const initialState = cookieToInitialState(config, headers().get("cookie"));
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html
+			lang="en"
+			suppressHydrationWarning
+			className={cn(anybody.variable, lexend.variable)}
+		>
 			<body
 				className={cn(
-					"min-h-screen bg-background font-sans antialiased",
-					fontSans.variable,
+					"min-h-screen font-sans antialiased flex flex-col bg-beach-sky",
 				)}
 			>
-				<Web3ModalProvider initialState={initialState}>
-					{children}
-				</Web3ModalProvider>
+				{/* <Web3ModalProvider initialState={initialState}> */}
+				<NavBar />
+				<div className="flex-1">{children}</div>
+				<Footer />
+				{/* </Web3ModalProvider> */}
 			</body>
 		</html>
 	);

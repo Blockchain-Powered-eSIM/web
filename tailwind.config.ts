@@ -1,4 +1,4 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
+const { fontFamily, fontSize } = require("tailwindcss/defaultTheme");
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -20,9 +20,57 @@ const config = {
 		},
 		extend: {
 			fontFamily: {
-				sans: ["var(--font-sans)", ...fontFamily.sans],
+				sans: ["var(--font-lexend)", ...fontFamily.sans],
+			},
+			fontSize: {
+				"6xl": ["4.5rem", { lineHeight: "1" }],
 			},
 			colors: {
+				"beach-sky": "hsl(var(--beach-sky-200))",
+				"night-purple": {
+					600: "hsl(var(--night-purple-600))",
+					800: "hsl(var(--night-purple-800))",
+				},
+				ocean: "hsl(var(--ocean))",
+				cashmere: {
+					50: "hsl(var(--cashmere-50))",
+					100: "hsl(var(--cashmere-100))",
+					200: "hsl(var(--cashmere-200))",
+					300: "hsl(var(--cashmere-300))",
+					400: "hsl(var(--cashmere-400))",
+					500: "hsl(var(--cashmere-500))",
+					600: "hsl(var(--cashmere-600))",
+					700: "hsl(var(--cashmere-700))",
+					800: "hsl(var(--cashmere-800))",
+					900: "hsl(var(--cashmere-900))",
+					950: "hsl(var(--cashmere-950))",
+				},
+				"esim-black": {
+					50: "hsl(var(--esim-black-50))",
+					100: "hsl(var(--esim-black-100))",
+					200: "hsl(var(--esim-black-200))",
+					300: "hsl(var(--esim-black-300))",
+					400: "hsl(var(--esim-black-400))",
+					500: "hsl(var(--esim-black-500))",
+					600: "hsl(var(--esim-black-600))",
+					700: "hsl(var(--esim-black-700))",
+					800: "hsl(var(--esim-black-800))",
+					900: "hsl(var(--esim-black-900))",
+					950: "hsl(var(--esim-black-950))",
+				},
+				"ship-cove": {
+					50: "hsl(var(--ship-cove-50))",
+					100: "hsl(var(--ship-cove-100))",
+					200: "hsl(var(--ship-cove-200))",
+					300: "hsl(var(--ship-cove-300))",
+					400: "hsl(var(--ship-cove-400))",
+					500: "hsl(var(--ship-cove-500))",
+					600: "hsl(var(--ship-cove-600))",
+					700: "hsl(var(--ship-cove-700))",
+					800: "hsl(var(--ship-cove-800))",
+					900: "hsl(var(--ship-cove-900))",
+					950: "hsl(var(--ship-cove-950))",
+				},
 				border: "hsl(var(--border))",
 				input: "hsl(var(--input))",
 				ring: "hsl(var(--ring))",
