@@ -3,149 +3,135 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    :root {
+        --background: 17 0% 100%;
+        --foreground: 17 0% 10%;
+        --card: 17 0% 100%;
+        --card-foreground: 17 0% 15%;
+        --popover: 17 0% 100%;
+        --popover-foreground: 17 95% 10%;
+        --primary: 17 70.7% 53.1%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 17 10% 90%;
+        --secondary-foreground: 0 0% 0%;
+        --muted: -21 10% 95%;
+        --muted-foreground: 17 0% 40%;
+        --accent: -21 10% 90%;
+        --accent-foreground: 17 0% 15%;
+        --destructive: 0 50% 50%;
+        --destructive-foreground: 17 0% 100%;
+        --border: 17 20% 82%;
+        --input: 17 20% 50%;
+        --ring: 17 70.7% 53.1%;
+        --radius: 0.75rem;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+        --beach-sky-200: 193 75% 89%;
+        --night-purple-600: 258 24% 38%;
+        --night-purple-800: 277 38% 23%;
+        --ocean: 191 73% 67%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+        --cashmere-50: 26 78% 96%;
+        --cashmere-100: 26 76% 92%;
+        --cashmere-200: 25 72% 79%;
+        --cashmere-300: 24 72% 72%;
+        --cashmere-400: 20 71% 61%;
+        --cashmere-500: 17 71% 53%;
+        --cashmere-600: 14 67% 48%;
+        --cashmere-700: 11 66% 40%;
+        --cashmere-800: 8 58% 34%;
+        --cashmere-900: 8 55% 28%;
+        --cashmere-950: 5 59% 15%;
 
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+        --pearl-lusta-50: 26 78% 96%;
+        --pearl-lusta-100: 26 76% 92%;
+        --pearl-lusta-200: 25 72% 79%;
+        --pearl-lusta-300: 24 72% 72%;
+        --pearl-lusta-400: 20 71% 61%;
+        --pearl-lusta-500: 17 71% 53%;
+        --pearl-lusta-600: 14 67% 48%;
+        --pearl-lusta-700: 11 66% 40%;
+        --pearl-lusta-800: 8 58% 34%;
+        --pearl-lusta-900: 8 55% 28%;
+        --pearl-lusta-950: 5 59% 15%;
 
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
+        --pearl-blush-50: 26 78% 96%;
+        --pearl-blush-100: 26 76% 92%;
+        --pearl-blush-200: 25 72% 79%;
+        --pearl-blush-300: 24 72% 72%;
+        --pearl-blush-400: 20 71% 61%;
+        --pearl-blush-500: 17 71% 53%;
+        --pearl-blush-600: 14 67% 48%;
+        --pearl-blush-700: 11 66% 40%;
+        --pearl-blush-800: 8 58% 34%;
+        --pearl-blush-900: 8 55% 28%;
+        --pearl-blush-950: 5 59% 15%;
 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+        --tangerine-50: 26 78% 96%;
+        --tangerine-100: 26 76% 92%;
+        --tangerine-200: 25 72% 79%;
+        --tangerine-300: 24 72% 72%;
+        --tangerine-400: 20 71% 61%;
+        --tangerine-500: 17 71% 53%;
+        --tangerine-600: 14 67% 48%;
+        --tangerine-700: 11 66% 40%;
+        --tangerine-800: 8 58% 34%;
+        --tangerine-900: 8 55% 28%;
+        --tangerine-950: 5 59% 15%;
 
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+        --ship-cove-50: 197 41% 97%;
+        --ship-cove-100: 198 42% 94%;
+        --ship-cove-200: 201 40% 89%;
+        --ship-cove-300: 201 40% 82%;
+        --ship-cove-400: 205 38% 74%;
+        --ship-cove-500: 210 35% 67%;
+        --ship-cove-600: 214 32% 60%;
+        --ship-cove-700: 216 25% 51%;
+        --ship-cove-800: 214 23% 41%;
+        --ship-cove-900: 213 20% 34%;
+        --ship-cove-950: 213 20% 20%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+        --esim-black-50: 0 0% 96%;
+        --esim-black-100: 0 0% 91%;
+        --esim-black-200: 0 0% 82%;
+        --esim-black-300: 0 0% 69%;
+        --esim-black-400: 0 0% 53%;
+        --esim-black-500: 0 0% 43%;
+        --esim-black-600: 0 0% 48%;
+        --esim-black-700: 0 0% 38%;
+        --esim-black-800: 0 0% 27%;
+        --esim-black-900: 0 0% 24%;
+        --esim-black-950: 0 0% 2%;
+    }
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-
-    --beach-sky-200: 193 75% 89%;
-    --night-purple-600: 258 24% 38%;
-    --night-purple-800: 277 38% 23%;
-    --ocean: 191 73% 67%;
-
-    --cashmere-50: 26 78% 96%;
-    --cashmere-100: 26 76% 92%;
-    --cashmere-200: 25 72% 79%;
-    --cashmere-300: 24 72% 72%;
-    --cashmere-400: 20 71% 61%;
-    --cashmere-500: 17 71% 53%;
-    --cashmere-600: 14 67% 48%;
-    --cashmere-700: 11 66% 40%;
-    --cashmere-800: 8 58% 34%;
-    --cashmere-900: 8 55% 28%;
-    --cashmere-950: 5 59% 15%;
-
-    --pearl-lusta-50: 26 78% 96%;
-    --pearl-lusta-100: 26 76% 92%;
-    --pearl-lusta-200: 25 72% 79%;
-    --pearl-lusta-300: 24 72% 72%;
-    --pearl-lusta-400: 20 71% 61%;
-    --pearl-lusta-500: 17 71% 53%;
-    --pearl-lusta-600: 14 67% 48%;
-    --pearl-lusta-700: 11 66% 40%;
-    --pearl-lusta-800: 8 58% 34%;
-    --pearl-lusta-900: 8 55% 28%;
-    --pearl-lusta-950: 5 59% 15%;
-
-    --pearl-blush-50: 26 78% 96%;
-    --pearl-blush-100: 26 76% 92%;
-    --pearl-blush-200: 25 72% 79%;
-    --pearl-blush-300: 24 72% 72%;
-    --pearl-blush-400: 20 71% 61%;
-    --pearl-blush-500: 17 71% 53%;
-    --pearl-blush-600: 14 67% 48%;
-    --pearl-blush-700: 11 66% 40%;
-    --pearl-blush-800: 8 58% 34%;
-    --pearl-blush-900: 8 55% 28%;
-    --pearl-blush-950: 5 59% 15%;
-
-    --tangerine-50: 26 78% 96%;
-    --tangerine-100: 26 76% 92%;
-    --tangerine-200: 25 72% 79%;
-    --tangerine-300: 24 72% 72%;
-    --tangerine-400: 20 71% 61%;
-    --tangerine-500: 17 71% 53%;
-    --tangerine-600: 14 67% 48%;
-    --tangerine-700: 11 66% 40%;
-    --tangerine-800: 8 58% 34%;
-    --tangerine-900: 8 55% 28%;
-    --tangerine-950: 5 59% 15%;
-
-    --ship-cove-50: 197 41% 97%;
-    --ship-cove-100: 198 42% 94%;
-    --ship-cove-200: 201 40% 89%;
-    --ship-cove-300: 201 40% 82%;
-    --ship-cove-400: 205 38% 74%;
-    --ship-cove-500: 210 35% 67%;
-    --ship-cove-600: 214 32% 60%;
-    --ship-cove-700: 216 25% 51%;
-    --ship-cove-800: 214 23% 41%;
-    --ship-cove-900: 213 20% 34%;
-    --ship-cove-950: 213 20% 20%;
-
-    --esim-black-50: 0 0% 96%;
-    --esim-black-100: 0 0% 91%;
-    --esim-black-200: 0 0% 82%;
-    --esim-black-300: 0 0% 69%;
-    --esim-black-400: 0 0% 53%;
-    --esim-black-500: 0 0% 43%;
-    --esim-black-600: 0 0% 48%;
-    --esim-black-700: 0 0% 38%;
-    --esim-black-800: 0 0% 27%;
-    --esim-black-900: 0 0% 24%;
-    --esim-black-950: 0 0% 2%;
-  }
-
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-  }
+    .dark {
+        --background: 17 10% 10%;
+        --foreground: 17 0% 100%;
+        --card: 17 0% 10%;
+        --card-foreground: 17 0% 100%;
+        --popover: 17 10% 5%;
+        --popover-foreground: 17 0% 100%;
+        --primary: 17 70.7% 53.1%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 17 10% 20%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: -21 10% 25%;
+        --muted-foreground: 17 0% 65%;
+        --accent: -21 10% 25%;
+        --accent-foreground: 17 0% 95%;
+        --destructive: 0 50% 50%;
+        --destructive-foreground: 17 0% 100%;
+        --border: 17 20% 50%;
+        --input: 17 20% 50%;
+        --ring: 17 70.7% 53.1%;
+        --radius: 0.75rem;
+    }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
 }
