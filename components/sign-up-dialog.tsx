@@ -11,6 +11,8 @@ import {
 	DialogTitle,
 	DialogTrigger,
 } from "@/components/ui/dialog";
+import { DialogDescription } from "@radix-ui/react-dialog";
+import { SignUpForm } from "./sign-up-form";
 
 const SignUpDialog = () => {
 	return (
@@ -20,12 +22,16 @@ const SignUpDialog = () => {
 					Sign Up For beta
 				</Button>
 			</DialogTrigger>
-			<DialogContent>
+			<DialogContent className="rounded-3xl w-11/12">
 				<DialogHeader>
 					<DialogTitle className="flex justify-start -mt-2">
 						<Image src={Logo} alt="Logo" width={100} height={100} />
 					</DialogTitle>
+					<DialogDescription className="flex justify-start">
+						Beta Sign Up
+					</DialogDescription>
 				</DialogHeader>
+				<SignUpForm />
 			</DialogContent>
 		</Dialog>
 	);

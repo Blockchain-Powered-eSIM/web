@@ -41,7 +41,7 @@ const NavBar = () => {
 					<DialogTrigger className="md:hidden">
 						<Menu />
 					</DialogTrigger>
-					<DialogContent className="bg-ship-cove-50 rounded-3xl w-10/12 top-[23%]">
+					<DialogContent className="bg-ship-cove-50 rounded-3xl w-11/12 top-[22%]">
 						<DialogHeader className="flex">
 							<DialogTitle className="flex justify-start -mt-2">
 								<Image src={Logo} alt="Logo" width={100} height={100} />

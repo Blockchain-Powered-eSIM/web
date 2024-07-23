@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 import Beach from "@/assets/beach-scene.svg";
+import SignUpDialog from "./sign-up-dialog";
 
 const Hero = () => {
 	return (
@@ -20,12 +21,7 @@ const Hero = () => {
 						seamless connectivity across over 200 destinations worldwide.
 					</p>
 				</div>
-				<Button
-					size="xl"
-					className="bg-cashmere-500 hover:bg-cashmere-500/90 max-w-72"
-				>
-					Sign Up For beta
-				</Button>
+				<SignUpDialog />
 			</div>
 			<Image
 				src={Beach}

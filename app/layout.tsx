@@ -45,11 +45,11 @@ export default function RootLayout({
 					"min-h-screen font-sans antialiased flex flex-col bg-beach-sky",
 				)}
 			>
-				{/* <Web3ModalProvider initialState={initialState}> */}
-				<NavBar />
-				<div className="flex-1">{children}</div>
-				<Footer />
-				{/* </Web3ModalProvider> */}
+				<Web3ModalProvider initialState={initialState}>
+					<NavBar />
+					<div className="flex-1">{children}</div>
+					<Footer />
+				</Web3ModalProvider>
 			</body>
 		</html>
 	);
