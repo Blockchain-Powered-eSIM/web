@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import type React from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 import Logo from "@/assets/logo.svg";
@@ -14,14 +16,15 @@ import {
 import { DialogDescription } from "@radix-ui/react-dialog";
 import { SignUpForm } from "./sign-up-form";
 
-const SignUpDialog = () => {
+const SignUpDialog = ({
+	open,
+	setOpen,
+}: {
+	open: boolean;
+	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
 	return (
-		<Dialog>
-			<DialogTrigger asChild>
-				<Button size="xl" className="bg-cashmere-500 hover:bg-cashmere-500/90">
-					Sign Up For beta
-				</Button>
-			</DialogTrigger>
+		<Dialog open={open} onOpenChange={setOpen}>
 			<DialogContent className="rounded-3xl w-11/12">
 				<DialogHeader>
 					<DialogTitle className="flex justify-start -mt-2">
@@ -31,7 +34,7 @@ const SignUpDialog = () => {
 						Beta Sign Up
 					</DialogDescription>
 				</DialogHeader>
-				<SignUpForm />
+				<SignUpForm setOpen={setOpen} />
 			</DialogContent>
 		</Dialog>
 	);

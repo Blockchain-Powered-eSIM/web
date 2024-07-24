@@ -35,14 +35,16 @@ const signUpFormSchema = z.object({
 	newToCrypto: z.string(),
 });
 
-const SignUpForm = () => {
-	const { mutate } = useSignUpForBeta();
+const SignUpForm = ({
+	setOpen,
+}: { setOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
+	const { mutate, status } = useSignUpForBeta();
 	const form = useForm<z.infer<typeof signUpFormSchema>>({
 		resolver: zodResolver(signUpFormSchema),
 	});
 
 	const onSubmit = (values: z.infer<typeof signUpFormSchema>) => {
-		mutate(values);
+		mutate(values, { onSuccess: () => setOpen(false) });
 		console.log(values);
 	};
 
@@ -119,6 +121,7 @@ const SignUpForm = () => {
 				/>
 				<Button
 					type="submit"
+					disabled={status === "pending"}
 					className="bg-cashmere-500 hover:bg-cashmere-500/90 w-full"
 				>
 					Sign Up

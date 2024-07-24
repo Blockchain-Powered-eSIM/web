@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 
 import Beach from "@/assets/beach-scene.svg";
 import SignUpDialog from "./sign-up-dialog";
+import SignUpButton from "./sign-up-button";
 
 const Hero = () => {
 	return (
@@ -21,7 +22,7 @@ const Hero = () => {
 						seamless connectivity across over 200 destinations worldwide.
 					</p>
 				</div>
-				<SignUpDialog />
+				<SignUpButton />
 			</div>
 			<Image
 				src={Beach}
