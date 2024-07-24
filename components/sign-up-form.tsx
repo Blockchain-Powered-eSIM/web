@@ -45,7 +45,6 @@ const SignUpForm = ({
 
 	const onSubmit = (values: z.infer<typeof signUpFormSchema>) => {
 		mutate(values, { onSuccess: () => setOpen(false) });
-		console.log(values);
 	};
 
 	return (
