@@ -19,6 +19,7 @@ const config = {
 		},
 		extend: {
 			fontFamily: {
+				heading: ["var(--font-anybody)", ...fontFamily.sans],
 				sans: ["var(--font-lexend)", ...fontFamily.sans],
 			},
 			fontSize: {
