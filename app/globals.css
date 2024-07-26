@@ -78,6 +78,18 @@
         --tangerine-900: 8 55% 28%;
         --tangerine-950: 5 59% 15%;
 
+        --amaranth-50: 353 100% 97%;
+        --amaranth-100: 348 100% 94%;
+        --amaranth-200: 346 100% 89%;
+        --amaranth-300: 347 100% 80%;
+        --amaranth-400: 346 100% 68%;
+        --amaranth-500: 344 100% 57%;
+        --amaranth-600: 342 100% 48%;
+        --amaranth-700: 342 100% 42%;
+        --amaranth-800: 339 100% 35%;
+        --amaranth-900: 337 97% 30%;
+        --amaranth-950: 341 100% 17%;
+
         --ship-cove-50: 197 41% 97%;
         --ship-cove-100: 198 42% 94%;
         --ship-cove-200: 201 40% 89%;
@@ -89,6 +101,30 @@
         --ship-cove-800: 214 23% 41%;
         --ship-cove-900: 213 20% 34%;
         --ship-cove-950: 213 20% 20%;
+
+        --powder-blue-50: 197 47% 97%;
+        --powder-blue-100: 193 44% 94%;
+        --powder-blue-200: 190 44% 86%;
+        --powder-blue-300: 188 45% 78%;
+        --powder-blue-400: 188 44% 60%;
+        --powder-blue-500: 188 42% 48%;
+        --powder-blue-600: 190 46% 39%;
+        --powder-blue-700: 190 45% 32%;
+        --powder-blue-800: 189 41% 27%;
+        --powder-blue-900: 192 38% 24%;
+        --powder-blue-950: 192 38% 16%;
+
+        --outer-space-50: 180 26% 96%;
+        --outer-space-100: 188 31% 90%;
+        --outer-space-200: 189 29% 82%;
+        --outer-space-300: 188 28% 69%;
+        --outer-space-400: 190 26% 53%;
+        --outer-space-500: 191 28% 43%;
+        --outer-space-600: 194 28% 36%;
+        --outer-space-700: 195 25% 31%;
+        --outer-space-800: 196 22% 27%;
+        --outer-space-900: 198 19% 24%;
+        --outer-space-950: 199 24% 15%;
 
         --esim-black-50: 0 0% 96%;
         --esim-black-100: 0 0% 91%;
@@ -124,6 +160,119 @@
         --input: 17 20% 50%;
         --ring: 17 70.7% 53.1%;
         --radius: 0.75rem;
+
+        --beach-sky-200: 193 75% 89%;
+        --night-purple-600: 258 24% 38%;
+        --night-purple-800: 277 38% 23%;
+        --ocean: 191 73% 67%;
+
+        --cashmere-50: 5 59% 15%;
+        --cashmere-100: 8 55% 28%;
+        --cashmere-200: 8 58% 34%;
+        --cashmere-300: 11 66% 40%;
+        --cashmere-400: 14 67% 48%;
+        --cashmere-500: 17 71% 53%;
+        --cashmere-600: 20 71% 61%;
+        --cashmere-700: 24 72% 72%;
+        --cashmere-800: 25 72% 79%;
+        --cashmere-900: 26 76% 92%;
+        --cashmere-950: 26 78% 96%;
+
+        --pearl-lusta-50: 5 59% 15%;
+        --pearl-lusta-100: 8 55% 28%;
+        --pearl-lusta-200: 8 58% 34%;
+        --pearl-lusta-300: 11 66% 40%;
+        --pearl-lusta-400: 14 67% 48%;
+        --pearl-lusta-500: 17 71% 53%;
+        --pearl-lusta-600: 20 71% 61%;
+        --pearl-lusta-700: 24 72% 72%;
+        --pearl-lusta-800: 25 72% 79%;
+        --pearl-lusta-900: 26 76% 92%;
+        --pearl-lusta-950: 26 78% 96%;
+
+        --pearl-blush-50: 5 59% 15%;
+        --pearl-blush-100: 8 55% 28%;
+        --pearl-blush-200: 8 58% 34%;
+        --pearl-blush-300: 11 66% 40%;
+        --pearl-blush-400: 14 67% 48%;
+        --pearl-blush-500: 17 71% 53%;
+        --pearl-blush-600: 20 71% 61%;
+        --pearl-blush-700: 24 72% 72%;
+        --pearl-blush-800: 25 72% 79%;
+        --pearl-blush-900: 26 76% 92%;
+        --pearl-blush-950: 26 78% 96%;
+
+        --tangerine-50: 5 59% 15%;
+        --tangerine-100: 8 55% 28%;
+        --tangerine-200: 8 58% 34%;
+        --tangerine-300: 11 66% 40%;
+        --tangerine-400: 14 67% 48%;
+        --tangerine-500: 17 71% 53%;
+        --tangerine-600: 20 71% 61%;
+        --tangerine-700: 24 72% 72%;
+        --tangerine-800: 25 72% 79%;
+        --tangerine-900: 26 76% 92%;
+        --tangerine-950: 26 78% 96%;
+
+        --amaranth-50: 341 100% 17%;
+        --amaranth-100: 337 97% 30%;
+        --amaranth-200: 339 100% 35%;
+        --amaranth-300: 342 100% 42%;
+        --amaranth-400: 342 100% 48%;
+        --amaranth-500: 344 100% 57%;
+        --amaranth-600: 346 100% 68%;
+        --amaranth-700: 347 100% 80%;
+        --amaranth-800: 346 100% 89%;
+        --amaranth-900: 348 100% 94%;
+        --amaranth-950: 353 100% 97%;
+
+        --ship-cove-50: 213 20% 20%;
+        --ship-cove-100: 213 20% 34%;
+        --ship-cove-200: 214 23% 41%;
+        --ship-cove-300: 216 25% 51%;
+        --ship-cove-400: 214 32% 60%;
+        --ship-cove-500: 210 35% 67%;
+        --ship-cove-600: 205 38% 74%;
+        --ship-cove-700: 201 40% 82%;
+        --ship-cove-800: 201 40% 89%;
+        --ship-cove-900: 198 42% 94%;
+        --ship-cove-950: 197 41% 97%;
+
+        --powder-blue-50: 192 38% 16%;
+        --powder-blue-100: 192 38% 24%;
+        --powder-blue-200: 189 41% 27%;
+        --powder-blue-300: 190 45% 32%;
+        --powder-blue-400: 190 46% 39%;
+        --powder-blue-500: 188 42% 48%;
+        --powder-blue-600: 188 44% 60%;
+        --powder-blue-700: 188 45% 78%;
+        --powder-blue-800: 190 44% 86%;
+        --powder-blue-900: 193 44% 94%;
+        --powder-blue-950: 197 47% 97%;
+
+        --outer-space-50: 199 24% 15%;
+        --outer-space-100: 198 19% 24%;
+        --outer-space-200: 196 22% 27%;
+        --outer-space-300: 195 25% 31%;
+        --outer-space-400: 194 28% 36%;
+        --outer-space-500: 191 28% 43%;
+        --outer-space-600: 190 26% 53%;
+        --outer-space-700: 188 28% 69%;
+        --outer-space-800: 189 29% 82%;
+        --outer-space-900: 188 31% 90%;
+        --outer-space-950: 180 26% 96%;
+
+        --esim-black-50: 0 0% 2%;
+        --esim-black-100: 0 0% 24%;
+        --esim-black-200: 0 0% 27%;
+        --esim-black-300: 0 0% 38%;
+        --esim-black-400: 0 0% 48%;
+        --esim-black-500: 0 0% 43%;
+        --esim-black-600: 0 0% 53%;
+        --esim-black-700: 0 0% 69%;
+        --esim-black-800: 0 0% 82%;
+        --esim-black-900: 0 0% 91%;
+        --esim-black-950: 0 0% 96%;
     }
 }
 
