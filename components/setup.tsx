@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import BeachBall from "@/assets/beach-ball.svg";
-import BeachTransition from "@/assets/transition1.svg";
+import BeachTransition from "@/assets/transition2b.svg";
 
 const setupData = [
 	{
@@ -24,7 +24,7 @@ const setupData = [
 
 const Setup = () => {
 	return (
-		<section className="bg-ocean flex justify-center">
+		<section className="relative bg-ocean flex justify-center overflow-x-hidden pb-[30rem]">
 			<div className="container px-4 flex flex-col text-center gap-28 py-10 md:mx-8">
 				<h2 className="text-5xl text-outer-space-950 font-bold md:text-6xl">
 					Simple Setup, Fun Trip Ahead.
@@ -35,11 +35,21 @@ const Setup = () => {
 				<dl className="flex flex-col gap-20 px-8 md:px-28 lg:flex-row lg:justify-between lg:px-4">
 					{setupData.map((setup) => (
 						<div key={setup.title} className="flex flex-col gap-4 lg:flex-1">
-							<dt className="text-4xl font-bold">{setup.title}</dt>
+							<dt className="text-4xl font-bold font-heading text-outer-space-950">
+								{setup.title}
+							</dt>
 							<dd className="text-xl font-light">{setup.description}</dd>
 						</div>
 					))}
 				</dl>
+			</div>
+			<div className="absolute bottom-0 -left-[42rem] w-[1200px] h-[470px] pt-40">
+				<Image
+					src={BeachTransition}
+					alt="Beach"
+					fill
+					className="object-cover"
+				/>
 			</div>
 		</section>
 	);

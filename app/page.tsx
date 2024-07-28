@@ -14,15 +14,7 @@ export default function Home() {
 		<main className="flex flex-col">
 			<Hero />
 			<Setup />
-			<div className="flex flex-col -mt-1">
-				<Image
-					src={PyramidTransition}
-					alt="Transition lines separating features"
-					sizes="100vw"
-					className="object-cover"
-				/>
-			</div>
-			<div className="bg-night-purple-800">
+			<div className="bg-night-purple-800 -mt-1">
 				<div className="relative flex flex-col bg-esim-black-950/25 md:overflow-hidden">
 					<Features />
 					<Image
