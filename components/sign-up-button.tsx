@@ -10,7 +10,7 @@ const SignUpButton = () => {
 			<Button
 				onClick={() => setOpen(!open)}
 				size="xl"
-				className="bg-cashmere-500 hover:bg-cashmere-500/90"
+				className="bg-cashmere-500 hover:bg-cashmere-500/90 w-full"
 			>
 				Sign Up For beta
 			</Button>

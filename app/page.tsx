@@ -11,16 +11,8 @@ import Pyramids from "@/assets/pyramids.svg";
 
 export default function Home() {
 	return (
-		<main className="flex flex-col z-30">
+		<main className="flex flex-col">
 			<Hero />
-			<div className="flex flex-col -mt-60 lg:-mt-[90rem]">
-				<Image
-					src={BeachTransition}
-					alt="Beach"
-					sizes="100vw"
-					className="object-cover"
-				/>
-			</div>
 			<Setup />
 			<div className="flex flex-col -mt-1">
 				<Image
@@ -30,16 +22,16 @@ export default function Home() {
 					className="object-cover"
 				/>
 			</div>
-			<div className="bg-night-purple-800 -z-20">
-				<div className="relative flex flex-col bg-esim-black-950/25 -z-10 md:overflow-hidden">
+			<div className="bg-night-purple-800">
+				<div className="relative flex flex-col bg-esim-black-950/25 md:overflow-hidden">
 					<Features />
 					<Image
 						src={Pyramids}
 						alt="Person taking picture of Pyramids with phone"
 						sizes="100vw"
-						className="w-full -mt-[54rem] md:-mt-[114rem] lg:-mt-[240rem] h-auto"
+						className="w-full h-auto"
 					/>
-					<div className="-mt-[104rem] md:-mt-[214rem] lg:-mt-[500rem]">
+					<div className="">
 						<Faqs />
 						<RoadMap />
 					</div>
