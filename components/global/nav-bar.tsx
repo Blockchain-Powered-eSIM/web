@@ -31,7 +31,7 @@ const Links = () => {
 
 const NavBar = () => {
 	return (
-		<div className="container px-4 w-full pt-10 max-w-screen-lg">
+		<div className="container px-4 w-full pt-10 max-w-screen-lg md:px-8">
 			<nav className="flex justify-between items-center bg-ship-cove-50 rounded-full p-6 md:px-14">
 				<Link href="/" legacyBehavior passHref>
 					<Image
