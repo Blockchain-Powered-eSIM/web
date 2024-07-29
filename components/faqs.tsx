@@ -47,17 +47,17 @@ const faqsData = [
 const Faqs = () => {
 	return (
 		<section className="container">
-			<div className="rounded-4xl px-8 py-14 bg-esim-black-950/60">
-				<h2 className="text-4xl font-bold text-cashmere-500 mb-8">
+			<div className="rounded-4xl px-8 py-14 bg-esim-black-950/60 md:rounded-[3.5rem] md:px-12 md:py-[5.5rem]">
+				<h2 className="text-4xl font-bold text-cashmere-500 mb-8 md:mb-20">
 					Frequently Asked Questions
 				</h2>
 				<dl className="flex flex-col gap-14">
 					{faqsData.map((faq) => (
 						<div key={faq.question} className="flex flex-col gap-2">
-							<dt className="text-2xl font-bold text-cashmere-300 font-heading leading-5">
+							<dt className="text-2xl font-bold text-cashmere-300 font-heading leading-5 md:text-[1.75rem] md:leading-7">
 								{faq.question}
 							</dt>
-							<dd className="text-esim-black-50 text-lg font-light">
+							<dd className="text-esim-black-50 text-lg font-light md:leading-7">
 								{faq.answer}
 							</dd>
 						</div>

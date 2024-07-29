@@ -50,7 +50,7 @@ const Features = () => {
 						key={feature.title}
 						className="flex flex-col items-center px-8 gap-6 md:max-w-[25rem]"
 					>
-						<div className="relative h-16 w-16">
+						<div className="relative h-16 w-16 md:h-20 md:w-20">
 							<Image
 								src={feature.icon}
 								alt={feature.title}
@@ -59,7 +59,9 @@ const Features = () => {
 							/>
 						</div>
 						<div className="flex flex-col gap-4">
-							<h3 className="text-4xl font-bold">{feature.title}</h3>
+							<h3 className="text-4xl font-bold md:text-5xl">
+								{feature.title}
+							</h3>
 							<p className="text-lg font-light">{feature.description}</p>
 						</div>
 					</div>

@@ -24,12 +24,12 @@ const setupData = [
 
 const Setup = () => {
 	return (
-		<section className="relative bg-ocean flex justify-center overflow-x-hidden pb-[30rem]">
-			<div className="container px-4 flex flex-col text-center gap-28 py-10 md:mx-8">
-				<h2 className="text-5xl text-outer-space-950 font-bold md:text-6xl">
+		<section className="relative bg-ocean flex justify-center overflow-x-hidden pb-[30rem] -mt-1">
+			<div className="container px-4 flex flex-col items-center text-center gap-28 py-10 md:gap-12 md:px-8">
+				<h2 className="text-5xl text-outer-space-950 font-bold md:text-6xl md:px-4">
 					Simple Setup, Fun Trip Ahead.
 				</h2>
-				<div className="relative h-48 w-full object-cover">
+				<div className="relative h-48 w-full md:w-[452px] md:h-[452px] object-cover">
 					<Image src={BeachBall} alt="Beach ball and bucket" fill />
 				</div>
 				<dl className="flex flex-col gap-20 px-8 md:px-28 lg:flex-row lg:justify-between lg:px-4">
@@ -43,7 +43,7 @@ const Setup = () => {
 					))}
 				</dl>
 			</div>
-			<div className="absolute bottom-0 -left-[42rem] w-[1200px] h-[470px] pt-40">
+			<div className="absolute bottom-0 -left-[42rem] w-[1200px] h-[470px] pt-40 md:-left-60">
 				<Image
 					src={BeachTransition}
 					alt="Beach"
