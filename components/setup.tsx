@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import BeachBall from "@/assets/beach-ball.svg";
-import BeachTransition from "@/assets/transition2b.svg";
+import Transition2 from "@/assets/transition2-3.svg";
 
 const setupData = [
 	{
@@ -26,7 +26,7 @@ const Setup = () => {
 	return (
 		<section className="relative bg-ocean flex justify-center overflow-x-hidden pb-[30rem] -mt-1">
 			<div className="container px-4 flex flex-col items-center text-center gap-28 py-10 md:gap-12 md:px-8">
-				<h2 className="text-5xl text-outer-space-950 font-bold md:text-6xl md:px-4">
+				<h2 className="text-5xl text-outer-space-950 font-bold md:text-6xl md:px-4 max-w-[637px]">
 					Simple Setup, Fun Trip Ahead.
 				</h2>
 				<div className="relative h-48 w-full md:w-[452px] md:h-[452px] object-cover">
@@ -43,10 +43,10 @@ const Setup = () => {
 					))}
 				</dl>
 			</div>
-			<div className="absolute bottom-0 -left-[42rem] w-[1200px] h-[470px] pt-40 md:-left-60">
+			<div className="absolute bottom-0 w-full h-[472px] pt-40 ">
 				<Image
-					src={BeachTransition}
-					alt="Beach"
+					src={Transition2}
+					alt="Transition lines between the setup sections and features section"
 					fill
 					className="object-cover"
 				/>

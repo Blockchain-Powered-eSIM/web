@@ -31,15 +31,15 @@ const Links = () => {
 
 const NavBar = () => {
 	return (
-		<div className="container px-4 w-full pt-10 max-w-screen-lg md:px-8">
-			<nav className="flex justify-between items-center bg-ship-cove-50 rounded-full p-6 md:px-14">
+		<div className="container flex justify-center px-4 w-full pt-10 md:px-8 lg:pt-[4.5rem] lg:px-0 max-w-[1017px]">
+			<nav className="w-full flex justify-between items-center bg-ship-cove-50 rounded-full p-6 md:px-14">
 				<Link href="/" legacyBehavior passHref>
 					<Image
 						src={Logo}
 						alt="Logo"
 						width={100}
 						height={24}
-						className="h-6 w-auto md:h-8"
+						className="h-6 w-auto md:h-8 lg:h-12"
 					/>
 				</Link>
 				{/* Mobile Nav */}
