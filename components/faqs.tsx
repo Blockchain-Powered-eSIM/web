@@ -47,7 +47,7 @@ const faqsData = [
 const Faqs = () => {
 	return (
 		<section className="container">
-			<div className="rounded-[2.5rem] px-8 py-14 bg-esim-black-950/60">
+			<div className="rounded-4xl px-8 py-14 bg-esim-black-950/60">
 				<h2 className="text-4xl font-bold text-cashmere-500 mb-8">
 					Frequently Asked Questions
 				</h2>
