@@ -14,9 +14,9 @@ export default function Home() {
 		<main className="flex flex-col">
 			<Hero />
 			<Setup />
-			<div className="flex flex-col object-cover bg-pyramid-mobile md:bg-pyramid-tablet lg:bg-pyramid-desktop h-[6459px] w-full md:h-[6629px] lg:h-[4603px] gap-[1200px]">
+			<div className="flex flex-col items-center bg-pyramid-mobile bg-center bg-cover bg-no-repeat md:bg-pyramid-tablet lg:bg-pyramid-desktop h-[6259px] w-full md:h-[6129px] lg:h-[4603px] gap-[950px] md:gap-[110rem]">
 				<Features />
-				<div>
+				<div className="flex flex-col gap-10">
 					<Faqs />
 					<RoadMap />
 				</div>

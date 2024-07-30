@@ -48,7 +48,7 @@ const Features = () => {
 				{featuresData.map((feature) => (
 					<div
 						key={feature.title}
-						className="flex flex-col items-center px-8 gap-6 md:max-w-[25rem]"
+						className="flex flex-col items-center px-4 gap-6 md:max-w-[25rem]"
 					>
 						<div className="relative h-16 w-16 md:h-20 md:w-20">
 							<Image

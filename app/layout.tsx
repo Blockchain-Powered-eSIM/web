@@ -48,7 +48,7 @@ export default function RootLayout({
 			>
 				<Web3ModalProvider initialState={initialState}>
 					<NavBar />
-					<div className="flex-1">{children}</div>
+					<div className="flex-1 m-0 p-0">{children}</div>
 					<Footer />
 					<Toaster />
 				</Web3ModalProvider>
