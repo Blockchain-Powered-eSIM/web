@@ -11,38 +11,22 @@ import Pyramids from "@/assets/pyramids.svg";
 
 export default function Home() {
 	return (
-		<main className="flex flex-col z-30">
+		<main className="flex flex-col">
 			<Hero />
-			<div className="flex flex-col -mt-60 lg:-mt-[90rem]">
-				<Image
-					src={BeachTransition}
-					alt="Beach"
-					sizes="100vw"
-					className="object-cover"
-				/>
-			</div>
 			<Setup />
-			<div className="flex flex-col -mt-1">
-				<Image
-					src={PyramidTransition}
-					alt="Transition lines separating features"
-					sizes="100vw"
-					className="object-cover"
-				/>
-			</div>
-			<div className="bg-night-purple-800 -z-20">
-				<div className="relative flex flex-col bg-esim-black-950/25 -z-10 md:overflow-hidden">
-					<Features />
+			<div className="relative flex flex-col items-center bg-pyramid-mobile bg-center bg-cover bg-no-repeat md:bg-pyramid-tablet lg:bg-pyramid-desktop h-[6459px] w-full md:h-[6129px] lg:h-[5003px] gap-[44rem] md:gap-[85rem] lg:gap-[110rem] -mt-1 py-[24rem] lg:py-[42rem]">
+				<div className="absolute top-0 left-0 w-full h-[472px] pt-40 ">
 					<Image
-						src={Pyramids}
-						alt="Person taking picture of Pyramids with phone"
-						sizes="100vw"
-						className="w-full -mt-[54rem] md:-mt-[114rem] lg:-mt-[240rem] h-auto"
+						src={PyramidTransition}
+						alt="Transition lines between the setup sections and features section"
+						fill
+						className="object-cover"
 					/>
-					<div className="-mt-[104rem] md:-mt-[214rem] lg:-mt-[500rem]">
-						<Faqs />
-						<RoadMap />
-					</div>
+				</div>
+				<Features />
+				<div className="flex flex-col gap-10">
+					<Faqs />
+					<RoadMap />
 				</div>
 			</div>
 		</main>

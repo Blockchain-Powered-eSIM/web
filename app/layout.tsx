@@ -10,6 +10,7 @@ import Web3ModalProvider from "@/context";
 import { cn } from "@/lib/utils";
 import { NavBar } from "@/components/global/nav-bar";
 import { Footer } from "@/components/global/footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const anybody = Anybody({
 	subsets: ["latin"],
@@ -47,8 +48,9 @@ export default function RootLayout({
 			>
 				<Web3ModalProvider initialState={initialState}>
 					<NavBar />
-					<div className="flex-1">{children}</div>
+					<div className="flex-1 m-0 p-0">{children}</div>
 					<Footer />
+					<Toaster />
 				</Web3ModalProvider>
 			</body>
 		</html>

@@ -7,7 +7,7 @@ import LogoMark from "@/assets/logomark.svg";
 import Discord from "@/assets/icons/discord.svg";
 import GitHub from "@/assets/icons/github.svg";
 import Docs from "@/assets/icons/docs.svg";
-import SignUpDialog from "../sign-up-dialog";
+import SignUpButton from "@/components/sign-up-button";
 
 export const socialLinks = [
 	{
@@ -49,7 +49,7 @@ const Footer = () => {
 						</li>
 					))}
 				</ul>
-				<SignUpDialog />
+				<SignUpButton />
 			</div>
 			<div className="flex justify-center text-sm items-center gap-2">
 				<small>Copyright ©</small>
