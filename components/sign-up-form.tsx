@@ -3,8 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
-import { useSignUpForBeta } from "@/hooks/use-sign-up-for-beta";
+import { Loader2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -28,35 +27,43 @@ const signUpFormSchema = z.object({
 	email: z.string().email().min(2, {
 		message: "Username must be at least 2 characters.",
 	}),
-	phoneModel: z.string().min(3, {
-		message: "Phone model must be at least 3 characters.",
-	}),
-	previousCustomer: z.string(),
-	newToCrypto: z.string(),
+	phoneModel: z.string().optional(),
+	previousCustomer: z.string().optional(),
+	newToCrypto: z.string().optional(),
 });
 
-const SignUpForm = () => {
-	const { mutate } = useSignUpForBeta();
+const SignUpForm = ({
+	mutate,
+	isPending,
+}: {
+	mutate: (values: z.infer<typeof signUpFormSchema>) => void;
+	isPending: boolean;
+}) => {
 	const form = useForm<z.infer<typeof signUpFormSchema>>({
 		resolver: zodResolver(signUpFormSchema),
 	});
 
 	const onSubmit = (values: z.infer<typeof signUpFormSchema>) => {
 		mutate(values);
-		console.log(values);
 	};
 
 	return (
 		<Form {...form}>
-			<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+			<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 				<FormField
 					control={form.control}
 					name="email"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>What is your email?</FormLabel>
+							<FormLabel className="text-base font-light">
+								What is your email?
+							</FormLabel>
 							<FormControl>
-								<Input placeholder="Your email" {...field} />
+								<Input
+									className="border-2 border-cashmere-300 focus-visible:ring-0"
+									placeholder="Your email"
+									{...field}
+								/>
 							</FormControl>
 							<FormMessage />
 						</FormItem>
@@ -67,9 +74,15 @@ const SignUpForm = () => {
 					name="phoneModel"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>What is your phone brand and model?</FormLabel>
+							<FormLabel className="text-base font-light">
+								What is your phone brand and model?
+							</FormLabel>
 							<FormControl>
-								<Input placeholder="ex. iPhone 11" {...field} />
+								<Input
+									className="border-2 border-cashmere-300 focus-visible:ring-0"
+									placeholder="ex. iPhone 11"
+									{...field}
+								/>
 							</FormControl>
 							<FormMessage />
 						</FormItem>
@@ -80,10 +93,12 @@ const SignUpForm = () => {
 					name="previousCustomer"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Have you used eSIM before?</FormLabel>
+							<FormLabel className="text-base font-light">
+								Have you used eSIM before?
+							</FormLabel>
 							<Select onValueChange={field.onChange}>
 								<FormControl>
-									<SelectTrigger>
+									<SelectTrigger className="border-2 border-cashmere-300">
 										<SelectValue placeholder="Please select" />
 									</SelectTrigger>
 								</FormControl>
@@ -101,10 +116,12 @@ const SignUpForm = () => {
 					name="newToCrypto"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Are you new to crypto?</FormLabel>
+							<FormLabel className="text-base font-light">
+								Are you new to crypto?
+							</FormLabel>
 							<Select onValueChange={field.onChange}>
 								<FormControl>
-									<SelectTrigger>
+									<SelectTrigger className="border-2 border-cashmere-300">
 										<SelectValue placeholder="Please select" />
 									</SelectTrigger>
 								</FormControl>
@@ -119,9 +136,12 @@ const SignUpForm = () => {
 				/>
 				<Button
 					type="submit"
-					className="bg-cashmere-500 hover:bg-cashmere-500/90 w-full"
+					size={"xl"}
+					disabled={isPending}
+					className="w-full bg-cashmere-500 hover:bg-cashmere-500/90"
 				>
-					Sign Up
+					{isPending && <Loader2 className="mr-2 h-6 w-6 animate-spin" />}
+					{isPending ? "Please wait" : "Sign Up"}
 				</Button>
 			</form>
 		</Form>

@@ -43,14 +43,14 @@ const featuresData = [
 
 const Features = () => {
 	return (
-		<section className="flex justify-center text-esim-black-50 -mt-1 bg-night-purple-600 container max-w-screen-2xl pt-24">
-			<div className="flex flex-col text-center gap-20 lg:flex-row lg:flex-wrap lg:justify-center">
+		<section className="flex justify-center text-esim-black-50 z-10">
+			<div className="flex flex-col text-center gap-20 lg:flex-row lg:flex-wrap lg:justify-center container max-w-screen-2xl">
 				{featuresData.map((feature) => (
 					<div
 						key={feature.title}
-						className="flex flex-col items-center px-8 gap-6 z-20 md:max-w-[25rem]"
+						className="flex flex-col items-center px-4 gap-6 md:max-w-[25rem]"
 					>
-						<div className="relative h-16 w-16">
+						<div className="relative h-16 w-16 md:h-20 md:w-20">
 							<Image
 								src={feature.icon}
 								alt={feature.title}
@@ -59,7 +59,9 @@ const Features = () => {
 							/>
 						</div>
 						<div className="flex flex-col gap-4">
-							<h3 className="text-4xl font-bold">{feature.title}</h3>
+							<h3 className="text-4xl font-bold md:text-5xl">
+								{feature.title}
+							</h3>
 							<p className="text-lg font-light">{feature.description}</p>
 						</div>
 					</div>

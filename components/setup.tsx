@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import BeachBall from "@/assets/beach-ball.svg";
+import Transition2 from "@/assets/transition2-3.svg";
 
 const setupData = [
 	{
@@ -23,18 +24,20 @@ const setupData = [
 
 const Setup = () => {
 	return (
-		<section className="z-20 -mt-1 bg-ocean flex justify-center">
-			<div className="container flex flex-col text-center gap-28 py-10 md:mx-8">
-				<h2 className="text-6xl font-bold md:text-6xl">
+		<section className="relative bg-ocean flex justify-center overflow-x-hidden -mt-1">
+			<div className="container px-4 flex flex-col items-center text-center gap-28 py-10 md:gap-12 md:px-8">
+				<h2 className="text-5xl text-outer-space-950 font-bold md:text-6xl md:px-4 max-w-[637px]">
 					Simple Setup, Fun Trip Ahead.
 				</h2>
-				<div className="relative h-48 w-full object-cover">
+				<div className="relative h-48 w-full md:w-[452px] md:h-[452px] object-cover">
 					<Image src={BeachBall} alt="Beach ball and bucket" fill />
 				</div>
 				<dl className="flex flex-col gap-20 px-8 md:px-28 lg:flex-row lg:justify-between lg:px-4">
 					{setupData.map((setup) => (
 						<div key={setup.title} className="flex flex-col gap-4 lg:flex-1">
-							<dt className="text-4xl font-bold">{setup.title}</dt>
+							<dt className="text-4xl font-bold font-heading text-outer-space-950">
+								{setup.title}
+							</dt>
 							<dd className="text-xl font-light">{setup.description}</dd>
 						</div>
 					))}

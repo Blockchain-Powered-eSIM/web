@@ -21,7 +21,7 @@ const Links = () => {
 			href={social.href}
 			className="flex items-center gap-1"
 		>
-			<div className="relative h-8 w-8">
+			<div className="relative h-6 w-6 text-outer-space-950">
 				<Image src={social.icon} alt={social.title} fill />
 			</div>
 			<span className="text-lg font-light">{social.title}</span>
@@ -31,17 +31,23 @@ const Links = () => {
 
 const NavBar = () => {
 	return (
-		<div className="container w-full pt-6 ">
-			<nav className="flex justify-between items-center bg-ship-cove-50 rounded-full p-6">
+		<div className="container flex justify-center px-4 w-full pt-10 md:px-8 lg:pt-[4.5rem] lg:px-0 max-w-[1017px]">
+			<nav className="w-full flex justify-between items-center bg-ship-cove-50 rounded-full p-6 md:px-14">
 				<Link href="/" legacyBehavior passHref>
-					<Image src={Logo} alt="Logo" width={100} height={100} />
+					<Image
+						src={Logo}
+						alt="Logo"
+						width={100}
+						height={24}
+						className="h-6 w-auto md:h-8 lg:h-12"
+					/>
 				</Link>
 				{/* Mobile Nav */}
 				<Dialog>
 					<DialogTrigger className="md:hidden">
 						<Menu />
 					</DialogTrigger>
-					<DialogContent className="bg-ship-cove-50 rounded-3xl w-11/12 top-[22%]">
+					<DialogContent className="bg-ship-cove-50 rounded-4xl w-11/12 top-[22%]">
 						<DialogHeader className="flex">
 							<DialogTitle className="flex justify-start -mt-2">
 								<Image src={Logo} alt="Logo" width={100} height={100} />
