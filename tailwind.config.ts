@@ -18,6 +18,14 @@ const config = {
 			},
 		},
 		extend: {
+			backgroundImage: {
+				"beach-mobile": "url('/beach-scene-mobile.svg')",
+				"beach-tablet": "url('/beach-scene-tablet.svg')",
+				"beach-desktop": "url('/beach-scene-desktop.svg')",
+				"pyramid-mobile": "url('/pyramid-scene-mobile.svg')",
+				"pyramid-tablet": "url('/pyramid-scene-tablet.svg')",
+				"pyramid-desktop": "url('/pyramid-scene-desktop.svg')",
+			},
 			fontFamily: {
 				heading: ["var(--font-anybody)", ...fontFamily.sans],
 				sans: ["var(--font-lexend)", ...fontFamily.sans],
@@ -203,6 +211,9 @@ const config = {
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 			},
+		},
+		variants: {
+			backgroundImage: ["responsive"],
 		},
 	},
 	plugins: [require("tailwindcss-animate")],

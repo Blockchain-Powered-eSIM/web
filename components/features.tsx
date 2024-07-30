@@ -43,7 +43,7 @@ const featuresData = [
 
 const Features = () => {
 	return (
-		<section className="flex justify-center text-esim-black-50 bg-night-purple-600 ">
+		<section className="flex justify-center text-esim-black-50">
 			<div className="flex flex-col text-center gap-20 lg:flex-row lg:flex-wrap lg:justify-center container max-w-screen-2xl">
 				{featuresData.map((feature) => (
 					<div

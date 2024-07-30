@@ -14,19 +14,11 @@ export default function Home() {
 		<main className="flex flex-col">
 			<Hero />
 			<Setup />
-			<div className="bg-night-purple-800 -mt-1">
-				<div className="relative flex flex-col bg-esim-black-950/25 md:overflow-hidden">
-					<Features />
-					<Image
-						src={Pyramids}
-						alt="Person taking picture of Pyramids with phone"
-						sizes="100vw"
-						className="w-full h-auto"
-					/>
-					<div className="">
-						<Faqs />
-						<RoadMap />
-					</div>
+			<div className="flex flex-col object-cover bg-pyramid-mobile md:bg-pyramid-tablet lg:bg-pyramid-desktop h-[6459px] w-full md:h-[6629px] lg:h-[4603px] gap-[1200px]">
+				<Features />
+				<div>
+					<Faqs />
+					<RoadMap />
 				</div>
 			</div>
 		</main>
