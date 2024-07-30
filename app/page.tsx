@@ -14,7 +14,7 @@ export default function Home() {
 		<main className="flex flex-col">
 			<Hero />
 			<Setup />
-			<div className="relative flex flex-col items-center bg-pyramid-mobile bg-center bg-cover bg-no-repeat md:bg-pyramid-tablet lg:bg-pyramid-desktop h-[6459px] w-full md:h-[6129px] lg:h-[4403px] gap-[44rem] md:gap-[85rem] -mt-1 py-[24rem]">
+			<div className="relative flex flex-col items-center bg-pyramid-mobile bg-center bg-cover bg-no-repeat md:bg-pyramid-tablet lg:bg-pyramid-desktop h-[6459px] w-full md:h-[6129px] lg:h-[5003px] gap-[44rem] md:gap-[85rem] lg:gap-[110rem] -mt-1 py-[24rem] lg:py-[42rem]">
 				<div className="absolute top-0 left-0 w-full h-[472px] pt-40 ">
 					<Image
 						src={PyramidTransition}
