@@ -44,7 +44,7 @@ const SignUpDialog = ({
 						alt="Logo"
 						width={100}
 						height={100}
-						className="h-6"
+						className="h-6 w-auto md:h-8"
 					/>
 					<DialogHeader className="px-8 gap-6">
 						<DialogTitle className="flex justify-center text-2xl text-outer-space-950 font-bold font-heading">
@@ -73,7 +73,7 @@ const SignUpDialog = ({
 						alt="Logo"
 						width={100}
 						height={100}
-						className="h-6"
+						className="h-6 w-auto md:h-8"
 					/>
 					<DialogHeader className="px-8 gap-6">
 						<DialogTitle className="flex justify-center text-2xl text-outer-space-950 font-bold font-heading">
@@ -108,10 +108,10 @@ const SignUpDialog = ({
 						alt="Logo"
 						width={100}
 						height={100}
-						className="h-6"
+						className="h-6 w-auto md:h-8"
 					/>
 					<DialogHeader className="gap-6">
-						<DialogTitle className="flex justify-start text-2xl text-outer-space-950 font-bold font-heading">
+						<DialogTitle className="flex justify-start text-2xl text-outer-space-950 font-bold font-heading md:justify-center md:text-3xl">
 							Beta Sign Up
 						</DialogTitle>
 						{/* <DialogDescription className="text-lg font-light">
