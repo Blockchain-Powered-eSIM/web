@@ -14,7 +14,15 @@ export default function Home() {
 		<main className="flex flex-col">
 			<Hero />
 			<Setup />
-			<div className="flex flex-col items-center bg-pyramid-mobile bg-center bg-cover bg-no-repeat md:bg-pyramid-tablet lg:bg-pyramid-desktop h-[6259px] w-full md:h-[6129px] lg:h-[4603px] gap-[950px] md:gap-[110rem]">
+			<div className="relative flex flex-col items-center bg-pyramid-mobile bg-center bg-cover bg-no-repeat md:bg-pyramid-tablet lg:bg-pyramid-desktop h-[6459px] w-full md:h-[6129px] lg:h-[4403px] gap-[44rem] md:gap-[85rem] -mt-1 py-[24rem]">
+				<div className="absolute top-0 left-0 w-full h-[472px] pt-40 ">
+					<Image
+						src={PyramidTransition}
+						alt="Transition lines between the setup sections and features section"
+						fill
+						className="object-cover"
+					/>
+				</div>
 				<Features />
 				<div className="flex flex-col gap-10">
 					<Faqs />

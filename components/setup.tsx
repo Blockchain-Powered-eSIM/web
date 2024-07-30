@@ -24,7 +24,7 @@ const setupData = [
 
 const Setup = () => {
 	return (
-		<section className="relative bg-ocean flex justify-center overflow-x-hidden pb-[30rem] -mt-1">
+		<section className="relative bg-ocean flex justify-center overflow-x-hidden -mt-1">
 			<div className="container px-4 flex flex-col items-center text-center gap-28 py-10 md:gap-12 md:px-8">
 				<h2 className="text-5xl text-outer-space-950 font-bold md:text-6xl md:px-4 max-w-[637px]">
 					Simple Setup, Fun Trip Ahead.
@@ -42,14 +42,6 @@ const Setup = () => {
 						</div>
 					))}
 				</dl>
-			</div>
-			<div className="absolute bottom-0 w-full h-[472px] pt-40 ">
-				<Image
-					src={Transition2}
-					alt="Transition lines between the setup sections and features section"
-					fill
-					className="object-cover"
-				/>
 			</div>
 		</section>
 	);
