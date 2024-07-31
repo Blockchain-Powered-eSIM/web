@@ -13,7 +13,7 @@ export const socialLinks = [
 	{
 		icon: Discord,
 		title: "Discord",
-		href: "https://discord.gg/K",
+		href: "https://discord.gg/KfQDsPNn5S",
 	},
 	{
 		icon: GitHub,
