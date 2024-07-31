@@ -13,17 +13,17 @@ export const socialLinks = [
 	{
 		icon: Discord,
 		title: "Discord",
-		href: "#",
+		href: "https://discord.gg/K",
 	},
 	{
 		icon: GitHub,
 		title: "GitHub",
-		href: "#",
+		href: "https://github.com/Blockchain-Powered-eSIM",
 	},
 	{
 		icon: Docs,
 		title: "Docs",
-		href: "#",
+		href: "https://docs.kokio.app/",
 	},
 ];
 
