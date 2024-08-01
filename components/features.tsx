@@ -9,66 +9,66 @@ import ThumbsUp from "@/assets/icons/thumbs-up.svg";
 import PyramidTransition from "@/assets/transition2.svg";
 
 const featuresData = [
-	{
-		icon: Relax,
-		title: "Simple",
-		description:
-			"Set up your mobile plan quickly and easily with our new technology. Speed up the process even more by provisioning your new secure eSIM device wallet.",
-	},
-	{
-		icon: Meditate,
-		title: "Private",
-		description:
-			"We never ask for personal information, so there’s no way for us to collect or store it. Enjoy complete peace of mind on your vacations.",
-	},
-	{
-		icon: Wallet,
-		title: "eSIM Wallet",
-		description:
-			"When you purchase your first Kokio travel data bundle, a secure eSIM crypto wallet is created. Not ready for crypto? No worries—the eSIM wallet is optional and can be activated whenever you choose.",
-	},
-	{
-		icon: Shield,
-		title: "Secure",
-		description:
-			"Our app ensures top-notch security and privacy, utilizing biometrics and Zero Knowledge Proof technology.",
-	},
-	{
-		icon: ThumbsUp,
-		title: "Quick Pay",
-		description:
-			"Enjoy flexible payment options including credit cards, Apple Pay, Google Pay, and PayPal. You can fund your eSIM wallet and check out even faster!",
-	},
+  {
+    icon: Relax,
+    title: "Simple",
+    description:
+      "Set up your mobile plan quickly and easily with our new technology. Speed up the process even more by provisioning your new secure eSIM device wallet.",
+  },
+  {
+    icon: Meditate,
+    title: "Private",
+    description:
+      "We never ask for personal information, so there’s no way for us to collect or store it. Enjoy complete peace of mind on your vacations.",
+  },
+  {
+    icon: Wallet,
+    title: "eSIM Wallet",
+    description:
+      "When you purchase your first Kokio travel data bundle, a secure eSIM crypto wallet is created. Not ready for crypto? No worries—the eSIM wallet is optional and can be activated whenever you choose.",
+  },
+  {
+    icon: Shield,
+    title: "Secure",
+    description:
+      "Our app ensures top-notch security and privacy, utilizing biometrics and Zero Knowledge Proof technology.",
+  },
+  {
+    icon: ThumbsUp,
+    title: "Quick Pay",
+    description:
+      "Enjoy flexible payment options including credit cards, Apple Pay, Google Pay, and PayPal. You can fund your eSIM wallet and check out even faster!",
+  },
 ];
 
 const Features = () => {
-	return (
-		<section className="flex justify-center text-esim-black-50 z-10">
-			<div className="flex flex-col text-center gap-20 lg:flex-row lg:flex-wrap lg:justify-center container max-w-screen-2xl">
-				{featuresData.map((feature) => (
-					<div
-						key={feature.title}
-						className="flex flex-col items-center px-4 gap-6 md:max-w-[25rem]"
-					>
-						<div className="relative h-16 w-16 md:h-20 md:w-20">
-							<Image
-								src={feature.icon}
-								alt={feature.title}
-								width={200}
-								height={200}
-							/>
-						</div>
-						<div className="flex flex-col gap-4">
-							<h3 className="text-4xl font-bold md:text-5xl">
-								{feature.title}
-							</h3>
-							<p className="text-lg font-light">{feature.description}</p>
-						</div>
-					</div>
-				))}
-			</div>
-		</section>
-	);
+  return (
+    <section className="flex justify-center text-esim-black-50 z-10">
+      <div className="flex flex-col text-center gap-20 lg:flex-row lg:flex-wrap lg:justify-center container max-w-screen-2xl">
+        {featuresData.map((feature) => (
+          <div
+            key={feature.title}
+            className="flex flex-col items-center px-4 gap-6 md:max-w-[25rem]"
+          >
+            <div className="relative h-16 w-16 md:h-20 md:w-20">
+              <Image
+                src={feature.icon}
+                alt={feature.title}
+                width={200}
+                height={200}
+              />
+            </div>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-4xl font-bold md:text-5xl">
+                {feature.title}
+              </h3>
+              <p className="text-lg font-light">{feature.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
 Features.displayName = "Features";
 
