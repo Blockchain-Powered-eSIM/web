@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Loader2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -34,10 +33,8 @@ const signUpFormSchema = z.object({
 
 const SignUpForm = ({
 	mutate,
-	isPending,
 }: {
 	mutate: (values: z.infer<typeof signUpFormSchema>) => void;
-	isPending: boolean;
 }) => {
 	const form = useForm<z.infer<typeof signUpFormSchema>>({
 		resolver: zodResolver(signUpFormSchema),
@@ -137,11 +134,9 @@ const SignUpForm = ({
 				<Button
 					type="submit"
 					size={"xl"}
-					disabled={isPending}
 					className="w-full bg-cashmere-500 hover:bg-cashmere-500/90"
 				>
-					{isPending && <Loader2 className="mr-2 h-6 w-6 animate-spin" />}
-					{isPending ? "Please wait" : "Sign Up"}
+					Sign Up
 				</Button>
 			</form>
 		</Form>
