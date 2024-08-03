@@ -43,12 +43,12 @@ const featuresData = [
 
 const Features = () => {
   return (
-    <section className="flex justify-center text-esim-black-50 z-10">
-      <div className="flex flex-col text-center gap-20 lg:flex-row lg:flex-wrap lg:justify-center container max-w-screen-2xl">
+    <section className="z-10 flex justify-center text-esim-black-50">
+      <div className="container flex max-w-screen-2xl flex-col gap-20 text-center lg:flex-row lg:flex-wrap lg:justify-center">
         {featuresData.map((feature) => (
           <div
             key={feature.title}
-            className="flex flex-col items-center px-4 gap-6 md:max-w-[25rem]"
+            className="flex flex-col items-center gap-6 px-4 md:max-w-[25rem]"
           >
             <div className="relative h-16 w-16 md:h-20 md:w-20">
               <Image

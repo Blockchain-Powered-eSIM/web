@@ -31,8 +31,8 @@ const Links = () => {
 
 const NavBar = () => {
   return (
-    <div className="container flex justify-center px-4 w-full pt-10 md:px-8 lg:pt-[4.5rem] lg:px-0 max-w-[1017px]">
-      <nav className="w-full flex justify-between items-center bg-ship-cove-50 rounded-full p-6 md:px-14">
+    <div className="container flex w-full max-w-[1017px] justify-center px-4 pt-10 md:px-8 lg:px-0 lg:pt-[4.5rem]">
+      <nav className="flex w-full items-center justify-between rounded-full bg-ship-cove-50 p-6 md:px-14">
         <Link href="/" legacyBehavior passHref>
           <Image
             src={Logo}
@@ -47,9 +47,9 @@ const NavBar = () => {
           <DialogTrigger className="md:hidden">
             <Menu />
           </DialogTrigger>
-          <DialogContent className="bg-ship-cove-50 rounded-4xl w-11/12 top-[22%]">
+          <DialogContent className="top-[22%] w-11/12 rounded-4xl bg-ship-cove-50">
             <DialogHeader className="flex">
-              <DialogTitle className="flex justify-start -mt-2">
+              <DialogTitle className="-mt-2 flex justify-start">
                 <Image src={Logo} alt="Logo" width={100} height={100} />
               </DialogTitle>
               <DialogDescription />
@@ -60,7 +60,7 @@ const NavBar = () => {
           </DialogContent>
         </Dialog>
         {/* Desktop Nav */}
-        <div className="gap-8 items-center hidden md:flex">
+        <div className="hidden items-center gap-8 md:flex">
           <Links />
         </div>
       </nav>

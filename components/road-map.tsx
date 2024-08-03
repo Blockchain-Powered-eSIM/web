@@ -23,10 +23,10 @@ const roadMapData = [
 
 const RoadMap = () => {
   return (
-    <section className="container text-esim-black-50 py-12 md:py-32 flex flex-col gap-14 items-center">
-      <div className="flex items-center justify-center w-full max-w-4xl gap-6 md:gap-14">
+    <section className="container flex flex-col items-center gap-14 py-12 text-esim-black-50 md:py-32">
+      <div className="flex w-full max-w-4xl items-center justify-center gap-6 md:gap-14">
         <div className="flex-1 border-t border-gray-300 md:max-w-[63px]" />
-        <h2 className="text-4xl font-bold text-center uppercase md:text-5xl">
+        <h2 className="text-center text-4xl font-bold uppercase md:text-5xl">
           Road Ahead
         </h2>
         <div className="flex-1 border-t border-gray-300 md:max-w-[63px]" />
@@ -35,7 +35,7 @@ const RoadMap = () => {
         {roadMapData.map((roadMap) => (
           <div
             key={roadMap.title}
-            className="text-center flex flex-col gap-4 flex-1"
+            className="flex flex-1 flex-col gap-4 text-center"
           >
             <h3 className="text-4xl font-bold">{roadMap.title}</h3>
             <ul className="flex flex-col gap-3">

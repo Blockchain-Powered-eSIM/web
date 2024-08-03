@@ -29,13 +29,13 @@ export const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col bg-esim-black-950 text-esim-black-50 pt-20 pb-6 -mt-1 gap-6">
-      <div className="container flex flex-col items-center gap-10 lg:flex-row lg:justify-between lg:max-w-[1200px]">
+    <footer className="-mt-1 flex flex-col gap-6 bg-esim-black-950 pb-6 pt-20 text-esim-black-50">
+      <div className="container flex flex-col items-center gap-10 lg:max-w-[1200px] lg:flex-row lg:justify-between">
         <Image src={Logo} alt="Kokio Logo" width={200} height={200} />
-        <ul className="flex flex-wrap gap-8 justify-center">
+        <ul className="flex flex-wrap justify-center gap-8">
           {socialLinks.map((footer) => (
             <li key={footer.title} className="flex items-center gap-2">
-              <div className=" relative h-10 w-10 text-white">
+              <div className="relative h-10 w-10 text-white">
                 <Image
                   src={footer.icon}
                   alt={footer.title}
@@ -51,7 +51,7 @@ const Footer = () => {
         </ul>
         <SignUpButton />
       </div>
-      <div className="flex justify-center text-sm items-center gap-2">
+      <div className="flex items-center justify-center gap-2 text-sm">
         <small>Copyright ©</small>
         <Image src={LogoMark} alt="Logo Mark for Kokio" />
         <small>Kokio 2024</small>

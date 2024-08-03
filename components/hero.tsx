@@ -1,7 +1,6 @@
 import React from "react";
 import Image, { getImageProps } from "next/image";
 
-import Beach from "@/assets/beach-scene.svg";
 import BeachTransition from "@/assets/transition1.svg";
 
 import SignUpButton from "@/components/sign-up-button";
