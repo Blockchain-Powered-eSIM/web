@@ -4,19 +4,19 @@ import { Button } from "@/components/ui/button";
 import SignUpDialog from "./sign-up-dialog";
 
 const SignUpButton = () => {
-	const [open, setOpen] = useState(false);
-	return (
-		<>
-			<Button
-				onClick={() => setOpen(!open)}
-				size="xl"
-				className="bg-cashmere-500 hover:bg-cashmere-500/90"
-			>
-				Sign Up For beta
-			</Button>
-			<SignUpDialog open={open} setOpen={setOpen} />
-		</>
-	);
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <Button
+        onClick={() => setOpen(!open)}
+        size="xl"
+        className="bg-cashmere-500 hover:bg-cashmere-500/90"
+      >
+        Sign Up For beta
+      </Button>
+      <SignUpDialog open={open} setOpen={setOpen} />
+    </>
+  );
 };
 
 export default SignUpButton;
