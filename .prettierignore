@@ -1,0 +1,33 @@
+# Ignore node_modules
+node_modules
+
+# Ignore GitHub configuration files
+.github
+
+# Ignore build output directories
+.next
+out
+
+# Ignore everything in the public folder
+public/**
+
+# Ignore environment variable files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore lock files
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+bun.lockb
+
+# Ignore coverage output
+coverage
+
+# Ignore logs
+logs
+*.log
+

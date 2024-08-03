@@ -44,12 +44,12 @@ export default function RootLayout({
     >
       <body
         className={cn(
-          "min-h-screen font-sans antialiased flex flex-col bg-beach-sky"
+          "flex min-h-screen flex-col bg-beach-sky font-sans antialiased"
         )}
       >
         <Web3ModalProvider initialState={initialState}>
           <NavBar />
-          <div className="flex-1 m-0 p-0">{children}</div>
+          <div className="m-0 flex-1 p-0">{children}</div>
           <Footer />
           <Toaster />
         </Web3ModalProvider>
