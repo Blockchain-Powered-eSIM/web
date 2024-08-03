@@ -8,9 +8,9 @@ import SignUpButton from "@/components/sign-up-button";
 
 const Hero = () => {
   return (
-    <section className="relative pt-14 flex flex-col text-center items-center gap-16 pb-32 md:pb-10 bg-center bg-cover bg-no-repeat bg-beach-mobile md:bg-beach-tablet md:bg-top lg:bg-beach-desktop h-[1239px] w-full md:h-[1766px] lg:h-[2178px]">
-      <div className="container px-4 md:px-8 flex flex-col gap-4 max-w-[1000px]">
-        <h1 className="text-5xl text-outer-space-950 md:text-6xl font-bold">
+    <section className="relative flex h-[1200px] w-full flex-col items-center gap-16 bg-beach-mobile bg-cover bg-center bg-no-repeat pb-32 pt-14 text-center xs:bg-beach-tablet md:max-h-[1500px] md:bg-beach-desktop md:pb-10 lg:max-h-[1700px]">
+      <div className="container flex max-w-[1000px] flex-col gap-4 px-4 md:px-8">
+        <h1 className="text-5xl font-bold text-outer-space-950 md:text-6xl">
           Experience the Future of Global Connectivity
         </h1>
         <p className="text-xl font-light lg:leading-7">
@@ -21,12 +21,12 @@ const Hero = () => {
         </p>
       </div>
       <SignUpButton />
-      <div className="absolute -bottom-20 custom-400:-bottom-40 md:-bottom-20 left-0 w-full h-[530px] lg:-bottom-0">
+      <div className="md:-bottom-30 absolute -bottom-20 left-0 z-10 h-[480px] w-full custom-400:-bottom-40 md:bg-top lg:-bottom-36">
         <Image
           src={BeachTransition}
           alt="Beach"
           fill
-          className="object-cover"
+          className="object-cover object-center"
         />
       </div>
     </section>
