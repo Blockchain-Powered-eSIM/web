@@ -23,7 +23,7 @@ const setupData = [
 
 const Setup = () => {
   return (
-    <section className="relative -mt-1 flex justify-center overflow-x-hidden bg-ocean custom-400:mt-5 md:pt-24 lg:-mt-1 lg:pt-32">
+    <section className="relative z-10 -mt-1 flex justify-center overflow-x-hidden bg-ocean custom-400:mt-5 md:pt-24 lg:-mt-1 lg:pt-32">
       <div className="container flex flex-col items-center gap-28 px-4 py-10 text-center md:gap-12 md:px-8">
         <h2 className="max-w-[637px] text-5xl font-bold text-outer-space-950 md:px-4 md:text-6xl">
           Simple Setup, Fun Trip Ahead.

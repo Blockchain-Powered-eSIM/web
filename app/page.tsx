@@ -14,7 +14,7 @@ export default function Home() {
     <main className="flex flex-col">
       <Hero />
       <Setup />
-      <div className="relative">
+      <div className="relative -mt-1">
         <div className="h-[472px] w-full">
           <Image
             src={PyramidTransition}
@@ -24,7 +24,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="-mt-1 flex flex-col items-center gap-[680px] bg-pyramid-mobile bg-cover bg-center bg-no-repeat custom-400:gap-[880px] md:gap-[1560px] md:bg-pyramid-tablet lg:gap-[820px] lg:bg-pyramid-desktop">
+      <div className="-mt-1 flex flex-col items-center gap-[720px] bg-pyramid-mobile bg-cover bg-center bg-no-repeat xs:gap-[680px] xs:bg-pyramid-tablet md:gap-[1060px] md:bg-pyramid-desktop lg:gap-[820px] lg:bg-pyramid-desktop">
         <Features />
         <div className="flex flex-col gap-10">
           <Faqs />

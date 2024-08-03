@@ -20,7 +20,7 @@ const Hero = () => {
         </p>
       </div>
       <SignUpButton />
-      <div className="md:-bottom-30 absolute -bottom-20 left-0 z-10 h-[480px] w-full custom-400:-bottom-40 md:bg-top lg:-bottom-36">
+      <div className="md:-bottom-30 absolute -bottom-20 left-0 z-20 h-[480px] w-full custom-400:-bottom-40 md:bg-top lg:-bottom-36">
         <Image
           src={BeachTransition}
           alt="Beach"
