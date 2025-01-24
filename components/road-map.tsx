@@ -3,15 +3,24 @@ import React from "react";
 const roadMapData = [
   {
     title: "Jan",
-    milestones: ["Finalize audit", "Conduct QA internal testing"],
+    milestones: [
+      "Finalize audit", 
+      "Conduct QA internal testing",
+    ],
   },
   {
     title: "Feb",
-    milestones: ["Beta testing", "Launch closed beta testing"],
+    milestones: [
+      "Beta testing", 
+      "Launch closed beta testing",
+    ],
   },
   {
     title: "March",
-    milestones: ["Launch app", "Open app for public download and free data plan access"],
+    milestones: [
+      "Launch app", 
+      "Open app for public download and free data plan access",
+    ],
   },
 ];
 
