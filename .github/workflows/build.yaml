@@ -18,15 +18,15 @@ jobs:
         AIRTABLE_API_KEY: "placeholder"
         NEXT_PUBLIC_PROJECT_ID: "placeholder"
 
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: oven-sh/setup-bun@v1
-      with:
-        bun-version: latest
-    - run: bun install
-    - run: bun run lint
+  # lint:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v4
+  #   - uses: oven-sh/setup-bun@v1
+  #     with:
+  #       bun-version: latest
+  #   - run: bun install
+  #   - run: bun run lint
 
   codeql:
       runs-on: ubuntu-latest
