@@ -3,10 +3,7 @@ import React from "react";
 const roadMapData = [
   {
     title: "Jan",
-    milestones: [
-      "Finalize audit",
-      "Conduct QA internal testing",
-    ],
+    milestones: ["Finalize audit", "Conduct QA internal testing"],
   },
   {
     title: "Feb",
