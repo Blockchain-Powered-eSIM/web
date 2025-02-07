@@ -2,7 +2,7 @@ import AirTable, { type Record } from "airtable";
 import { NextResponse } from "next/server";
 
 const base = new AirTable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
-  "appvRYA4uxvcdmBxo"
+  "appfkjYpNQxFZs0Qe"
 );
 
 export async function POST(request: Request, response: Response) {
