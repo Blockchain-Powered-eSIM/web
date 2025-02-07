@@ -17,7 +17,7 @@ export async function POST(request: Request, response: Response) {
     const { email, phoneModel, previousCustomer, newToCrypto } = req;
 
     const record = base("Kokio Beta Signups").create({
-      "Email": email,
+      Email: email,
       "Phone Brand and Model": phoneModel,
       "Used eSIM Before": previousCustomer,
       "New to Crypto": newToCrypto,
