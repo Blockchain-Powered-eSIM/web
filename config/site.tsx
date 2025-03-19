@@ -1,5 +1,5 @@
 //import Discord from "@/assets/icons/discord-fill.svg";
-import Twitter from "@/assets/icons/twitter-fill.svg"
+import Twitter from "@/assets/icons/twitter-fill.svg";
 import GitHub from "@/assets/icons/github-fill.svg";
 import Docs from "@/assets/icons/docs-fill.svg";
 

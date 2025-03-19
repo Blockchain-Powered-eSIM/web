@@ -11,10 +11,7 @@ const roadMapData = [
   },
   {
     title: "April",
-    milestones: [
-      "Beta Testing",
-      "Launch closed beta testing",
-    ],
+    milestones: ["Beta Testing", "Launch closed beta testing"],
   },
 ];
 
