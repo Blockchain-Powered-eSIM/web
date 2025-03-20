@@ -2,19 +2,16 @@ import React from "react";
 
 const roadMapData = [
   {
-    title: "Jan",
+    title: "Feb",
     milestones: ["Finalize audit", "Conduct QA internal testing"],
   },
   {
-    title: "Feb",
-    milestones: ["Beta Testing", "Launch closed beta testing"],
+    title: "March",
+    milestones: ["Service Integrations", "SDK and Unified Backend Integration"],
   },
   {
-    title: "March",
-    milestones: [
-      "Launch app",
-      "Open app for public download and free data plan access",
-    ],
+    title: "April",
+    milestones: ["Beta Testing", "Launch closed beta testing"],
   },
 ];
 
