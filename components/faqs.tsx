@@ -30,7 +30,7 @@ const faqsData = [
   {
     question: "What security measures does Kokio employ for its services?",
     answer:
-      "Kokio’s app ensures top-notch security and privacy using biometrics, Zero Knowledge Proof technology, and the inherent security features of blockchain technology.",
+      "Kokio’s app ensures top-notch security and privacy using biometrics, secure enclave technology, and the inherent security features of blockchain technology.",
   },
   {
     question: "Is personal information required to use Kokio’s services?",
@@ -40,7 +40,7 @@ const faqsData = [
   {
     question: "What is the roadmap for Kokio’s service launch?",
     answer:
-      "Key milestones include finalizing the smart contract for PSE audit in January, conducting internal QA testing, launching closed beta testing in February to address bugs, and publicly launching the app with free data plan access in March.",
+      "Key milestones includes the smart contract audit in February, app integration and conducting internal QA testing in March, launching closed beta testing in April to address bugs, and publicly launching the app with free data plan access in May.",
   },
 ];
 
