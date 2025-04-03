@@ -40,7 +40,7 @@ const faqsData = [
   {
     question: "What is the roadmap for Kokio’s service launch?",
     answer:
-      "Key milestones includes the smart contract audit in February, app integration and conducting internal QA testing March, launching closed beta testing in April to address bugs, and publicly launching the app with free data plan access in May.",
+      "Key milestones includes the smart contract audit in February, app integration and conducting internal QA testing in March, launching closed beta testing in April to address bugs, and publicly launching the app with free data plan access in May.",
   },
 ];
 
