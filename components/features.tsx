@@ -13,7 +13,7 @@ const featuresData = [
     icon: Relax,
     title: "Simple",
     description:
-      "Set up your mobile plan quickly and easily with our new technology. Speed up the process even more by provisioning your new secure eSIM smart ID.",
+      "Set up your mobile plan quickly and easily with our new technology. Speed up the process even more by provisioning your new secure eSIM smart account.",
   },
   {
     icon: Meditate,

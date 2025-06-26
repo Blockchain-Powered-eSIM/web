@@ -17,7 +17,7 @@ const setupData = [
   {
     title: "Turn Your Phone Into a Digital ID",
     description:
-      "Activate your eSIM and optionally enable the eSIM smart ID that also functions as a digital ID.",
+      "Activate your eSIM and optionally enable the eSIM smart account that also functions as a digital ID.",
   },
   /*{
     title: "Turn Your Phone Into a Crypto Wallet",
