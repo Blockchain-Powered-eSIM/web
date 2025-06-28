@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
+import escapeHtml from "escape-html";
 
 interface Article {
   slug: string;
@@ -26,7 +27,10 @@ export default async function CategoryPage({
     articles = files
       .filter((file) => file.endsWith(".mdx"))
       .map((file) => {
-        const mdxSource = fs.readFileSync(path.join(categoryDir, file), "utf-8");
+        const mdxSource = fs.readFileSync(
+          path.join(categoryDir, file),
+          "utf-8"
+        );
         const { data } = matter(mdxSource);
         return {
           slug: file.replace(/\.mdx$/, ""),
@@ -37,22 +41,21 @@ export default async function CategoryPage({
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-4">Category: {category}</h1>
+    <div className="mx-auto max-w-4xl p-8">
+      <h1 className="mb-4 text-3xl font-bold">Category: {category}</h1>
       <ul className="space-y-4">
         {articles.map((article) => (
           <li key={article.slug}>
             <Link
-              href={`/help/${category}/${article.slug}`}
+              href={`/help/${escapeHtml(category)}/${escapeHtml(article.slug)}`}
               className="text-blue-600 underline"
             >
               {article.title}
             </Link>
-            <p className="text-gray-500 text-sm">{article.description}</p>
+            <p className="text-sm text-gray-500">{article.description}</p>
           </li>
         ))}
       </ul>
     </div>
   );
 }
-

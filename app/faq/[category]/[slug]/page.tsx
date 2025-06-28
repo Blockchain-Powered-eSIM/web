@@ -25,12 +25,11 @@ export default async function ArticlePage({
   const { content, data } = matter(source);
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-4">{data.title}</h1>
+    <div className="mx-auto max-w-4xl p-8">
+      <h1 className="mb-4 text-3xl font-bold">{data.title}</h1>
       <div className="prose">
         <MDXRemote source={content} />
       </div>
     </div>
   );
 }
-

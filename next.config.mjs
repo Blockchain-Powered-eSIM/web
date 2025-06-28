@@ -4,7 +4,7 @@ import nextMDX from "@next/mdx";
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
-})
+});
 
 const nextConfig = withMDX({
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
