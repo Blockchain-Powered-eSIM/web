@@ -12,13 +12,18 @@ const setupData = [
   {
     title: "Pay and Activate the eSIM",
     description:
-      "We support various payment methods including credit cards and cryptocurrencies. Just pay and activate your eSIM to start enjoying mobile connectivity instantly.",
+      "We support various payment methods including credit cards and digital wallets. Just pay and activate your eSIM to start enjoying mobile connectivity instantly.",
   },
   {
+    title: "Turn Your Phone Into a Digital ID",
+    description:
+      "Activate your eSIM and optionally enable the eSIM smart account that also functions as a digital ID.",
+  },
+  /*{
     title: "Turn Your Phone Into a Crypto Wallet",
     description:
       "Activate your eSIM and optionally enable the eSIM crypto wallet that also functions as a digital ID.",
-  },
+  },*/
 ];
 
 const Setup = () => {
