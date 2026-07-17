@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const SignUpButton = () => {
   return (
-    <Link href="https://alpha.kokio.app" target="_blank">
+    <Link href="https://t.me/+b44BXiy8d5k4M2Q1" target="_blank">
       <Button size="xl" className="bg-cashmere-500 hover:bg-cashmere-500/90">
-        Try out the Alpha now!
+        Join Telegram Group for Early Access!
       </Button>
     </Link>
   );
