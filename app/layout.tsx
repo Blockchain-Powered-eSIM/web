@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Anybody, Lexend } from "next/font/google";
 
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site";
 import { NavBar } from "@/components/global/nav-bar";
 import { Footer } from "@/components/global/footer";
 import { Toaster } from "@/components/ui/toaster";
@@ -22,6 +23,7 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: "Kokio",
   description: "Blockchain powered eSIM",
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import Logo from "@/assets/logo.svg";
 import LogoMark from "@/assets/logomark.svg";
@@ -26,6 +27,11 @@ export const socialLinks = [
     title: "Docs",
     href: "https://docs.kokio.app/",
   },
+];
+
+const legalLinks = [
+  { title: "Privacy Policy", href: "/privacy-policy" },
+  { title: "Terms of Service", href: "/terms-of-service" },
 ];
 
 const Footer = () => {
@@ -72,6 +78,20 @@ const Footer = () => {
           for updates.
         </p>
       </div>
+      <nav
+        aria-label="Legal"
+        className="container flex flex-wrap items-center justify-center gap-x-6 gap-y-2 lg:max-w-[1200px]"
+      >
+        {legalLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="text-sm font-light text-esim-black-50 underline-offset-2 transition-colors hover:text-cashmere-400 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cashmere-500 focus-visible:ring-offset-2 focus-visible:ring-offset-esim-black-950"
+          >
+            {link.title}
+          </Link>
+        ))}
+      </nav>
       <div className="flex items-center justify-center gap-2 text-sm">
         <small>Copyright ©</small>
         <Image src={LogoMark} alt="Logo Mark for Kokio" />
