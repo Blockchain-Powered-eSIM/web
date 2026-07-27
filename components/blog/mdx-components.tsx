@@ -35,7 +35,6 @@ function SmartLink({
 function MdxImage({ src, alt, ...props }: ImgHTMLAttributes<HTMLImageElement>) {
   return (
     <figure className="my-8">
-      {/* eslint-disable-next-line @next/next/no-img-element -- content images have no known dimensions */}
       <img src={src} alt={alt ?? ""} className="w-full rounded-2xl" {...props} />
       {alt ? (
         <figcaption className="mt-2 text-center text-sm text-esim-black-500">
