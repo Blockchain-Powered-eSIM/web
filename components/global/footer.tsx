@@ -6,6 +6,7 @@ import Logo from "@/assets/logo.svg";
 import LogoMark from "@/assets/logomark.svg";
 
 //import Discord from "@/assets/icons/discord.svg";
+import Blog from "@/assets/icons/blog.svg";
 import Twitter from "@/assets/icons/twitter.svg";
 import GitHub from "@/assets/icons/github.svg";
 import Docs from "@/assets/icons/docs.svg";
@@ -27,6 +28,11 @@ export const socialLinks = [
     title: "Docs",
     href: "https://docs.kokio.app/",
   },
+  {
+    icon: Blog,
+    title: "Blogs",
+    href: "/blog",
+  },
 ];
 
 const legalLinks = [
@@ -37,7 +43,7 @@ const legalLinks = [
 const Footer = () => {
   return (
     <footer className="-mt-1 flex flex-col gap-6 bg-esim-black-950 pb-6 pt-20 text-esim-black-50">
-      <div className="container flex flex-col items-center gap-10 lg:max-w-[1200px] lg:flex-row lg:justify-between">
+      <div className="container flex flex-col items-center gap-10 lg:max-w-[1200px] xl:flex-row xl:justify-between">
         <Image
           src={Logo}
           alt="Kokio Logo"
@@ -56,9 +62,15 @@ const Footer = () => {
                   className="fill-current"
                 />
               </div>
-              <a href={footer.href} className="text-lg font-light">
-                {footer.title}
-              </a>
+              {footer.href.startsWith("/") ? (
+                <Link href={footer.href} className="text-lg font-light">
+                  {footer.title}
+                </Link>
+              ) : (
+                <a href={footer.href} className="text-lg font-light">
+                  {footer.title}
+                </a>
+              )}
             </li>
           ))}
         </ul>
