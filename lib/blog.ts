@@ -101,6 +101,11 @@ function loadPosts(): Post[] {
 
   const posts = filenames.map((filename) => {
     const slug = filename.replace(/\.mdx$/, "");
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) {
+      throw new Error(
+        `Invalid post filename "${filename}". Expected kebab-case slug characters only (lowercase letters, numbers, and hyphens).`,
+      );
+    }
     const raw = fs.readFileSync(path.join(BLOG_DIR, filename), "utf8");
     const { data, content } = matter(raw);
 
