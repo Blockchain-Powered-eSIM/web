@@ -15,18 +15,38 @@ import { siteConfig } from "@/config/site";
 import { DialogDescription } from "@radix-ui/react-dialog";
 
 const Links = () => {
-  return siteConfig.socials.map((social) => (
-    <a
-      key={social.title}
-      href={social.href}
-      className="flex items-center gap-1"
-    >
-      <div className="relative h-6 w-6 text-outer-space-950">
-        <Image src={social.icon} alt={social.title} fill />
-      </div>
-      <span className="text-lg font-light">{social.title}</span>
-    </a>
-  ));
+  return siteConfig.socials.map((social) => {
+    const content = (
+      <>
+        <div className="relative h-6 w-6 text-outer-space-950">
+          <Image src={social.icon} alt={social.title} fill />
+        </div>
+        <span className="text-lg font-light">{social.title}</span>
+      </>
+    );
+
+    if (social.href.startsWith("/")) {
+      return (
+        <Link
+          key={social.title}
+          href={social.href}
+          className="flex items-center gap-1"
+        >
+          {content}
+        </Link>
+      );
+    }
+
+    return (
+      <a
+        key={social.title}
+        href={social.href}
+        className="flex items-center gap-1"
+      >
+        {content}
+      </a>
+    );
+  });
 };
 
 const NavBar = () => {
