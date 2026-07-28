@@ -10,6 +10,8 @@ import { AuthorCard } from "@/components/blog/author-card";
 import { TLDRBox } from "@/components/blog/tldr-box";
 import { PostCard } from "@/components/blog/post-card";
 import { EndCardCTA } from "@/components/blog/end-card-cta";
+import { WaveDivider } from "@/components/blog/wave-divider";
+import { ReadingProgressBar } from "@/components/blog/reading-progress-bar";
 import { getMdxComponents } from "@/components/blog/mdx-components";
 import Logo from "@/assets/logo.svg";
 
@@ -91,13 +93,17 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
   return (
     <main className="px-4 py-12 md:px-8 md:py-16">
+      <ReadingProgressBar targetId="post-article" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <article className="container mx-auto flex max-w-[52rem] flex-col">
+      <article
+        id="post-article"
+        className="container mx-auto flex max-w-[52rem] flex-col"
+      >
         <div className="mx-auto flex w-full max-w-[42rem] flex-col">
           <span className="w-fit rounded-full bg-cashmere-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cashmere-700">
             {post.tag}
@@ -148,6 +154,10 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         </div>
 
         <div className="mt-16">
+          <WaveDivider />
+        </div>
+
+        <div className="mt-8">
           <EndCardCTA slug={post.slug} />
         </div>
       </article>
