@@ -1,14 +1,23 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { compileMDX } from "next-mdx-remote/rsc";
+import remarkSmartypants from "remark-smartypants";
+import rehypeSlug from "rehype-slug";
 
 import { getAllPosts, getPost, getRelatedPosts } from "@/lib/blog";
+import { rehypeCollectH2Toc, type TocHeading } from "@/lib/mdx-toc";
+import { TableOfContents } from "@/components/blog/table-of-contents";
+import { siteConfig } from "@/config/site";
 import { AuthorCard } from "@/components/blog/author-card";
 import { TLDRBox } from "@/components/blog/tldr-box";
 import { PostCard } from "@/components/blog/post-card";
 import { EndCardCTA } from "@/components/blog/end-card-cta";
+import { WaveDivider } from "@/components/blog/wave-divider";
+import { ReadingProgressBar } from "@/components/blog/reading-progress-bar";
+import { BackToTopButton } from "@/components/blog/back-to-top-button";
 import { getMdxComponents } from "@/components/blog/mdx-components";
+import Logo from "@/assets/logo.svg";
 
 type Params = Promise<{ slug: string }>;
 
@@ -25,10 +34,26 @@ export async function generateMetadata({
   const post = getPost(slug);
   if (!post) return {};
 
+  const url = `${siteConfig.url}/blog/${post.slug}`;
+
   return {
-    title: post.title,
+    title: `${post.title} | Kokio`,
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: "article",
+      url,
+      siteName: siteConfig.name,
+      title: post.title,
+      description: post.description,
+      publishedTime: post.date.toISOString(),
+      authors: [post.author.name],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+    },
   };
 }
 
@@ -39,49 +64,124 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
   const related = getRelatedPosts(post.slug);
 
+  const { content, frontmatter } = await compileMDX<{ headings?: TocHeading[] }>({
+    source: post.content,
+    components: getMdxComponents(post.slug),
+    options: {
+      mdxOptions: {
+        remarkPlugins: [[remarkSmartypants, { dashes: "oldschool" }]],
+        rehypePlugins: [rehypeSlug, rehypeCollectH2Toc],
+      },
+    },
+  });
+  const headings = frontmatter.headings ?? [];
+  const showToc = headings.length >= 5;
+
+  const url = `${siteConfig.url}/blog/${post.slug}`;
+  const heroUrl = `${siteConfig.url}${post.ogImage ?? post.hero}`;
+  const logoUrl = `${siteConfig.url}${Logo.src}`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    image: [heroUrl],
+    datePublished: post.date.toISOString(),
+    dateModified: post.date.toISOString(),
+    author: {
+      "@type": "Person",
+      name: post.author.name,
+      ...(post.author.twitter ? { sameAs: [post.author.twitter] } : {}),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      logo: {
+        "@type": "ImageObject",
+        url: logoUrl,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+  };
+
   return (
     <main className="px-4 py-12 md:px-8 md:py-16">
-      <article className="container mx-auto flex max-w-[680px] flex-col gap-6">
-        <span className="w-fit rounded-full bg-cashmere-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cashmere-700">
-          {post.tag}
-        </span>
+      <ReadingProgressBar targetId="post-article" />
+      <BackToTopButton hideBeforeId="post-end-marker" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <article
+        id="post-article"
+        className="container mx-auto flex max-w-[52rem] flex-col"
+      >
+        <div className="mx-auto flex w-full max-w-[42rem] flex-col">
+          <span className="w-fit rounded-full bg-cashmere-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cashmere-700">
+            {post.tag}
+          </span>
 
-        <h1 className="font-heading text-3xl font-bold text-outer-space-950 md:text-4xl">
-          {post.title}
-        </h1>
+          <h1 className="mt-6 font-heading text-3xl font-bold text-outer-space-950 md:text-4xl">
+            {post.title}
+          </h1>
 
-        <p className="text-lg font-light text-esim-black-700">
-          {post.description}
-        </p>
+          <p className="mt-6 text-lg font-light text-esim-black-700">
+            {post.description}
+          </p>
 
-        <AuthorCard
-          author={post.author}
-          date={post.date}
-          readingTime={post.readingTime}
-        />
+          <div className="mt-6">
+            <AuthorCard
+              author={post.author}
+              date={post.date}
+              readingTime={post.readingTime}
+            />
+          </div>
+        </div>
 
-        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl bg-cashmere-50">
+        <div className="relative mt-6 aspect-[16/9] w-full overflow-hidden rounded-3xl bg-cashmere-50">
           <Image
             src={post.hero}
             alt=""
             fill
             className="object-cover"
-            sizes="(min-width: 680px) 680px, 100vw"
+            sizes="(min-width: 832px) 832px, 100vw"
             priority
           />
         </div>
 
-        <TLDRBox items={post.tldr} />
-
-        <div className="prose max-w-none text-[17px] leading-[1.7] text-outer-space-900 prose-headings:font-heading prose-strong:text-outer-space-950 md:text-[18px]">
-          <MDXRemote source={post.content} components={getMdxComponents(post.slug)} />
+        <div className="mt-8">
+          <TLDRBox items={post.tldr} />
         </div>
 
-        <EndCardCTA slug={post.slug} />
+        <div className="mt-10 lg:flex lg:items-start lg:justify-center lg:gap-4">
+          <div className="prose prose-headings:font-heading mx-auto lg:mx-0 lg:w-[42rem] lg:shrink-0">
+            {content}
+          </div>
+
+          {showToc ? (
+            <div className="hidden lg:sticky lg:top-24 lg:block lg:w-32 lg:shrink-0 lg:self-start">
+              <TableOfContents headings={headings} />
+            </div>
+          ) : null}
+        </div>
+
+        <div id="post-end-marker" className="mt-16">
+          <WaveDivider />
+        </div>
+
+        <div className="mt-8">
+          <EndCardCTA slug={post.slug} />
+        </div>
       </article>
 
-      {related.length > 0 ? (
-        <section className="container mx-auto mt-16 flex max-w-4xl flex-col gap-6">
+      {related.length >= 2 ? (
+        <section className="container mx-auto mt-16 flex max-w-[52rem] flex-col gap-6">
           <h2 className="font-heading text-2xl font-bold text-outer-space-950">
             Keep reading
           </h2>

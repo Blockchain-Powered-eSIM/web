@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Guides, product updates, and behind-the-scenes notes from the team building Koki'o.",
-  alternates: { canonical: "/blog" },
+  alternates: {
+    canonical: "/blog",
+    types: { "application/rss+xml": "/blog/rss.xml" },
+  },
 };
 
 export default function BlogIndexPage() {

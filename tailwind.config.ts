@@ -203,6 +203,36 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: "42rem",
+            color: "#2B3F47",
+            fontSize: "1.0625rem",
+            lineHeight: "1.7",
+            h2: { color: "#193238", marginTop: "3rem", marginBottom: "1rem" },
+            h3: { color: "#193238", marginTop: "2rem", marginBottom: "0.75rem" },
+            a: {
+              color: "#48A2AF",
+              textDecorationColor: "#AED9E0",
+              textUnderlineOffset: "3px",
+              fontWeight: "500",
+            },
+            "a:hover": { color: "#FF5D84" },
+            strong: { color: "#193238" },
+            blockquote: {
+              borderLeftColor: "#ECBE58",
+              color: "#3A4D57",
+              fontStyle: "normal",
+              backgroundColor: "#FAF3DD",
+              borderRadius: "0 0.75rem 0.75rem 0",
+              padding: "0.75rem 1.25rem",
+            },
+            "li::marker": { color: "#E28355" },
+            img: { borderRadius: "1rem" },
+          },
+        },
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
