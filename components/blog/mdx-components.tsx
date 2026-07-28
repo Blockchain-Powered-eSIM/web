@@ -8,25 +8,12 @@ function SmartLink({
   children,
   ...props
 }: AnchorHTMLAttributes<HTMLAnchorElement>) {
-  const className =
-    "font-semibold text-cashmere-600 underline underline-offset-2 hover:text-cashmere-700";
-
   if (href.startsWith("/") || href.startsWith("#")) {
-    return (
-      <Link href={href} className={className}>
-        {children}
-      </Link>
-    );
+    return <Link href={href}>{children}</Link>;
   }
 
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={className}
-      {...props}
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
       {children}
     </a>
   );
@@ -47,24 +34,12 @@ function MdxImage({ src, alt, ...props }: ImgHTMLAttributes<HTMLImageElement>) {
 
 const baseMdxComponents = {
   h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h2
-      className="mt-10 scroll-mt-24 font-heading text-2xl font-bold text-outer-space-950 md:text-3xl"
-      {...props}
-    />
+    <h2 className="scroll-mt-24" {...props} />
   ),
   h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h3
-      className="mt-8 scroll-mt-24 font-heading text-xl font-semibold text-outer-space-950 md:text-2xl"
-      {...props}
-    />
+    <h3 className="scroll-mt-24" {...props} />
   ),
   a: SmartLink,
-  blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
-    <blockquote
-      className="border-l-4 border-cashmere-300 bg-cashmere-50 px-6 py-4 italic text-outer-space-900"
-      {...props}
-    />
-  ),
   img: MdxImage,
   code: (props: React.HTMLAttributes<HTMLElement>) => (
     <code

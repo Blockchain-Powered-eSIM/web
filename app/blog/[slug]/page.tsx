@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkSmartypants from "remark-smartypants";
 
 import { getAllPosts, getPost, getRelatedPosts } from "@/lib/blog";
 import { siteConfig } from "@/config/site";
@@ -96,43 +97,59 @@ export default async function BlogPostPage({ params }: { params: Params }) {
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <article className="container mx-auto flex max-w-[680px] flex-col gap-6">
-        <span className="w-fit rounded-full bg-cashmere-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cashmere-700">
-          {post.tag}
-        </span>
+      <article className="container mx-auto flex max-w-[52rem] flex-col">
+        <div className="mx-auto flex w-full max-w-[42rem] flex-col">
+          <span className="w-fit rounded-full bg-cashmere-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cashmere-700">
+            {post.tag}
+          </span>
 
-        <h1 className="font-heading text-3xl font-bold text-outer-space-950 md:text-4xl">
-          {post.title}
-        </h1>
+          <h1 className="mt-6 font-heading text-3xl font-bold text-outer-space-950 md:text-4xl">
+            {post.title}
+          </h1>
 
-        <p className="text-lg font-light text-esim-black-700">
-          {post.description}
-        </p>
+          <p className="mt-6 text-lg font-light text-esim-black-700">
+            {post.description}
+          </p>
 
-        <AuthorCard
-          author={post.author}
-          date={post.date}
-          readingTime={post.readingTime}
-        />
+          <div className="mt-6">
+            <AuthorCard
+              author={post.author}
+              date={post.date}
+              readingTime={post.readingTime}
+            />
+          </div>
+        </div>
 
-        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl bg-cashmere-50">
+        <div className="relative mt-6 aspect-[16/9] w-full overflow-hidden rounded-3xl bg-cashmere-50">
           <Image
             src={post.hero}
             alt=""
             fill
             className="object-cover"
-            sizes="(min-width: 680px) 680px, 100vw"
+            sizes="(min-width: 832px) 832px, 100vw"
             priority
           />
         </div>
 
-        <TLDRBox items={post.tldr} />
-
-        <div className="prose max-w-none text-[17px] leading-[1.7] text-outer-space-900 prose-headings:font-heading prose-strong:text-outer-space-950 md:text-[18px]">
-          <MDXRemote source={post.content} components={getMdxComponents(post.slug)} />
+        <div className="mt-8">
+          <TLDRBox items={post.tldr} />
         </div>
 
-        <EndCardCTA slug={post.slug} />
+        <div className="prose prose-headings:font-heading mx-auto mt-10">
+          <MDXRemote
+            source={post.content}
+            components={getMdxComponents(post.slug)}
+            options={{
+              mdxOptions: {
+                remarkPlugins: [[remarkSmartypants, { dashes: "oldschool" }]],
+              },
+            }}
+          />
+        </div>
+
+        <div className="mt-16">
+          <EndCardCTA slug={post.slug} />
+        </div>
       </article>
 
       {related.length > 0 ? (

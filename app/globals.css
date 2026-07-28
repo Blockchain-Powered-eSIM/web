@@ -291,4 +291,8 @@
   h6 {
     @apply font-heading;
   }
+
+  ::selection {
+    background: #f3da95;
+  }
 }
