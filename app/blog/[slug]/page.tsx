@@ -4,11 +4,13 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 import { getAllPosts, getPost, getRelatedPosts } from "@/lib/blog";
+import { siteConfig } from "@/config/site";
 import { AuthorCard } from "@/components/blog/author-card";
 import { TLDRBox } from "@/components/blog/tldr-box";
 import { PostCard } from "@/components/blog/post-card";
 import { EndCardCTA } from "@/components/blog/end-card-cta";
 import { getMdxComponents } from "@/components/blog/mdx-components";
+import Logo from "@/assets/logo.svg";
 
 type Params = Promise<{ slug: string }>;
 
@@ -25,10 +27,26 @@ export async function generateMetadata({
   const post = getPost(slug);
   if (!post) return {};
 
+  const url = `${siteConfig.url}/blog/${post.slug}`;
+
   return {
-    title: post.title,
+    title: `${post.title} | Kokio`,
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: "article",
+      url,
+      siteName: siteConfig.name,
+      title: post.title,
+      description: post.description,
+      publishedTime: post.date.toISOString(),
+      authors: [post.author.name],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+    },
   };
 }
 
@@ -39,8 +57,45 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
   const related = getRelatedPosts(post.slug);
 
+  const url = `${siteConfig.url}/blog/${post.slug}`;
+  const heroUrl = `${siteConfig.url}${post.ogImage ?? post.hero}`;
+  const logoUrl = `${siteConfig.url}${Logo.src}`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    image: [heroUrl],
+    datePublished: post.date.toISOString(),
+    dateModified: post.date.toISOString(),
+    author: {
+      "@type": "Person",
+      name: post.author.name,
+      ...(post.author.twitter ? { sameAs: [post.author.twitter] } : {}),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      logo: {
+        "@type": "ImageObject",
+        url: logoUrl,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+  };
+
   return (
     <main className="px-4 py-12 md:px-8 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <article className="container mx-auto flex max-w-[680px] flex-col gap-6">
         <span className="w-fit rounded-full bg-cashmere-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cashmere-700">
           {post.tag}

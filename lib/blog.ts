@@ -32,6 +32,7 @@ export interface Post {
   author: Author;
   tag: BlogTag;
   hero: string;
+  ogImage?: string;
   tldr: string[];
   draft: boolean;
   content: string;
@@ -53,6 +54,7 @@ const frontmatterSchema = z.object({
   author: z.string().min(1),
   tag: z.enum(BLOG_TAGS),
   hero: z.string().min(1),
+  ogImage: z.string().min(1).optional(),
   tldr: z.array(z.string().min(1)).min(1),
   draft: z.boolean().default(false),
 });
@@ -132,6 +134,7 @@ function loadPosts(): Post[] {
       author,
       tag: frontmatter.tag,
       hero: frontmatter.hero,
+      ogImage: frontmatter.ogImage,
       tldr: frontmatter.tldr,
       draft: frontmatter.draft,
       content,
