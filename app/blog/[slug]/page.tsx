@@ -160,15 +160,15 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         </div>
 
         <div className="mt-10 lg:flex lg:items-start lg:justify-center lg:gap-4">
-          <div className="prose prose-headings:font-heading mx-auto lg:mx-0 lg:w-[42rem] lg:shrink-0">
-            {content}
-          </div>
-
           {showToc ? (
             <div className="hidden lg:sticky lg:top-24 lg:block lg:w-32 lg:shrink-0 lg:self-start">
               <TableOfContents headings={headings} />
             </div>
           ) : null}
+
+          <div className="prose prose-headings:font-heading mx-auto lg:mx-0 lg:w-[42rem] lg:shrink-0">
+            {content}
+          </div>
         </div>
 
         <div id="post-end-marker" className="mt-16">
