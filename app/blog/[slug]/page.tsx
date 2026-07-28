@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { compileMDX } from "next-mdx-remote/rsc";
 import remarkSmartypants from "remark-smartypants";
+import rehypeSlug from "rehype-slug";
 
 import { getAllPosts, getPost, getRelatedPosts } from "@/lib/blog";
+import { rehypeCollectH2Toc, type TocHeading } from "@/lib/mdx-toc";
+import { TableOfContents } from "@/components/blog/table-of-contents";
 import { siteConfig } from "@/config/site";
 import { AuthorCard } from "@/components/blog/author-card";
 import { TLDRBox } from "@/components/blog/tldr-box";
@@ -12,6 +15,7 @@ import { PostCard } from "@/components/blog/post-card";
 import { EndCardCTA } from "@/components/blog/end-card-cta";
 import { WaveDivider } from "@/components/blog/wave-divider";
 import { ReadingProgressBar } from "@/components/blog/reading-progress-bar";
+import { BackToTopButton } from "@/components/blog/back-to-top-button";
 import { getMdxComponents } from "@/components/blog/mdx-components";
 import Logo from "@/assets/logo.svg";
 
@@ -60,6 +64,19 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
   const related = getRelatedPosts(post.slug);
 
+  const { content, frontmatter } = await compileMDX<{ headings?: TocHeading[] }>({
+    source: post.content,
+    components: getMdxComponents(post.slug),
+    options: {
+      mdxOptions: {
+        remarkPlugins: [[remarkSmartypants, { dashes: "oldschool" }]],
+        rehypePlugins: [rehypeSlug, rehypeCollectH2Toc],
+      },
+    },
+  });
+  const headings = frontmatter.headings ?? [];
+  const showToc = headings.length >= 5;
+
   const url = `${siteConfig.url}/blog/${post.slug}`;
   const heroUrl = `${siteConfig.url}${post.ogImage ?? post.hero}`;
   const logoUrl = `${siteConfig.url}${Logo.src}`;
@@ -94,6 +111,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
   return (
     <main className="px-4 py-12 md:px-8 md:py-16">
       <ReadingProgressBar targetId="post-article" />
+      <BackToTopButton hideBeforeId="post-end-marker" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -141,19 +159,19 @@ export default async function BlogPostPage({ params }: { params: Params }) {
           <TLDRBox items={post.tldr} />
         </div>
 
-        <div className="prose prose-headings:font-heading mx-auto mt-10">
-          <MDXRemote
-            source={post.content}
-            components={getMdxComponents(post.slug)}
-            options={{
-              mdxOptions: {
-                remarkPlugins: [[remarkSmartypants, { dashes: "oldschool" }]],
-              },
-            }}
-          />
+        <div className="mt-10 lg:flex lg:items-start lg:justify-center lg:gap-4">
+          <div className="prose prose-headings:font-heading mx-auto lg:mx-0 lg:w-[42rem] lg:shrink-0">
+            {content}
+          </div>
+
+          {showToc ? (
+            <div className="hidden lg:sticky lg:top-24 lg:block lg:w-32 lg:shrink-0 lg:self-start">
+              <TableOfContents headings={headings} />
+            </div>
+          ) : null}
         </div>
 
-        <div className="mt-16">
+        <div id="post-end-marker" className="mt-16">
           <WaveDivider />
         </div>
 
@@ -162,8 +180,8 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         </div>
       </article>
 
-      {related.length > 0 ? (
-        <section className="container mx-auto mt-16 flex max-w-4xl flex-col gap-6">
+      {related.length >= 2 ? (
+        <section className="container mx-auto mt-16 flex max-w-[52rem] flex-col gap-6">
           <h2 className="font-heading text-2xl font-bold text-outer-space-950">
             Keep reading
           </h2>
