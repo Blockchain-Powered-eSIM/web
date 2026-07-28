@@ -8,7 +8,7 @@ import BeachFun from "@/assets/seb/Beach Fun.svg";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Guides, product updates, and behind-the-scenes notes from the team building Koki'o.",
+    "Everything about eSIMs, travel connectivity, and what we're building behind the scenes.",
   alternates: {
     canonical: "/blog",
     types: { "application/rss+xml": "/blog/rss.xml" },
