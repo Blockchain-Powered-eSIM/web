@@ -20,6 +20,9 @@ export const CTA_MODE: "prelaunch" | "live" = "prelaunch";
 // Single source for the Twitter/X link - matches the footer social link.
 export const TWITTER_URL = "https://x.com/kokiodotapp";
 
+// Twitter/X handle for the twitter:site card attribution.
+export const TWITTER_HANDLE = "@kokiodotapp";
+
 // Placeholder destination for "live" mode until real App Store / Play Store links exist.
 export const APP_URL = "https://kokio.app";
 
