@@ -17,8 +17,8 @@ export type BlogTag = (typeof BLOG_TAGS)[number];
 // Flip to "live" once the app is out; every CTA reads this, no component edits needed.
 export const CTA_MODE: "prelaunch" | "live" = "prelaunch";
 
-// Single source for the early-access Telegram link - matches the hero/footer CTA.
-export const TELEGRAM_URL = "https://t.me/+b44BXiy8d5k4M2Q1";
+// Single source for the Twitter/X link - matches the footer social link.
+export const TWITTER_URL = "https://x.com/kokiodotapp";
 
 // Placeholder destination for "live" mode until real App Store / Play Store links exist.
 export const APP_URL = "https://kokio.app";

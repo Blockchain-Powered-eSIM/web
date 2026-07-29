@@ -1,13 +1,13 @@
-import { APP_URL, TELEGRAM_URL } from "@/config/site";
+import { APP_URL, TWITTER_URL } from "@/config/site";
 
 export const CTA_CONTENT = {
   prelaunch: {
-    heading: "Get early access",
-    body: "Join the Telegram group for early access",
-    ctaLabel: "Join the Telegram group",
-    href: TELEGRAM_URL,
-    inlineText: "Want early access?",
-    inlineLabel: "Join the Telegram group",
+    heading: "Follow along on X",
+    body: "Stay updated about Koki'o and learn about digital well-being and wellness :)",
+    ctaLabel: "Follow on X",
+    href: TWITTER_URL,
+    inlineText: "Want to learn more?",
+    inlineLabel: "Follow us on X",
   },
   live: {
     heading: "Try Koki'o",
