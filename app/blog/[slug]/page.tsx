@@ -8,7 +8,7 @@ import rehypeSlug from "rehype-slug";
 import { getAllPosts, getPost, getRelatedPosts } from "@/lib/blog";
 import { rehypeCollectH2Toc, type TocHeading } from "@/lib/mdx-toc";
 import { TableOfContents } from "@/components/blog/table-of-contents";
-import { siteConfig } from "@/config/site";
+import { siteConfig, TWITTER_HANDLE } from "@/config/site";
 import { AuthorCard } from "@/components/blog/author-card";
 import { TLDRBox } from "@/components/blog/tldr-box";
 import { PostCard } from "@/components/blog/post-card";
@@ -51,6 +51,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
+      site: TWITTER_HANDLE,
       title: post.title,
       description: post.description,
     },
