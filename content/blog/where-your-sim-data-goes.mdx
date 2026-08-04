@@ -1,6 +1,6 @@
 ---
-title: "What Happens to Your Data When You Buy a Travel SIM or an eSIM?"
-description: "Every travel SIM purchase starts with your ID and ends in a database you'll never see. Here's the journey your identity takes that you usually find you when there's a breach affecting millions of users."
+title: "What happens to your data when you buy a travel SIM or an eSIM?"
+description: "Have you ever felt like someone is trying to impersonate you while you're travelling? Received an OTP for a signup that you didn't initiated? Why you should care about your data & Why you usually find you when there's a breach affecting millions of users."
 date: "2026-08-03"
 author: "arpit"
 tag: "Privacy & Security"
@@ -13,15 +13,17 @@ tldr:
 draft: false
 ---
 
-Last week we covered how eSIMs work — the mechanics of staying connected abroad. This week, the part nobody puts in the setup guide: what you actually pay with.
+Last week we covered how everything about eSIMs. This week, the part nobody puts in the setup guide: **The hidden cost of freedom of connectivity**
 
-Because whether it's a kiosk in an airport arrivals hall or a slick eSIM app, most connectivity purchases start the same way. Name. Email. Sometimes a home address. Often a photo of your passport. You type it in, tap agree, and never think about it again.
+Because whether it's a kiosk or a slick eSIM app, most connectivity purchases start the same way. Name. Email. Sometimes a home address. Often a photo of your passport. You type it in, tap agree, and you use the service without worrying about the data you shared!
 
-Here's where it actually goes.
+Here's what all your data goes through and why you should be concerned about it:
 
 ## KYC (Know-Your-Customer)
 
-Telecom is one of the most identity-tied industries on the planet. Most countries legally require carriers to verify who's behind every subscription — rules usually called KYC, "Know Your Customer." They exist for reasonable reasons: fraud prevention, spam control, law enforcement access, anti-scam.
+Telecom is one of the most identity-tied industries on the planet.
+
+Most countries legally require carriers to verify who's behind every subscription — rules usually called KYC, "Know Your Customer." They exist for reasonable reasons: fraud prevention, spam control, law enforcement access, anti-scam.
 
 **For travellers, that produces two problems immediately.**
 
@@ -30,11 +32,15 @@ The first is friction. Some countries ask for:
 - passport and visa alongside it,
 - personal informations that the local authentication method requires for either eKYC, OTP or biometric, all common and different depending on the carrier. In a handful of countries, KYC is effectively impossible for visitors from certain nationalities altogether.
 
-**The second problem is quieter. It's the rest of this post.**
+**The second problem is quieter. Lock in**
 
 ## Where your data actually goes
 
-Your details don't disappear once you're verified. They're stored — by the carrier, and usually by a chain of partners behind it: the reseller who sold you the plan, the payment processor, a marketing vendor, an analytics provider. Each one holds a copy. Each copy is a place your identity now lives, governed by respective privacy policy and secured by global standards.
+Whenever you sign-up , there's a new row with your name and id in your provider's(carrier) database along with all other info that you shared to the provider and mapped with all your activity.
+
+And not just by your carrier but also by a chain of partners behind it: the reseller who sold you the plan, the payment processor, a marketing vendor, an analytics provider.
+
+Each one holds a copy. Each copy is a place your identity now lives, governed by respective privacy policy and secured by global standards.
 
 It’s not practical to get a hold of visibility into any of this. There's no dashboard showing you which companies currently hold your passport photo. There's no unified "who has my data" query you can run. After a few years of travel, the honest answer is: you cannot know.
 
@@ -46,9 +52,13 @@ Data only eSIMs exist precisely to provide you connectivity on-the-go as quick a
 
 Databases get breached constantly, and telecom is one of the most-targeted sectors in the world, for a simple reason: carrier databases are dense with exactly what criminals want, verified names attached to verified numbers attached to real addresses.
 
-The example worth sitting with: in March 2024, AT&T disclosed a breach affecting roughly 8.9 million customers. The stolen data had reportedly been circulating on the dark web since 2021 — three years before anyone was told. A few months later, a second incident exposed call and text metadata for nearly all of AT&T's wireless customers. Millions of people carried on for years not knowing their information was already out there. That's the part that should bother you more than the breach itself: **you don't find out. Not for years. Sometimes not at all.**
+In March 2024, AT&T disclosed a breach affecting roughly 8.9 million customers. The stolen data had reportedly been circulating on the dark web since 2021, three years before anyone was told.
 
-And AT&T is a giant with well-resourced security. Think about the chain from the last section — the reseller, the regional partner, the marketing vendor. Every link inherits your data. Not every link inherits enterprise-grade security. How well any of them actually protects it depends entirely on that one company's own standards.
+A few months later, a second incident exposed call and text metadata for nearly all of AT&T's wireless customers. Millions of people carried on for years not knowing their information was already out there. That's the bothering part than the breach itself: **you don't find out. Not for years. Sometimes not at all.**
+
+And AT&T is a giant with well-resourced security. Think about the chain from the last section — the reseller, the regional partner, the marketing vendor.
+
+Every link inherits your data. Not every link inherits enterprise-grade security. How well any of them actually protects it depends entirely on that one company's own standards.
 
 <img src="/blog/inline/where-your-sim-data-goes/esim-privacy.png" alt="Should you be worried about eSIM privacy?" style={{ width: "80%", margin: "0 auto" }} />
 
@@ -56,9 +66,14 @@ And AT&T is a giant with well-resourced security. Think about the chain from the
 
 A breach doesn't stay abstract for long. It's the raw material for the part that actually costs you money.
 
-> Picture it from the other side. You're not sending an obviously fake email — you know real names, you know which carrier the target uses, and you may know where they've travelled and what they've bought.
+> Picture it like you are the scammer. 
+> - You're not sending an obviously fake email as you know real names,
+> - you know which carrier the target uses,
+> - And you may know where they've travelled and what they've bought.
 
-If you've ever received a one-time passcode for a login you didn't start, that's a signal worth taking seriously: your details are circulating somewhere, whether from a breach or a data broker. Scammers build around real behaviour, not blind guesses — a genuine-sounding text about a genuine trip is far more convincing than a generic phishing email, and a jetlagged traveller checking their phone at 2 a.m. is exactly who these messages are built for.
+If you've ever received a one-time passcode for a login you didn't start, that's a signal worth taking seriously: your details are circulating somewhere, whether from a breach or a data broker.
+
+Scammers build around real behaviour, not blind guesses — a genuine-sounding text about a genuine trip is far more convincing than a generic phishing email, and a jetlagged traveller checking their phone at 2 a.m. is exactly who these messages are built for.
 
 <HeadsUp>
 The breach isn't the crime — it's the reconnaissance. If you get an OTP or login alert you didn't trigger, don't ignore it: your information is already circulating, and it's worth tightening up two-factor authentication and account recovery settings before it's used against you.
