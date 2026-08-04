@@ -1,0 +1,98 @@
+---
+title: "What happens to your data when you buy a travel SIM or an eSIM?"
+description: "Have you ever felt like someone is trying to impersonate you while you're travelling? Received an OTP for a signup that you didn't initiated? Why you should care about your data & Why you usually find you when there's a breach affecting millions of users."
+date: "2026-08-03"
+author: "arpit"
+tag: "Privacy & Security"
+hero: "/blog/heroes/where-your-sim-data-goes.png"
+tldr:
+  - "Buying a SIM or eSIM abroad almost always means handing over KYC details first — passport, name, sometimes a photo."
+  - "That data isn't held by one company. It's copied across carriers, resellers, and payment processors, with no dashboard showing who still has it."
+  - "Telecom is one of the most-breached industries, and breaches are often disclosed a year after they happen."
+  - "A data-only eSIM doesn't technically need to know who you are."
+draft: false
+---
+
+Last week we covered how everything about eSIMs. This week, the part nobody puts in the setup guide: **The hidden cost of freedom of connectivity**
+
+Because whether it's a kiosk or a slick eSIM app, most connectivity purchases start the same way. Name. Email. Sometimes a home address. Often a photo of your passport. You type it in, tap agree, and you use the service without worrying about the data you shared!
+
+Here's what all your data goes through and why you should be concerned about it:
+
+## KYC (Know-Your-Customer)
+
+Telecom is one of the most identity-tied industries on the planet.
+
+Most countries legally require carriers to verify who's behind every subscription — rules usually called KYC, "Know Your Customer." They exist for reasonable reasons: fraud prevention, spam control, law enforcement access, anti-scam.
+
+**For travellers, that produces two problems immediately.**
+
+The first is friction. Some countries ask for:
+- a local ID that you, a visitor, don't have by definition.
+- passport and visa alongside it,
+- personal informations that the local authentication method requires for either eKYC, OTP or biometric, all common and different depending on the carrier. In a handful of countries, KYC is effectively impossible for visitors from certain nationalities altogether.
+
+**The second problem is quieter. Lock in**
+
+## Where your data actually goes
+
+Whenever you sign-up , there's a new row with your name and id in your provider's(carrier) database along with all other info that you shared to the provider and mapped with all your activity.
+
+And not just by your carrier but also by a chain of partners behind it: the reseller who sold you the plan, the payment processor, a marketing vendor, an analytics provider.
+
+Each one holds a copy. Each copy is a place your identity now lives, governed by respective privacy policy and secured by global standards.
+
+It’s not practical to get a hold of visibility into any of this. There's no dashboard showing you which companies currently hold your passport photo. There's no unified "who has my data" query you can run. After a few years of travel, the honest answer is: you cannot know.
+
+<Tip>
+Data only eSIMs exist precisely to provide you connectivity on-the-go as quick as possible. If you don't need a local phone number, a data-only plan is one less place your identity has to live.
+</Tip>
+
+## Breaches aren't rare
+
+Databases get breached constantly, and telecom is one of the most-targeted sectors in the world, for a simple reason: carrier databases are dense with exactly what criminals want, verified names attached to verified numbers attached to real addresses.
+
+In March 2024, AT&T disclosed a breach affecting roughly 8.9 million customers. The stolen data had reportedly been circulating on the dark web since 2021, three years before anyone was told.
+
+A few months later, a second incident exposed call and text metadata for nearly all of AT&T's wireless customers. Millions of people carried on for years not knowing their information was already out there. That's the bothering part than the breach itself: **you don't find out. Not for years. Sometimes not at all.**
+
+And AT&T is a giant with well-resourced security. Think about the chain from the last section — the reseller, the regional partner, the marketing vendor.
+
+Every link inherits your data. Not every link inherits enterprise-grade security. How well any of them actually protects it depends entirely on that one company's own standards.
+
+<img src="/blog/inline/where-your-sim-data-goes/esim-privacy.png" alt="Should you be worried about eSIM privacy?" style={{ width: "80%", margin: "0 auto" }} />
+
+## How a breach turns into a scam
+
+A breach doesn't stay abstract for long. It's the raw material for the part that actually costs you money.
+
+> Picture it like you are the scammer. 
+> - You're not sending an obviously fake email as you know real names,
+> - you know which carrier the target uses,
+> - And you may know where they've travelled and what they've bought.
+
+If you've ever received a one-time passcode for a login you didn't start, that's a signal worth taking seriously: your details are circulating somewhere, whether from a breach or a data broker.
+
+Scammers build around real behaviour, not blind guesses — a genuine-sounding text about a genuine trip is far more convincing than a generic phishing email, and a jetlagged traveller checking their phone at 2 a.m. is exactly who these messages are built for.
+
+<HeadsUp>
+The breach isn't the crime — it's the reconnaissance. If you get an OTP or login alert you didn't trigger, don't ignore it: your information is already circulating, and it's worth tightening up two-factor authentication and account recovery settings before it's used against you.
+</HeadsUp>
+
+## The actual cost of staying connected
+
+The roaming fee or the plan price is the visible cost. The invisible line item is your identity, sitting in an unknown number of databases indefinitely, behind whatever KYC wall you cleared to get there.
+
+That's what "freedom of connectivity" looks like today: go anywhere, connect anywhere, as long as you keep identifying yourself and trusting every company in the chain. It isn't free. It's just billed in a currency you don't see!
+
+## Does it have to work this way?
+
+Here's the actual question: what does a SIM, or an eSIM, technically need to know about you?
+
+If you want a phone number you can make & receive calls and SMS, KYC is a must — scam and fraud prevention on a public number is a legitimate problem. But for a data-only eSIM, go back to last week's post: a SIM's one job is proving to a network that *this device* is allowed to use data that's already been paid for.
+
+Notice what's missing from that sentence. Your name. Your email. Your address. Your travel route. The network needs to authenticate a paid, authorised device — not a person. Identity collection is bolted on by legacy design and market habit, not by anything the technology strictly requires.
+
+Which means, in principle, connectivity without identity is possible: you pay, your device is authorised, and no database anywhere gains a row with your name in it. You can't breach a database that doesn't exist.
+
+That's not just a thought experiment. It's the problem we started Koki'o to solve — more on that soon.
