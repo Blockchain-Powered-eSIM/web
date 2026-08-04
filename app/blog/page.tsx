@@ -11,7 +11,11 @@ export const metadata: Metadata = {
     "Everything about eSIMs, travel connectivity, and what we're building behind the scenes.",
   alternates: {
     canonical: "/blog",
-    types: { "application/rss+xml": "/blog/rss.xml" },
+    types: {
+      "application/rss+xml": [
+        { url: "/blog/rss.xml", title: "Kokio Blog" },
+      ],
+    },
   },
 };
 
