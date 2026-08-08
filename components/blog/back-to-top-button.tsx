@@ -38,9 +38,12 @@ export function BackToTopButton({ hideBeforeId }: { hideBeforeId: string }) {
 
   function handleClick() {
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
+      "(prefers-reduced-motion: reduce)"
     ).matches;
-    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "instant" : "smooth" });
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? "instant" : "smooth",
+    });
   }
 
   return (

@@ -6,7 +6,7 @@ export const OG_IMAGE_SIZE = { width: 1200, height: 630 };
 export const OG_IMAGE_CONTENT_TYPE = "image/png";
 
 const anybodyBold = fs.readFileSync(
-  path.join(process.cwd(), "assets/fonts/Anybody-Bold.ttf"),
+  path.join(process.cwd(), "assets/fonts/Anybody-Bold.ttf")
 );
 
 /** Copied from assets/Kokio - Logo.svg (viewBox 0 0 207 48) so satori can render it inline. */
@@ -43,88 +43,86 @@ export function renderOgImage({
   title: string;
 }) {
   return new ImageResponse(
-    (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "80px",
-          backgroundColor: "#050505",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <svg width="90" height="21" viewBox="0 0 207 48">
-            {LOGO_PATHS.map((p) => (
-              <path
-                key={p.fill}
-                d={p.d}
-                fill={p.fill}
-                fillRule={p.fillRule}
-                clipRule={p.clipRule}
-              />
-            ))}
-          </svg>
-          <span
-            style={{
-              display: "flex",
-              fontFamily: "Anybody",
-              fontSize: 28,
-              fontWeight: 700,
-              letterSpacing: 4,
-              color: "#f5f5f5",
-              textTransform: "uppercase",
-            }}
-          >
-            Koki&apos;o
-          </span>
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          <span
-            style={{
-              display: "flex",
-              fontFamily: "Anybody",
-              fontSize: 24,
-              fontWeight: 700,
-              color: "#dc6232",
-              textTransform: "uppercase",
-              letterSpacing: 2,
-            }}
-          >
-            {eyebrow}
-          </span>
-          <span
-            style={{
-              display: "flex",
-              fontFamily: "Anybody",
-              fontSize: 60,
-              fontWeight: 700,
-              lineHeight: 1.15,
-              color: "#f5f5f5",
-              maxWidth: 1000,
-            }}
-          >
-            {title}
-          </span>
-        </div>
-
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        padding: "80px",
+        backgroundColor: "#050505",
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+        <svg width="90" height="21" viewBox="0 0 207 48">
+          {LOGO_PATHS.map((p) => (
+            <path
+              key={p.fill}
+              d={p.d}
+              fill={p.fill}
+              fillRule={p.fillRule}
+              clipRule={p.clipRule}
+            />
+          ))}
+        </svg>
         <span
           style={{
             display: "flex",
             fontFamily: "Anybody",
             fontSize: 28,
             fontWeight: 700,
+            letterSpacing: 4,
             color: "#f5f5f5",
-            opacity: 0.7,
+            textTransform: "uppercase",
           }}
         >
-          kokio.app
+          Koki&apos;o
         </span>
       </div>
-    ),
+
+      <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+        <span
+          style={{
+            display: "flex",
+            fontFamily: "Anybody",
+            fontSize: 24,
+            fontWeight: 700,
+            color: "#dc6232",
+            textTransform: "uppercase",
+            letterSpacing: 2,
+          }}
+        >
+          {eyebrow}
+        </span>
+        <span
+          style={{
+            display: "flex",
+            fontFamily: "Anybody",
+            fontSize: 60,
+            fontWeight: 700,
+            lineHeight: 1.15,
+            color: "#f5f5f5",
+            maxWidth: 1000,
+          }}
+        >
+          {title}
+        </span>
+      </div>
+
+      <span
+        style={{
+          display: "flex",
+          fontFamily: "Anybody",
+          fontSize: 28,
+          fontWeight: 700,
+          color: "#f5f5f5",
+          opacity: 0.7,
+        }}
+      >
+        kokio.app
+      </span>
+    </div>,
     {
       ...OG_IMAGE_SIZE,
       fonts: [
@@ -135,6 +133,6 @@ export function renderOgImage({
           style: "normal",
         },
       ],
-    },
+    }
   );
 }

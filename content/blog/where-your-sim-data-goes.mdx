@@ -28,6 +28,7 @@ Most countries legally require carriers to verify who's behind every subscriptio
 **For travellers, that produces two problems immediately.**
 
 The first is friction. Some countries ask for:
+
 - a local ID that you, a visitor, don't have by definition.
 - passport and visa alongside it,
 - personal informations that the local authentication method requires for either eKYC, OTP or biometric, all common and different depending on the carrier. In a handful of countries, KYC is effectively impossible for visitors from certain nationalities altogether.
@@ -45,7 +46,9 @@ Each one holds a copy. Each copy is a place your identity now lives, governed by
 It’s not practical to get a hold of visibility into any of this. There's no dashboard showing you which companies currently hold your passport photo. There's no unified "who has my data" query you can run. After a few years of travel, the honest answer is: you cannot know.
 
 <Tip>
-Data only eSIMs exist precisely to provide you connectivity on-the-go as quick as possible. If you don't need a local phone number, a data-only plan is one less place your identity has to live.
+  Data only eSIMs exist precisely to provide you connectivity on-the-go as quick
+  as possible. If you don't need a local phone number, a data-only plan is one
+  less place your identity has to live.
 </Tip>
 
 ## Breaches aren't rare
@@ -60,13 +63,18 @@ And AT&T is a giant with well-resourced security. Think about the chain from the
 
 Every link inherits your data. Not every link inherits enterprise-grade security. How well any of them actually protects it depends entirely on that one company's own standards.
 
-<img src="/blog/inline/where-your-sim-data-goes/esim-privacy.png" alt="Should you be worried about eSIM privacy?" style={{ width: "80%", margin: "0 auto" }} />
+<img
+  src="/blog/inline/where-your-sim-data-goes/esim-privacy.png"
+  alt="Should you be worried about eSIM privacy?"
+  style={{ width: "80%", margin: "0 auto" }}
+/>
 
 ## How a breach turns into a scam
 
 A breach doesn't stay abstract for long. It's the raw material for the part that actually costs you money.
 
-> Picture it like you are the scammer. 
+> Picture it like you are the scammer.
+>
 > - You're not sending an obviously fake email as you know real names,
 > - you know which carrier the target uses,
 > - And you may know where they've travelled and what they've bought.
@@ -76,7 +84,10 @@ If you've ever received a one-time passcode for a login you didn't start, that's
 Scammers build around real behaviour, not blind guesses — a genuine-sounding text about a genuine trip is far more convincing than a generic phishing email, and a jetlagged traveller checking their phone at 2 a.m. is exactly who these messages are built for.
 
 <HeadsUp>
-The breach isn't the crime — it's the reconnaissance. If you get an OTP or login alert you didn't trigger, don't ignore it: your information is already circulating, and it's worth tightening up two-factor authentication and account recovery settings before it's used against you.
+  The breach isn't the crime — it's the reconnaissance. If you get an OTP or
+  login alert you didn't trigger, don't ignore it: your information is already
+  circulating, and it's worth tightening up two-factor authentication and
+  account recovery settings before it's used against you.
 </HeadsUp>
 
 ## The actual cost of staying connected
@@ -89,7 +100,7 @@ That's what "freedom of connectivity" looks like today: go anywhere, connect any
 
 Here's the actual question: what does a SIM, or an eSIM, technically need to know about you?
 
-If you want a phone number you can make & receive calls and SMS, KYC is a must — scam and fraud prevention on a public number is a legitimate problem. But for a data-only eSIM, go back to last week's post: a SIM's one job is proving to a network that *this device* is allowed to use data that's already been paid for.
+If you want a phone number you can make & receive calls and SMS, KYC is a must — scam and fraud prevention on a public number is a legitimate problem. But for a data-only eSIM, go back to last week's post: a SIM's one job is proving to a network that _this device_ is allowed to use data that's already been paid for.
 
 Notice what's missing from that sentence. Your name. Your email. Your address. Your travel route. The network needs to authenticate a paid, authorised device — not a person. Identity collection is bolted on by legacy design and market habit, not by anything the technology strictly requires.
 
