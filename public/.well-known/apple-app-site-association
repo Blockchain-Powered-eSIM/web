@@ -3,17 +3,21 @@
     "details": [
       {
         "appIDs": [
-          "XSQ2GAB4RW.app.kokio.mobile"
+          "4H5GAVTM93.app.kokio.mobile"
         ],
         "components": [
-          {
-            "/": "*",
-            "comment": "Matches all routes."
+          { 
+            "/": "/callback*",
+            "comment": "OAuth authorization-code redirect"
+          },
+          { 
+            "/": "/moonpay-return*",
+            "comment": "MoonPay/Helio crypto payment return"
           }
         ]
       },
       {
-        "appID": "XSQ2GAB4RW.app.kokio.mobile",
+        "appID": "4H5GAVTM93.app.kokio.mobile",
         "paths": [
           "*"
         ]
@@ -22,7 +26,7 @@
   },
   "webcredentials": {
     "apps": [
-      "XSQ2GAB4RW.app.kokio.mobile"
+      "4H5GAVTM93.app.kokio.mobile"
     ]
   }
 }
