@@ -65,7 +65,9 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
   const related = getRelatedPosts(post.slug);
 
-  const { content, frontmatter } = await compileMDX<{ headings?: TocHeading[] }>({
+  const { content, frontmatter } = await compileMDX<{
+    headings?: TocHeading[];
+  }>({
     source: post.content,
     components: getMdxComponents(post.slug),
     options: {
@@ -167,7 +169,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             </div>
           ) : null}
 
-          <div className="prose prose-headings:font-heading mx-auto lg:mx-0 lg:w-[42rem] lg:shrink-0">
+          <div className="prose mx-auto prose-headings:font-heading lg:mx-0 lg:w-[42rem] lg:shrink-0">
             {content}
           </div>
         </div>

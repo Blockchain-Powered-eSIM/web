@@ -20,11 +20,11 @@ export function TableOfContents({ headings }: { headings: TocHeading[] }) {
           const intersecting = entries.filter((entry) => entry.isIntersecting);
           if (intersecting.length === 0) return prevId;
           return intersecting.sort(
-            (a, b) => a.boundingClientRect.top - b.boundingClientRect.top,
+            (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
           )[0].target.id;
         });
       },
-      { rootMargin: "-96px 0px -70% 0px", threshold: 0 },
+      { rootMargin: "-96px 0px -70% 0px", threshold: 0 }
     );
 
     elements.forEach((el) => observer.observe(el));

@@ -12,9 +12,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/blog",
     types: {
-      "application/rss+xml": [
-        { url: "/blog/rss.xml", title: "Kokio Blog" },
-      ],
+      "application/rss+xml": [{ url: "/blog/rss.xml", title: "Kokio Blog" }],
     },
   },
 };
