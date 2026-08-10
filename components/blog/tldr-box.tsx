@@ -9,7 +9,10 @@ export function TLDRBox({ items }: { items: string[] }) {
       </p>
       <ul className="mt-3 flex list-none flex-col gap-2">
         {items.map((item, i) => (
-          <li key={i} className="flex gap-2 text-sm text-outer-space-900 md:text-base">
+          <li
+            key={i}
+            className="flex gap-2 text-sm text-outer-space-900 md:text-base"
+          >
             <span aria-hidden="true" className="text-[#E28355]">
               •
             </span>

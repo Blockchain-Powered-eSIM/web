@@ -211,7 +211,11 @@ const config = {
             fontSize: "1.0625rem",
             lineHeight: "1.7",
             h2: { color: "#193238", marginTop: "3rem", marginBottom: "1rem" },
-            h3: { color: "#193238", marginTop: "2rem", marginBottom: "0.75rem" },
+            h3: {
+              color: "#193238",
+              marginTop: "2rem",
+              marginBottom: "0.75rem",
+            },
             a: {
               color: "#48A2AF",
               textDecorationColor: "#AED9E0",

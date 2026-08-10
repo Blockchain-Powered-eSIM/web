@@ -38,7 +38,12 @@ export function AuthorCard({
                 aria-label={`${author.name} on X`}
                 className="text-esim-black-400 hover:text-cashmere-600"
               >
-                <Image src={Twitter} alt="" aria-hidden="true" className="h-3.5 w-3.5" />
+                <Image
+                  src={Twitter}
+                  alt=""
+                  aria-hidden="true"
+                  className="h-3.5 w-3.5"
+                />
               </a>
             ) : null}
           </div>

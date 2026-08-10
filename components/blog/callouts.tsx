@@ -8,7 +8,7 @@ export function Tip({ children }: { children: ReactNode }) {
         <Sun aria-hidden="true" className="h-4 w-4" />
         Tip
       </p>
-      <div className="mt-2 text-sm leading-relaxed text-outer-space-900 md:text-base [&>p]:m-0 [&>p+p]:mt-3">
+      <div className="mt-2 text-sm leading-relaxed text-outer-space-900 md:text-base [&>p+p]:mt-3 [&>p]:m-0">
         {children}
       </div>
     </div>
@@ -22,7 +22,7 @@ export function HeadsUp({ children }: { children: ReactNode }) {
         <TriangleAlert aria-hidden="true" className="h-4 w-4" />
         Heads up
       </p>
-      <div className="mt-2 text-sm leading-relaxed text-outer-space-900 md:text-base [&>p]:m-0 [&>p+p]:mt-3">
+      <div className="mt-2 text-sm leading-relaxed text-outer-space-900 md:text-base [&>p+p]:mt-3 [&>p]:m-0">
         {children}
       </div>
     </div>
