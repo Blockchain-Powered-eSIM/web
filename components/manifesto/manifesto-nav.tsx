@@ -27,7 +27,7 @@ export function ManifestoNav() {
           alt="Logo"
           width={100}
           height={24}
-          className="h-6 w-auto md:h-8"
+          className="h-6 w-auto md:h-8 lg:h-12"
           style={{ width: "auto" }}
         />
       </Link>
