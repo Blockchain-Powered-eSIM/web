@@ -20,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.8,
     },
+    {
+      url: new URL("/manifesto", siteConfig.url).href,
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
     ...posts.map((post) => ({
       url: new URL(`/blog/${post.slug}`, siteConfig.url).href,
       lastModified: post.date,

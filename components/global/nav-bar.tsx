@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import Logo from "@/assets/logo.svg";
 import {
@@ -14,12 +17,12 @@ import { Menu } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { DialogDescription } from "@radix-ui/react-dialog";
 
-const Links = () => {
+export const Links = () => {
   return siteConfig.socials.map((social) => {
     const content = (
       <>
         <div className="relative h-6 w-6 text-outer-space-950">
-          <Image src={social.icon} alt={social.title} fill />
+          <Image src={social.icon} alt="" fill />
         </div>
         <span className="text-lg font-light">{social.title}</span>
       </>
@@ -30,7 +33,7 @@ const Links = () => {
         <Link
           key={social.title}
           href={social.href}
-          className="flex items-center gap-1"
+          className="flex items-center gap-1 py-2"
         >
           {content}
         </Link>
@@ -41,7 +44,7 @@ const Links = () => {
       <a
         key={social.title}
         href={social.href}
-        className="flex items-center gap-1"
+        className="flex items-center gap-1 py-2"
       >
         {content}
       </a>
@@ -50,6 +53,11 @@ const Links = () => {
 };
 
 const NavBar = () => {
+  // /manifesto renders its own nav row inside the shared translucent panel
+  // (components/manifesto/manifesto-nav.tsx) instead of this global pill — see #25.
+  const pathname = usePathname();
+  if (pathname?.startsWith("/manifesto")) return null;
+
   return (
     <div className="container flex w-full max-w-[1017px] justify-center px-4 pt-10 md:px-8 lg:px-0 lg:pt-[4.5rem]">
       <nav className="flex w-full items-center justify-between rounded-full bg-ship-cove-50 p-6 md:px-14">
@@ -65,7 +73,10 @@ const NavBar = () => {
         </Link>
         {/* Mobile Nav */}
         <Dialog>
-          <DialogTrigger className="md:hidden">
+          <DialogTrigger
+            className="-m-2.5 p-2.5 md:hidden"
+            aria-label="Open menu"
+          >
             <Menu />
           </DialogTrigger>
           <DialogContent className="top-[22%] w-11/12 rounded-4xl bg-ship-cove-50">
