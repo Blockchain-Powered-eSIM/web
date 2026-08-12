@@ -39,7 +39,7 @@ function MdxImage({ src, alt, ...props }: ImgHTMLAttributes<HTMLImageElement>) {
   );
 }
 
-const baseMdxComponents = {
+export const baseMdxComponents = {
   h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2 className="scroll-mt-24" {...props} />
   ),
