@@ -34,7 +34,7 @@ export function ManifestoNav() {
 
       {/* Mobile Nav */}
       <Dialog>
-        <DialogTrigger className="md:hidden">
+        <DialogTrigger className="-m-2.5 p-2.5 md:hidden" aria-label="Open menu">
           <Menu />
         </DialogTrigger>
         <DialogContent className="top-[22%] w-11/12 rounded-4xl bg-ship-cove-50">

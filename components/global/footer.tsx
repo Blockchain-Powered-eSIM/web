@@ -56,12 +56,7 @@ const Footer = () => {
           {socialLinks.map((footer) => (
             <li key={footer.title} className="flex items-center gap-2">
               <div className="relative h-10 w-10 text-white">
-                <Image
-                  src={footer.icon}
-                  alt={footer.title}
-                  fill
-                  className="fill-current"
-                />
+                <Image src={footer.icon} alt="" fill className="fill-current" />
               </div>
               {footer.href.startsWith("/") ? (
                 <Link href={footer.href} className="text-lg font-light">

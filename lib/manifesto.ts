@@ -8,6 +8,7 @@ const MANIFESTO_PATH = path.join(process.cwd(), "content/manifesto.mdx");
 export interface Manifesto {
   title: string;
   description: string;
+  ogHeadline?: string;
   tldr: string[];
   content: string;
 }
@@ -15,6 +16,7 @@ export interface Manifesto {
 const frontmatterSchema = z.object({
   title: z.string().min(1),
   description: z.string().min(1),
+  ogHeadline: z.string().min(1).optional(),
   tldr: z.array(z.string().min(1)).min(1),
 });
 
@@ -45,6 +47,7 @@ export function getManifesto(): Manifesto {
   return {
     title: result.data.title,
     description: result.data.description,
+    ogHeadline: result.data.ogHeadline,
     tldr: result.data.tldr,
     content,
   };

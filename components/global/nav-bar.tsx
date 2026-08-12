@@ -22,7 +22,7 @@ export const Links = () => {
     const content = (
       <>
         <div className="relative h-6 w-6 text-outer-space-950">
-          <Image src={social.icon} alt={social.title} fill />
+          <Image src={social.icon} alt="" fill />
         </div>
         <span className="text-lg font-light">{social.title}</span>
       </>
@@ -33,7 +33,7 @@ export const Links = () => {
         <Link
           key={social.title}
           href={social.href}
-          className="flex items-center gap-1"
+          className="flex items-center gap-1 py-2"
         >
           {content}
         </Link>
@@ -44,7 +44,7 @@ export const Links = () => {
       <a
         key={social.title}
         href={social.href}
-        className="flex items-center gap-1"
+        className="flex items-center gap-1 py-2"
       >
         {content}
       </a>
@@ -73,7 +73,10 @@ const NavBar = () => {
         </Link>
         {/* Mobile Nav */}
         <Dialog>
-          <DialogTrigger className="md:hidden">
+          <DialogTrigger
+            className="-m-2.5 p-2.5 md:hidden"
+            aria-label="Open menu"
+          >
             <Menu />
           </DialogTrigger>
           <DialogContent className="top-[22%] w-11/12 rounded-4xl bg-ship-cove-50">

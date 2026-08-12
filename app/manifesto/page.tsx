@@ -47,7 +47,7 @@ export default async function ManifestoPage() {
   return (
     <div className="xl:flex xl:items-start xl:justify-center xl:gap-8">
       {headings.length > 0 ? (
-        <div className="hidden xl:sticky xl:top-24 xl:block xl:w-36 xl:shrink-0 xl:self-start">
+        <div className="hidden xl:sticky xl:top-24 xl:block xl:w-36 xl:shrink-0 xl:self-start print:hidden">
           <SectionIndex headings={headings} />
         </div>
       ) : null}
