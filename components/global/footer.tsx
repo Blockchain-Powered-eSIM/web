@@ -36,6 +36,7 @@ export const socialLinks = [
 ];
 
 const legalLinks = [
+  { title: "Manifesto", href: "/manifesto" },
   { title: "Privacy Policy", href: "/privacy-policy" },
   { title: "Terms of Service", href: "/terms-of-service" },
 ];
