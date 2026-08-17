@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import { getAllPosts } from "@/lib/blog";
+import { getManifesto } from "@/lib/manifesto";
 import { PostCard } from "@/components/blog/post-card";
+import { ManifestoCard } from "@/components/blog/manifesto-card";
 import BeachFun from "@/assets/seb/Beach Fun.svg";
 
 export const metadata: Metadata = {
@@ -19,6 +21,7 @@ export const metadata: Metadata = {
 
 export default function BlogIndexPage() {
   const posts = getAllPosts();
+  const manifesto = getManifesto();
 
   return (
     <main className="px-4 py-12 md:px-8 md:py-16">
@@ -43,6 +46,7 @@ export default function BlogIndexPage() {
         </header>
 
         <div className="flex flex-col gap-6">
+          <ManifestoCard manifesto={manifesto} />
           {posts.map((post) => (
             <PostCard key={post.slug} post={post} />
           ))}
