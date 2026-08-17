@@ -1,0 +1,82 @@
+---
+title: "All types of No-KYC eSIMs"
+description: "No-KYC is not one thing. An analysis of the categories of privacy-preserving eSIM providers, the layers they actually protect, and what none of them can claim."
+date: "2026-08-17"
+author: "arpit"
+tag: "Privacy & Security"
+hero: "/blog/heroes/no-kyc-esims.svg"
+tldr:
+  - "No-KYC describes what a provider skips at signup, not what it protects afterwards."
+  - "Providers cluster into four approaches, each securing a different layer."
+  - "None of them make you anonymous: the carrier still sees the device, the network still logs an IP."
+  - "The useful question is which layer a given provider actually removes you from."
+draft: false
+---
+
+Disclosure before anything else: we build one of the products described here. Read accordingly.
+
+This analysis was prompted by [a comparison of no-KYC eSIM providers posted on r/best_eSIM_providers](https://www.reddit.com/r/eSIMforTravelers/), written by someone who tested several over a few weeks and spent as much space on what these services *cannot* do as on what they can. That framing is the more valuable contribution, and it is the one this post tries to extend.
+
+For the purposes of this analysis, "no-KYC eSIM" refers to any mobile data service that provisions a profile (an eSIM plan or subscription) without collecting verified identity documents at purchase. That definition is narrow on purpose. It describes an absence at one moment and says nothing about what happens at every other layer, which is where most of the confusion in this category lives.
+
+## The layers, first
+
+A traveller's connectivity touches at least four distinct layers, and a provider may protect one while leaving the others entirely open:
+
+1. **Registration,** whether your legal identity is attached to the SIM at purchase. This is the layer "no-KYC" refers to.
+2. **Account,** whether a durable record of you (email, login, order history, dashboard) exists on the provider's side after purchase.
+3. **Payment,** whether the transaction can be traced to you through the rail used to pay.
+4. **Network,** what the carrier and the exit route can observe once you are connected: device identifiers, IP, traffic metadata.
+
+Almost every disagreement about privacy eSIMs is a disagreement about which of these layers someone meant.
+
+## Four approaches
+
+Providers in this space cluster into recognisable groups. The categories below are approaches rather than brands; most real services combine two.
+
+**Anonymity-first, crypto-native.** Purchases in cryptocurrency, no account of consequence, coverage across most of the world with limited and costly plans, often with activation strings for degoogled devices. Strong at registration and payment; the trade is price and user experience.
+
+**Routing-focused.** Choose which carrier or country your traffic appears to come from. Strong at the network layer in the specific sense of decoupling your visible location from your physical one. Whether the exit is disclosed before purchase varies, and that variance matters more than it sounds: a foreign IP you cannot verify in advance is a claim, not a feature.
+
+**Privacy suites.** eSIM bundled with a VPN, virtual numbers, sometimes more. The appeal is coverage across several layers at once from one vendor. The cost is concentration: a single provider now sits at more of your stack, which is a reasonable trade only if you trust that provider more than the alternative.
+
+**Consumer-facing.** Card and wallet payments alongside crypto, an app rather than a dashboard, aimed at people who will never hold crypto, resulting in a well-established design for consumers. Strong at reach; historically the weakest at the technical rigor the other three compete on. This is the category we are in, and its central tension is stated plainly below.
+
+## What none of them can claim
+
+The Reddit comparison makes the point that most marketing in this category obscures: no-KYC is not anonymity. The carrier still sees the device identifier. The network layer still logs an IP. An eSIM adds no encryption to anything.
+
+What a no-KYC eSIM removes is your identity from the registration record and, if the provider routes traffic through a foreign exit, your real-country IP from the network's view. Encryption is a separate purchase, a VPN or proxy on top. Any provider implying otherwise is selling something.
+
+This distinction is worth holding firmly, because the alternative is a familiar failure. In its study *Smartphone as Lifeline*, Tactical Tech observes:
+
+> Identity is increasingly less a matter of what you say you are and more what a particular service provider says you are.
+
+A provider that overstates its protections is still the party defining you — only now with your confidence attached.
+
+## Two perspectives
+
+Following the structure that study uses, the category reads differently depending on where you stand.
+
+**The individual.** For a traveller, the practical question is not "is this anonymous" but "which record am I trying not to create?" Someone avoiding a foreign carrier's identity database has a different requirement from someone avoiding a correlation between their location and their home ISP. The four approaches above answer different questions, and the honest recommendation depends entirely on which one you are asking.
+
+**The structural.** Registration requirements are not distributed evenly. Those who can produce local ID on demand experience KYC as friction; those who cannot experience it as exclusion. The same study notes that mass analysis of mobile data during lockdowns revealed, in effect, who could afford to stay home and who could not. A reminder that connectivity data has never been socially neutral. Identity-free connectivity is, among other things, a way of not requiring people to be legible before they are allowed to connect.
+
+## Where Koki'o sits
+
+We are the consumer-facing category, and the central trade is deliberate: we accept cards, Apple Pay and Google Pay alongside crypto. That widens reach beyond people who already hold crypto, and it is the choice this audience will scrutinise hardest. It is also the choice we would make again, sovereignty that only reaches people who already understand wallets is not much of a sovereignty.
+
+<Highlight>
+  What we do differently sits at the **account** layer. There is no signup at
+  all: no name, no email, no KYC. Your account is a smart contract wallet
+  bound to your device's secure enclave via passkeys, so there is no password
+  to phish and no account record to subpoena or breach.
+</Highlight>
+
+The architecture is the guarantee rather than the policy, and it is checkable, the [contracts and app are open source](https://github.com/Blockchain-Powered-eSIM/smart-contract-suite), enabled by a grant from [Ethereum Foundation PSE](https://pse.dev/) (Privacy Stewards of Ethereum) grant, audited by PSE and externally by CD Security, with a final audit in progress before mainnet.
+
+Beyond the architecture, the product itself is the point. Koki'o innovates as a consumer telecom application built around digital well-being practices. With a well-curated eSIM catalogue (cheap plans, unlimited plans, special regional plans) that travellers actually want, Koki'o sets users free to cross borders around the globe without worrying about connectivity roadblocks, and with sovereignty intact. Where the rest of this category asks you to choose between privacy and usability, we are working to make that choice unnecessary.
+
+The category does not need another provider claiming to solve everything. It needs providers stating precisely which layer they operate at, and being checkable about it. That is the standard the Reddit comparison applied, and it is the right one.
+
+*Quoted material in this post comes from* Smartphone as Lifeline: Designing Technology for a Changing World *by Stephanie Hankey, Cade Diehm, Rose Regina Lawrence and Marek Tuszynski, published free by Tactical Tech. Our own position is set out in full in the [Koki'o Manifesto](/manifesto).*

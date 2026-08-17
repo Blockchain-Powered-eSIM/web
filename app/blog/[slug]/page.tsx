@@ -152,7 +152,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
             src={post.hero}
             alt=""
             fill
-            className="object-cover"
+            className="object-cover object-top"
             sizes="(min-width: 832px) 832px, 100vw"
             priority
           />

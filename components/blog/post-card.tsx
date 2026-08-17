@@ -16,7 +16,7 @@ export function PostCard({ post }: { post: Post }) {
           alt=""
           fill
           sizes="(min-width: 640px) 256px, 100vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
         />
       </div>
       <div className="flex flex-1 flex-col gap-3 p-6">
