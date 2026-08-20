@@ -2,8 +2,10 @@ import type { AnchorHTMLAttributes, ImgHTMLAttributes } from "react";
 import Link from "next/link";
 
 import { InlineCTA } from "@/components/blog/inline-cta";
-import { Tip, HeadsUp } from "@/components/blog/callouts";
+import { Tip, HeadsUp, Highlight } from "@/components/blog/callouts";
 import { Steps } from "@/components/blog/steps";
+import { ManifestoCTA } from "@/components/blog/manifesto-cta";
+import { AppDownloadCTA } from "@/components/blog/app-download-cta";
 
 function SmartLink({
   href = "",
@@ -69,6 +71,9 @@ export function getMdxComponents(slug: string) {
     InlineCTA: () => <InlineCTA slug={slug} />,
     Tip,
     HeadsUp,
+    Highlight,
     Steps,
+    ManifestoCTA,
+    AppDownloadCTA,
   };
 }
