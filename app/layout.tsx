@@ -5,6 +5,8 @@ import { Anybody, Lexend } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { siteConfig, TWITTER_HANDLE } from "@/config/site";
 import { META_DESCRIPTION, PRODUCT_NAME } from "@/lib/site-copy";
+import { siteGraph } from "@/lib/schema";
+import { JsonLd } from "@/components/json-ld";
 import { NavBar } from "@/components/global/nav-bar";
 import { Footer } from "@/components/global/footer";
 import { Toaster } from "@/components/ui/toaster";
@@ -63,6 +65,7 @@ export default function RootLayout({
           "flex min-h-screen flex-col bg-beach-sky font-sans antialiased"
         )}
       >
+        <JsonLd data={siteGraph} />
         <AnnouncementBanner />
         <NavBar />
         <div className="m-0 flex-1 p-0">{children}</div>
