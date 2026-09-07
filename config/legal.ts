@@ -22,6 +22,15 @@ export interface LegalConfig {
   /** "Effective" date shown in each document header. Source: "[DATE]". */
   effective: string;
 
+  /**
+   * Date counsel last reviewed the Terms and the Privacy Policy, ISO 8601.
+   *
+   * The build warns when either document has been edited more recently than
+   * this. Move it only after counsel has actually seen the change, never to
+   * silence the warning.
+   */
+  counselReviewedIso: string;
+
   /** Liability-cap look-back window in months (ToS §13). Confirmed by counsel. */
   liabilityCapMonths: string;
   /**
@@ -49,6 +58,8 @@ export const legalConfig: LegalConfig = {
   lastUpdated: "15th July 2026",
   lastUpdatedIso: "2026-07-15",
   effective: "15th July 2026",
+
+  counselReviewedIso: "2026-09-07",
 
   liabilityCapMonths: "3",
   retentionYears: "[3]",

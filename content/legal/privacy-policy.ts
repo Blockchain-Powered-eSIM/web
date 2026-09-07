@@ -1,3 +1,13 @@
+/**
+ * Published policy text. It states what Kokio does and does not collect, so it
+ * has to keep matching the app, the glossary and the marketing copy.
+ *
+ * Anything beyond a typo needs counsel to see it first, and the record of what
+ * they were asked and what they answered is kept outside this repository.
+ * After a reviewed change lands, move `counselReviewedIso` in config/legal.ts
+ * and update that record. The build warns until the date moves.
+ */
+
 import { legalConfig } from "@/config/legal";
 import type { LegalDocument } from "@/lib/legal/types";
 

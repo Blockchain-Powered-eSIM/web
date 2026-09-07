@@ -253,6 +253,22 @@ if (legalTouched && legalStamp && day(legalTouched) > day(legalStamp)) {
   );
 }
 
+// Contract text that has outrun its last legal review. Read from source rather
+// than the build, because the date is a fact about the documents and never
+// reaches a page.
+const reviewed = readFileSync("config/legal.ts", "utf8").match(
+  /counselReviewedIso:\s*"(\d{4}-\d{2}-\d{2})"/
+)?.[1];
+
+if (!reviewed) {
+  fail("legal", "config/legal.ts has no counselReviewedIso. It is what says the documents have been read.");
+} else if (legalTouched && day(legalTouched) > reviewed) {
+  warn(
+    "legal",
+    `legal text changed on ${day(legalTouched)}, after the last counsel review on ${reviewed}. Send the change to counsel, then move counselReviewedIso.`
+  );
+}
+
 for (const message of warnings) console.warn(`warning  ${message}`);
 for (const message of failures) console.error(`FAIL     ${message}`);
 
