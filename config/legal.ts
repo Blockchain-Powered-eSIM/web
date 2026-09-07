@@ -22,25 +22,18 @@ export interface LegalConfig {
   /** "Effective" date shown in each document header. Source: "[DATE]". */
   effective: string;
 
-  /**
-   * Liability-cap look-back window in months (ToS §13). Kept as a string so it
-   * can carry the bracketed placeholder "[3]" until counsel confirms it.
-   */
+  /** Liability-cap look-back window in months (ToS §13). Confirmed by counsel. */
   liabilityCapMonths: string;
   /**
-   * Data-retention period (Privacy §8), e.g. a number of years. Kept as a
-   * string so it can carry the placeholder "[N]" until the concrete period is
-   * set per Singapore accounting / tax / AML obligations.
+   * Data-retention period (Privacy §8). No document reads this yet: counsel
+   * asked for the retention wording to stay general until the Terms review
+   * finishes, and will give a period then. Keep the field.
    */
   retentionYears: string;
 
   /** Governing law (ToS §17). Fixed to Singapore per the drafts. */
   governingLaw: string;
-  /**
-   * Dispute-resolution mechanism (ToS §17): litigation vs SIAC arbitration.
-   * Defaults to the unresolved either/or string from the draft so the pending
-   * choice renders visibly until counsel selects one.
-   */
+  /** Dispute-resolution mechanism (ToS §17). Counsel chose SIAC arbitration. */
   disputeResolution: string;
 }
 
@@ -57,10 +50,10 @@ export const legalConfig: LegalConfig = {
   lastUpdatedIso: "2026-07-15",
   effective: "15th July 2026",
 
-  liabilityCapMonths: "[3]",
+  liabilityCapMonths: "3",
   retentionYears: "[3]",
 
   governingLaw: "Singapore",
   disputeResolution:
-    "[the courts of Singapore / by arbitration administered by the Singapore International Arbitration Centre (SIAC) in Singapore]",
+    "by arbitration administered by the Singapore International Arbitration Centre (SIAC) in Singapore",
 };
