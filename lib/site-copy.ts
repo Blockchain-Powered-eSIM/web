@@ -52,6 +52,17 @@ export const CANONICAL_DESCRIPTION =
  */
 export const HOME_UPDATED = new Date("2026-09-07");
 
+/**
+ * Public launch target, and the notice the banner and the footer both render.
+ *
+ * One string, so the two cannot drift apart, and one place to edit on the day
+ * it ships. It names a month rather than saying "soon" because a wrong date is
+ * visible, while "soon" stays plausible forever and nobody notices it rot.
+ */
+export const LAUNCH_TARGET = "September 2026";
+
+export const LAUNCH_NOTICE = `${PRODUCT_NAME} launches in ${LAUNCH_TARGET}.`;
+
 /** Same claims, trimmed to fit a `<meta name="description">` without truncation. */
 export const META_DESCRIPTION =
   "Kokio is a privacy-first travel eSIM app. Data plans in over 200 destinations, paid by card or stablecoins. No KYC, no personal information collected.";
