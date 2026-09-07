@@ -19,12 +19,11 @@ const AnnouncementBanner = () => {
           >
             <Image
               src={Twitter}
-              alt=""
+              alt="X"
               width={16}
               height={16}
               className="relative top-[3px] inline-block h-4 w-4"
             />
-            X
           </a>{" "}
           for updates.
         </p>
