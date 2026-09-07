@@ -30,6 +30,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      // Posts are aimed at roughly every two weeks. The sitemap spec has no
+      // value for that, and weekly is the closer of the two neighbours, so a
+      // crawler checks a little too often rather than missing a post. Revisit
+      // once the real cadence is known: monthly if it slips, daily never.
       url: new URL("/blog", siteConfig.url).href,
       lastModified: blogUpdated,
       changeFrequency: "weekly",
