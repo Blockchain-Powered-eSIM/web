@@ -160,17 +160,15 @@ for (const pathname of sitemapPaths) {
     fail("schema", `${pathname} references @id ${id}, which nothing defines and no element matches.`);
   }
 
-  // A question's @id is a deep link to the one answer that was cited, so unlike
-  // the entity ids around it, it has to name something on the page.
-  for (const node of nodes.filter((entry) => entry["@type"] === "FAQPage")) {
-    for (const question of node.mainEntity ?? []) {
-      const fragment = String(question["@id"] ?? "").split("#")[1];
-      if (!fragment || !domIds.has(fragment)) {
-        fail(
-          "schema",
-          `${pathname} answers "${question.name}" at ${question["@id"]}, but no element has that id.`
-        );
-      }
+  // An answer or a definition has an @id so a citation can point at that one
+  // item, so unlike the entity ids around it, it has to name something on the
+  // page. Everything a set holds is checked, not the set itself.
+  const items = nodes.flatMap((node) => node.mainEntity ?? node.hasDefinedTerm ?? []);
+
+  for (const item of items) {
+    const fragment = String(item["@id"] ?? "").split("#")[1];
+    if (!fragment || !domIds.has(fragment)) {
+      fail("schema", `${pathname} puts "${item.name}" at ${item["@id"]}, but no element has that id.`);
     }
   }
 }
