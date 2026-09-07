@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+// Reached only after a payment. It says nothing useful on its own, and a search
+// result pointing here would look like a transaction that never happened.
+export const metadata: Metadata = {
+  title: "Payment complete",
+  robots: { index: false, follow: false },
+};
+
 export default function MoonpayReturnPage() {
   return (
     <main className="flex min-h-full flex-1 items-center justify-center px-6 py-24">
