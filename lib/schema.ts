@@ -10,6 +10,7 @@ import Logo from "@/assets/logo.svg";
 
 import { siteConfig, TWITTER_URL } from "@/config/site";
 import { legalConfig } from "@/config/legal";
+import { faqsData } from "@/content/faqs";
 import {
   CANONICAL_DESCRIPTION,
   PRODUCT_NAME,
@@ -69,4 +70,41 @@ const website = {
 export const siteGraph = {
   "@context": "https://schema.org",
   "@graph": [organization, website],
+};
+
+const app = {
+  "@type": "MobileApplication",
+  "@id": `${siteConfig.url}/#app`,
+  name: PRODUCT_NAME,
+  alternateName: [...PRODUCT_NAME_VARIANTS],
+  description: CANONICAL_DESCRIPTION,
+  applicationCategory: "TravelApplication",
+  operatingSystem: "iOS, Android",
+  url: siteConfig.url,
+  publisher: { "@id": ORGANIZATION_ID },
+  featureList: [
+    "eSIM data plans in over 200 destinations",
+    "No KYC and no personal information collected",
+    "Passkey authentication using the device secure enclave",
+    "Card, Apple Pay, Google Pay and PayPal payments",
+    "Optional self-custodial smart wallet, owned by the user",
+  ],
+};
+
+const faqPage = {
+  "@type": "FAQPage",
+  "@id": `${siteConfig.url}/#faq`,
+  isPartOf: { "@id": WEBSITE_ID },
+  mainEntity: faqsData.map((faq) => ({
+    "@type": "Question",
+    "@id": `${siteConfig.url}/#faq-${faq.id}`,
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
+/** Home page graph. The app itself, plus the FAQ as answerable pairs. */
+export const homeGraph = {
+  "@context": "https://schema.org",
+  "@graph": [app, faqPage],
 };
