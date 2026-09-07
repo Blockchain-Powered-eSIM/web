@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import BeachBall from "@/assets/beach-ball.svg";
 
-const setupData = [
+export const setupData = [
   {
     title: "Download Our App and Choose a Plan",
     description:

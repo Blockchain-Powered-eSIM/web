@@ -48,6 +48,7 @@ ${posts.map((post) => link(post.title, `/blog/${post.slug}`, post.description)).
 - [Documentation](${DOCS_URL}): architecture, mobile app flow, smart contract suite
 - [Smart contracts](${CONTRACTS_URL}): open source wallet contract suite
 - [X](${TWITTER_URL}): announcements
+${link("Full text", "/llms-full.txt", "every page of this site as one markdown file")}
 
 ## Legal
 ${link("Terms of Service", "/terms-of-service", "terms governing use of the app")}

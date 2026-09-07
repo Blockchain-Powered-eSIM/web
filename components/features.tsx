@@ -6,7 +6,7 @@ import Meditate from "@/assets/icons/meditate.svg";
 import Shield from "@/assets/icons/shield.svg";
 import ThumbsUp from "@/assets/icons/thumbs-up.svg";
 
-const featuresData = [
+export const featuresData = [
   {
     icon: Relax,
     title: "Simple",
