@@ -37,7 +37,7 @@ export async function generateMetadata({
   const url = `${siteConfig.url}/blog/${post.slug}`;
 
   return {
-    title: `${post.title} | Kokio`,
+    title: post.title,
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {

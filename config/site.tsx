@@ -3,6 +3,7 @@ import Blog from "@/assets/icons/blog-fill.svg";
 import Twitter from "@/assets/icons/twitter-fill.svg";
 import GitHub from "@/assets/icons/github-fill.svg";
 import Docs from "@/assets/icons/docs-fill.svg";
+import { CANONICAL_DESCRIPTION, PRODUCT_NAME } from "@/lib/site-copy";
 
 export const BLOG_TAGS = [
   "eSIM Basics",
@@ -27,11 +28,10 @@ export const TWITTER_HANDLE = "@kokiodotapp";
 export const APP_URL = "https://kokio.app";
 
 export const siteConfig = {
-  name: "Kokio",
+  name: PRODUCT_NAME,
   url: "https://kokio.app",
   header: "Experience the Future of Global Connectivity",
-  description:
-    "Travel with confidence with Kokio’s travel data plans. Unlike traditional eSIM providers, Kokio leverages cutting-edge blockchain technology for enhanced security, privacy, and ease of use. Enjoy seamless connectivity across over 200 destinations worldwide.",
+  description: CANONICAL_DESCRIPTION,
   socials: [
     {
       icon: Twitter,

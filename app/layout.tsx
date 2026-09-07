@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { Anybody, Lexend } from "next/font/google";
 
 import { cn } from "@/lib/utils";
-import { siteConfig } from "@/config/site";
+import { siteConfig, TWITTER_HANDLE } from "@/config/site";
+import { META_DESCRIPTION, PRODUCT_NAME } from "@/lib/site-copy";
 import { NavBar } from "@/components/global/nav-bar";
 import { Footer } from "@/components/global/footer";
 import { Toaster } from "@/components/ui/toaster";
@@ -24,8 +25,26 @@ const lexend = Lexend({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: "Kokio",
-  description: "Blockchain powered eSIM",
+  title: {
+    default: PRODUCT_NAME,
+    template: `%s | ${PRODUCT_NAME}`,
+  },
+  description: META_DESCRIPTION,
+  applicationName: PRODUCT_NAME,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: siteConfig.url,
+    siteName: PRODUCT_NAME,
+    title: PRODUCT_NAME,
+    description: META_DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: TWITTER_HANDLE,
+    title: PRODUCT_NAME,
+    description: META_DESCRIPTION,
+  },
 };
 
 export default function RootLayout({

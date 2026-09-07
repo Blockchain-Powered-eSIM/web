@@ -5,7 +5,7 @@ import { LegalDocumentView } from "@/components/legal/legal-document";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "The terms governing your use of the Koki'o app and services.",
+  description: "The terms governing your use of the Kokio app and services.",
   alternates: { canonical: "/terms-of-service" },
 };
 

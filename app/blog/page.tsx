@@ -34,10 +34,10 @@ export default function BlogIndexPage() {
             className="h-20 w-auto md:h-24"
           />
           <p className="font-heading text-sm font-semibold uppercase tracking-wide text-cashmere-700">
-            KOKI&apos;O Blog
+            Kokio Blog
           </p>
           <h1 className="font-heading text-4xl font-bold text-outer-space-950 md:text-5xl">
-            Guides, updates, and stories from Koki&apos;o
+            Guides, updates, and stories from Kokio
           </h1>
           <p className="max-w-xl text-base font-light text-esim-black-700 md:text-lg">
             Everything about eSIMs, travel connectivity, and what we&apos;re

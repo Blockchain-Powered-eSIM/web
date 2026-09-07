@@ -74,7 +74,7 @@ const Footer = () => {
       </div>
       <div className="container flex items-center justify-center px-4 py-4 text-center lg:max-w-[1200px]">
         <p className="text-lg font-light text-esim-black-50">
-          KOKI&apos;O launches soon —{" "}
+          Kokio launches soon.{" "}
           <a
             href="https://x.com/kokiodotapp"
             target="_blank"

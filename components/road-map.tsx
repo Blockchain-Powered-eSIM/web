@@ -12,14 +12,14 @@ const roadMapData = [
     title: "Q1'26",
     milestones: [
       "Working on Beta release",
-      "With KOKI'O alpha live in over 200 countries, work on features scheduled in beta release with continuous improvement from user feedback.",
+      "With Kokio alpha live in over 200 countries, work on features scheduled in beta release with continuous improvement from user feedback.",
     ],
   },
   {
     title: "Q2'26",
     milestones: [
       "Beta Testing",
-      "Launch the public beta for testing and prepare to ship KOKI'O to production.",
+      "Launch the public beta for testing and prepare to ship Kokio to production.",
     ],
   },
 ];
