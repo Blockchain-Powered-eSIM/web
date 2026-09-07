@@ -3,15 +3,23 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 
 /**
- * Crawlers that read and reason over the site, named individually.
+ * AI crawlers named individually.
  *
- * Every token here was checked against the operator's own documentation. Do not
- * add one from a blog post or a copied template: a name nobody publishes cannot
- * be honoured, and it makes the rest of the file look guessed.
+ * The wildcard group below already allows every crawler, named or not, so this
+ * list grants no access that would otherwise be missing. It exists so the
+ * stance is auditable, and so blocking any single agent later is a one-line
+ * edit rather than a research task.
  *
- * Naming them changes nothing on its own, since crawling is allowed by default.
- * The point is that the stance is explicit and auditable, and that flipping any
- * single one later is a one-line edit rather than a research task.
+ * One rule for adding an entry: the operator publishes a crawler page naming
+ * the token. That keeps the list checkable and finite.
+ *
+ * It is not meant to be exhaustive and cannot be. Most labs publish nothing:
+ * xAI documents no user agent and Grok's fetches arrive as ordinary browser
+ * traffic from rotating addresses, DeepSeek crawls with no user agent at all,
+ * and the tokens circulating for Qwen, GLM and Bytespider come from
+ * third-party trackers rather than their operators. Chasing those names would
+ * mean maintaining a list that is unverifiable, permanently incomplete, and
+ * worth nothing while the answer is yes to everyone. The wildcard covers them.
  */
 const AI_CRAWLERS = [
   // OpenAI, developers.openai.com/api/docs/bots
@@ -56,46 +64,18 @@ const AI_CRAWLERS = [
   "CCBot",
 ];
 
-/**
- * Agents whose operators publish no crawler documentation.
- *
- * These names come from observed traffic and third-party trackers, not from a
- * vendor page, so nothing here can be relied on. They are listed because the
- * stance is to allow everything: a name that turns out to be wrong costs
- * nothing, since permitted is already the default.
- *
- * If the stance ever flips to blocking, this group is the weak part of the
- * file. Rewrite it from whatever each operator publishes at that point, and
- * expect to need something other than robots.txt for the ones below.
- */
-const UNDOCUMENTED_CRAWLERS = [
-  // ByteDance has never confirmed how Bytespider treats robots.txt, though it
-  // does at least identify itself under that name in server logs.
-  "Bytespider",
-
-  // xAI publishes no crawler documentation, no user agent and no IP ranges.
-  // Reported behaviour is worse than undocumented: Grok's retrieval traffic
-  // arrives with ordinary browser or Go client user agents over rotating
-  // residential addresses, so none of these names appear in logs and no
-  // robots.txt rule can match it. Kept as a statement of intent only.
-  "xAI-Bot",
-  "xAI-Grok",
-  "GrokBot",
-
-  // Reported as the Dolma-specific variant of AI2Bot. Not named on AI2's own
-  // crawler page, which documents AI2Bot only.
-  "AI2Bot-Dolma",
-];
-
 /** Payment callback. Meaningless without the transaction that led to it. */
 const DISALLOWED = ["/moonpay-return"];
 
 export default function robots(): MetadataRoute.Robots {
+  // The wildcard group is what actually grants access, including to every
+  // crawler not named above. The named groups only make the stance explicit.
+  //
   // Groups in robots.txt are independent: a crawler that matches a named group
   // reads only that group and never sees the wildcard rules. So the disallow
   // has to be repeated per agent rather than stated once.
   const rules = [{ userAgent: "*", allow: "/", disallow: DISALLOWED }].concat(
-    [...AI_CRAWLERS, ...UNDOCUMENTED_CRAWLERS].map((userAgent) => ({
+    AI_CRAWLERS.map((userAgent) => ({
       userAgent,
       allow: "/",
       disallow: DISALLOWED,
