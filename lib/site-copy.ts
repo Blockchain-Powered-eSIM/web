@@ -11,16 +11,24 @@
 export const PRODUCT_NAME = "Kokio";
 
 /**
- * Other spellings that have shipped or that users type. Goes in `alternateName`
- * so a model can resolve all of them to one entity. Never use these in prose.
+ * Every way the name itself gets written: shipped spellings, and what people
+ * type. All of them must resolve to this product, so they are stated in prose
+ * as well as in schema. Never use these as the name in new copy.
  */
-export const PRODUCT_NAME_VARIANTS = [
+export const PRODUCT_NAME_SPELLINGS = [
   "Koki'o",
   "KOKI'O",
   "KOKIO",
   "kokio",
-  "Kokio eSIM",
-  "Kokio App",
+] as const;
+
+/** Names for the product that are not spellings of the word. */
+export const PRODUCT_NAME_ALIASES = ["Kokio eSIM", "Kokio App"] as const;
+
+/** Everything that is not the canonical name. Goes in schema `alternateName`. */
+export const PRODUCT_NAME_VARIANTS = [
+  ...PRODUCT_NAME_SPELLINGS,
+  ...PRODUCT_NAME_ALIASES,
 ] as const;
 
 /** Registered company name. Stays uppercase because that is the filed string. */
