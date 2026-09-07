@@ -20,10 +20,11 @@ const Hero = () => {
           Experience the Future of Global Connectivity
         </h1>
         <p className="text-xl font-light lg:leading-7">
-          Travel with confidence with Kokio’s travel data plans. Unlike
-          traditional eSIM providers, Kokio leverages cutting-edge distributed
-          ledger technology for enhanced security, privacy, and ease of use.
-          Enjoy seamless connectivity across over 200 destinations worldwide.
+          Kokio is a travel eSIM app built for privacy. Buy data in over 200
+          destinations with a card, Apple Pay, Google Pay or stablecoins. No
+          KYC, and no personal information collected. Your account is a
+          passkey-controlled smart wallet, so the eSIM belongs to you instead of
+          sitting in a provider&apos;s database.
         </p>
       </div>
       <SignUpButton />
