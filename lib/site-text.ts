@@ -1,4 +1,5 @@
 import { featuresData } from "@/components/features";
+import { roadMapData } from "@/components/road-map";
 import { setupData } from "@/components/setup";
 import { faqsData } from "@/content/faqs";
 import { glossaryData } from "@/content/glossary";
@@ -51,6 +52,14 @@ function homeSection(): string {
     featuresData
       .map((feature) => `- **${feature.title}** ${feature.description}`)
       .join("\n"),
+    "## Milestones",
+    "Targets, not promises.",
+    roadMapData
+      .map(
+        (phase) =>
+          `### ${phase.title}: ${phase.focus}\n${phase.milestones.map((item) => `- ${item}`).join("\n")}`
+      )
+      .join("\n\n"),
     "## Frequently asked questions",
     faqsData.map((faq) => `### ${faq.question}\n\n${faq.answer}`).join("\n\n"),
   ].join("\n\n");
@@ -104,11 +113,6 @@ function manifestoSection(): string {
   ].join("\n\n");
 }
 
-/**
- * The milestones on the landing page are left out on purpose while their dates
- * are stale. A wrong roadmap in plain text is worse than no roadmap, because
- * this is the format a model is most likely to quote back word for word.
- */
 export function pageSections(): Record<string, () => string> {
   const posts = getAllPosts();
 
