@@ -1,25 +1,36 @@
 import React from "react";
 
-const roadMapData = [
+/**
+ * Only what is still ahead. Dates are targets, and a milestone whose date has
+ * passed reads as a missed deadline rather than as history, so shipped work
+ * comes off this list instead of staying on it.
+ */
+export const roadMapData = [
   {
-    title: "Q4'25",
+    title: "Q3'26",
+    focus: "Public launch",
     milestones: [
-      "Alpha testing",
-      "Android & iOS alpha app launch in Argentina, India and Thailand & bug fixes from user feeback.",
+      "Public launch across 200+ destinations, on the App Store and Play Store",
+      "Regional testing across Southeast Asia and partner communities",
+      "Road to mainnet",
     ],
   },
   {
-    title: "Q1'26",
+    title: "Q4'26",
+    focus: "Features and distribution",
     milestones: [
-      "Working on Beta release",
-      "With Kokio alpha live in over 200 countries, work on features scheduled in beta release with continuous improvement from user feedback.",
+      "Device wallet, so checkout happens inside the app",
+      "Referral links, partner discount codes and sponsored eSIM flows for events",
+      "Connectivity partnerships",
     ],
   },
   {
-    title: "Q2'26",
+    title: "Q1'27",
+    focus: "Privacy and deeper integrations",
     milestones: [
-      "Beta Testing",
-      "Launch the public beta for testing and prepare to ship Kokio to production.",
+      "Distribution through physical hubs and coworking partnerships",
+      "Privacy rails, based on user demand",
+      "Plans that need verified identity, built with identity partners, without Kokio holding the identity",
     ],
   },
 ];
@@ -48,6 +59,9 @@ const RoadMap = () => {
             className="flex flex-1 flex-col gap-4 text-center"
           >
             <h3 className="text-4xl font-bold">{roadMap.title}</h3>
+            <p className="text-2xl font-bold text-cashmere-500">
+              {roadMap.focus}
+            </p>
             <ul className="flex flex-col gap-3">
               {roadMap.milestones.map((milestone) => (
                 <li key={milestone} className="text-xl font-light">
