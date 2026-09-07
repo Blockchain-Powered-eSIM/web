@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     canonical: "/blog",
     types: {
       "application/rss+xml": [{ url: "/blog/rss.xml", title: "Kokio Blog" }],
+      "text/markdown": "/blog.md",
     },
   },
 };
