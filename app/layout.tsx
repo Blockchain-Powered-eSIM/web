@@ -33,7 +33,10 @@ export const metadata: Metadata = {
   },
   description: META_DESCRIPTION,
   applicationName: PRODUCT_NAME,
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    types: { "text/markdown": "/index.md" },
+  },
   openGraph: {
     type: "website",
     url: siteConfig.url,

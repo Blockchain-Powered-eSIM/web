@@ -16,7 +16,10 @@ export function generateMetadata(): Metadata {
   return {
     title: manifesto.title,
     description: manifesto.description,
-    alternates: { canonical: "/manifesto" },
+    alternates: {
+      canonical: "/manifesto",
+      types: { "text/markdown": "/manifesto.md" },
+    },
     openGraph: {
       type: "article",
       url: `${siteConfig.url}/manifesto`,
