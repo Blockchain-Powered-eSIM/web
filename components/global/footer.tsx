@@ -35,8 +35,9 @@ export const socialLinks = [
   },
 ];
 
-const legalLinks = [
+const siteLinks = [
   { title: "Manifesto", href: "/manifesto" },
+  { title: "Glossary", href: "/glossary" },
   { title: "Privacy Policy", href: "/privacy-policy" },
   { title: "Terms of Service", href: "/terms-of-service" },
 ];
@@ -87,10 +88,10 @@ const Footer = () => {
         </p>
       </div>
       <nav
-        aria-label="Legal"
+        aria-label="Site"
         className="container flex flex-wrap items-center justify-center gap-x-6 gap-y-2 lg:max-w-[1200px]"
       >
-        {legalLinks.map((link) => (
+        {siteLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}

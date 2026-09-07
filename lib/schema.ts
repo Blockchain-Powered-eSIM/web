@@ -11,6 +11,7 @@ import Logo from "@/assets/logo.svg";
 import { siteConfig, TWITTER_URL } from "@/config/site";
 import { legalConfig } from "@/config/legal";
 import { faqsData } from "@/content/faqs";
+import { glossaryData } from "@/content/glossary";
 import {
   CANONICAL_DESCRIPTION,
   PRODUCT_NAME,
@@ -107,4 +108,33 @@ const faqPage = {
 export const homeGraph = {
   "@context": "https://schema.org",
   "@graph": [app, faqPage],
+};
+
+const GLOSSARY_ID = `${siteConfig.url}/glossary#glossary`;
+
+const glossary = {
+  "@type": "DefinedTermSet",
+  "@id": GLOSSARY_ID,
+  name: `${PRODUCT_NAME} glossary`,
+  description: `Definitions of the eSIM, mobile network and wallet terms used across ${PRODUCT_NAME}.`,
+  url: `${siteConfig.url}/glossary`,
+  publisher: { "@id": ORGANIZATION_ID },
+  isPartOf: { "@id": WEBSITE_ID },
+  inLanguage: "en",
+  hasDefinedTerm: glossaryData.map((entry) => ({
+    "@type": "DefinedTerm",
+    // Points at the entry on the page, so a citation lands on the definition
+    // rather than the top of the glossary.
+    "@id": `${siteConfig.url}/glossary#${entry.id}`,
+    name: entry.term,
+    ...(entry.aliases ? { alternateName: entry.aliases } : {}),
+    description: entry.definition,
+    inDefinedTermSet: { "@id": GLOSSARY_ID },
+  })),
+};
+
+/** Glossary page graph. One set, one term per entry. */
+export const glossaryGraph = {
+  "@context": "https://schema.org",
+  "@graph": [glossary],
 };

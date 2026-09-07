@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { siteConfig } from "@/config/site";
 import { legalConfig } from "@/config/legal";
+import { GLOSSARY_UPDATED } from "@/content/glossary";
 import { getAllPosts } from "@/lib/blog";
 import { getManifesto } from "@/lib/manifesto";
 import { HOME_UPDATED } from "@/lib/site-copy";
@@ -42,6 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: new URL("/manifesto", siteConfig.url).href,
       lastModified: manifesto.updated,
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
+      url: new URL("/glossary", siteConfig.url).href,
+      lastModified: GLOSSARY_UPDATED,
       changeFrequency: "yearly",
       priority: 0.7,
     },

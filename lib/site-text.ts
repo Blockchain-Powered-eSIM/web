@@ -1,6 +1,7 @@
 import { featuresData } from "@/components/features";
 import { setupData } from "@/components/setup";
 import { faqsData } from "@/content/faqs";
+import { glossaryData } from "@/content/glossary";
 import { privacyPolicy } from "@/content/legal/privacy-policy";
 import { termsOfService } from "@/content/legal/terms-of-service";
 import { getAllPosts, type Post } from "@/lib/blog";
@@ -77,6 +78,20 @@ function postSection(post: Post): string {
   ].join("\n\n");
 }
 
+function glossarySection(): string {
+  return [
+    `Definitions of the eSIM, mobile network and wallet terms used across ${PRODUCT_NAME}.`,
+    glossaryData
+      .map((entry) => {
+        const also = entry.aliases
+          ? `\n\nAlso called: ${entry.aliases.join(", ")}.`
+          : "";
+        return `### ${entry.term}${also}\n\n${entry.definition}`;
+      })
+      .join("\n\n"),
+  ].join("\n\n");
+}
+
 function manifestoSection(): string {
   const manifesto = getManifesto();
 
@@ -101,6 +116,7 @@ export function pageSections(): Record<string, () => string> {
     "/": homeSection,
     "/blog": () => blogIndexSection(posts),
     "/manifesto": manifestoSection,
+    "/glossary": glossarySection,
     "/terms-of-service": () => legalDocumentToText(termsOfService),
     "/privacy-policy": () => legalDocumentToText(privacyPolicy),
     ...Object.fromEntries(
