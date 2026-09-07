@@ -22,10 +22,10 @@ export const faqsData: Faq[] = [
       "Kokio utilizes distributed ledger technology to offer decentralized mobile connectivity, enhancing privacy, security, and ease of use compared to traditional eSIM providers.",
   },
   {
-    id: "beta-signup",
-    question: "How do I sign up for Kokio’s beta program?",
+    id: "early-access",
+    question: "How do I get early access to Kokio?",
     answer:
-      "To join Kokio’s beta program, click on the “Sign up for beta” button on the landing page and follow the instructions provided.",
+      "Kokio runs early access through its Telegram group, linked from the buttons on kokio.app. Invitations, release dates and testing rounds are announced there first, and on X at @kokiodotapp. Kokio reaches public launch in September 2026 on the App Store and Google Play, so early access is the way to use it before then.",
   },
   {
     id: "setup",
@@ -55,6 +55,6 @@ export const faqsData: Faq[] = [
     id: "roadmap",
     question: "What is the roadmap for Kokio’s service launch?",
     answer:
-      "Get your eSIM, Kokio alpha is now live in over 200 countries. Key milestones include the Dev and Ops work for beta features in Q1 2026 followed by a beta launch in Q2 alongside ongoing bug fixes and continuous improvements based on user feedback.",
+      "Kokio goes into public launch in September 2026, on the App Store and Google Play, with data plans in over 200 destinations. Around the launch, Kokio is testing regionally across Southeast Asia and with partner communities, and starting the road to mainnet. Later in 2026 come the device wallet, so checkout happens inside the app, referral links, partner discount codes, sponsored eSIM flows for events, and connectivity partnerships. Early 2027 adds distribution through physical hubs and coworking partnerships, privacy rails driven by what people ask for, and plans that need verified identity, built with identity partners so that Kokio never holds the identity itself. These are targets rather than promises.",
   },
 ];
