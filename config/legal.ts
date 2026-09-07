@@ -13,6 +13,12 @@ export interface LegalConfig {
 
   /** "Last Updated" date shown in each document header. Source: "[DATE]". */
   lastUpdated: string;
+  /**
+   * Same date as lastUpdated, as ISO 8601, for the sitemap. Kept separate
+   * because lastUpdated is written for readers ("15th July 2026") and does not
+   * parse. Change both together.
+   */
+  lastUpdatedIso: string;
   /** "Effective" date shown in each document header. Source: "[DATE]". */
   effective: string;
 
@@ -48,6 +54,7 @@ export const legalConfig: LegalConfig = {
   generalContact: "contact@kokio.app",
 
   lastUpdated: "15th July 2026",
+  lastUpdatedIso: "2026-07-15",
   effective: "15th July 2026",
 
   liabilityCapMonths: "[3]",

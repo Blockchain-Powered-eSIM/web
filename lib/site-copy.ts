@@ -35,6 +35,15 @@ export const LEGAL_NAME = "KOKIO SG PTE. LTD.";
 export const CANONICAL_DESCRIPTION =
   "Kokio is a privacy-first travel eSIM app. Buy eSIM data plans in over 200 destinations with card, Apple Pay, Google Pay or stablecoins. No KYC and no personal information collected. Every Kokio account is a passkey-controlled smart wallet, so the eSIM is owned by the user rather than held in a provider database.";
 
+/**
+ * When the landing page copy last changed substantively.
+ *
+ * The home page is assembled from components rather than a content file, so
+ * there is nothing to read a date from. Bump this when the copy changes, not
+ * when the styling does.
+ */
+export const HOME_UPDATED = new Date("2026-09-07");
+
 /** Same claims, trimmed to fit a `<meta name="description">` without truncation. */
 export const META_DESCRIPTION =
   "Kokio is a privacy-first travel eSIM app. Data plans in over 200 destinations, paid by card or stablecoins. No KYC, no personal information collected.";
