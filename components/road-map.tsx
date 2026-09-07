@@ -26,10 +26,17 @@ const roadMapData = [
 
 const RoadMap = () => {
   return (
-    <section className="container flex flex-col items-center gap-14 py-12 text-esim-black-50 md:py-32">
+    <section
+      id="roadmap"
+      aria-labelledby="roadmap-heading"
+      className="container flex scroll-mt-24 flex-col items-center gap-14 py-12 text-esim-black-50 md:py-32"
+    >
       <div className="flex w-full max-w-4xl items-center justify-center gap-6 md:gap-14">
         <div className="flex-1 border-t border-gray-300 md:max-w-[63px]" />
-        <h2 className="text-center text-4xl font-bold uppercase md:text-5xl">
+        <h2
+          id="roadmap-heading"
+          className="text-center text-4xl font-bold uppercase md:text-5xl"
+        >
           Milestones
         </h2>
         <div className="flex-1 border-t border-gray-300 md:max-w-[63px]" />

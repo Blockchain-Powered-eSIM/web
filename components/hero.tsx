@@ -7,9 +7,16 @@ import SignUpButton from "@/components/sign-up-button";
 
 const Hero = () => {
   return (
-    <section className="relative flex h-[1200px] w-full flex-col items-center gap-16 bg-beach-mobile bg-cover bg-center bg-no-repeat pb-32 pt-14 text-center xs:bg-beach-tablet md:max-h-[1500px] md:bg-beach-desktop md:pb-10 lg:max-h-[1700px]">
+    <section
+      id="overview"
+      aria-labelledby="overview-heading"
+      className="relative flex h-[1200px] w-full scroll-mt-24 flex-col items-center gap-16 bg-beach-mobile bg-cover bg-center bg-no-repeat pb-32 pt-14 text-center xs:bg-beach-tablet md:max-h-[1500px] md:bg-beach-desktop md:pb-10 lg:max-h-[1700px]"
+    >
       <div className="container flex max-w-[1000px] flex-col gap-4 px-4 md:px-8">
-        <h1 className="text-5xl font-bold text-outer-space-950 md:text-6xl">
+        <h1
+          id="overview-heading"
+          className="text-5xl font-bold text-outer-space-950 md:text-6xl"
+        >
           Experience the Future of Global Connectivity
         </h1>
         <p className="text-xl font-light lg:leading-7">
