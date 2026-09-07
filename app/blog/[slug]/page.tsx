@@ -47,6 +47,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.description,
       publishedTime: post.date.toISOString(),
+      modifiedTime: post.updated.toISOString(),
       authors: [post.author.name],
     },
     twitter: {
@@ -91,7 +92,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
     description: post.description,
     image: [heroUrl],
     datePublished: post.date.toISOString(),
-    dateModified: post.date.toISOString(),
+    dateModified: post.updated.toISOString(),
     inLanguage: "en",
     author: {
       "@type": "Person",
