@@ -1,48 +1,6 @@
 import React from "react";
 
-const faqsData = [
-  {
-    question:
-      "What is Kokio and how does it differ from traditional eSIM providers?",
-    answer:
-      "Kokio utilizes distributed ledger technology to offer decentralized mobile connectivity, enhancing privacy, security, and ease of use compared to traditional eSIM providers.",
-  },
-  {
-    question: "How do I sign up for Kokio’s beta program?",
-    answer:
-      "To join Kokio’s beta program, click on the “Sign up for beta” button on the landing page and follow the instructions provided.",
-  },
-  {
-    question: "How can I set up my Kokio eSIM?",
-    answer:
-      "Download the Kokio app, choose your desired plan from over 200 destinations, and activate your eSIM instantly to start enjoying mobile connectivity.",
-  },
-  {
-    question: "What payment options does Kokio accept?",
-    answer:
-      "Kokio supports a variety of payment methods including credit and debit cards, Apple Pay, Google Pay, PayPal and other digital wallets.",
-  },
-  /*{
-    question: "How does the eSIM wallet feature work?",
-    answer:
-      "When you activate your Kokio eSIM, an optional secure digital wallet is also created. This wallet can function as both a crypto wallet and a digital ID.",
-  },*/
-  {
-    question: "What security measures does Kokio employ for its services?",
-    answer:
-      "Kokio’s app ensures top-notch security and privacy using biometrics, secure enclave technology, and the inherent security features of distributed ledger technology.",
-  },
-  {
-    question: "Is personal information required to use Kokio’s services?",
-    answer:
-      "No, Kokio values privacy and does not require personal information for setting up or using its services, ensuring your data remains private.",
-  },
-  {
-    question: "What is the roadmap for Kokio’s service launch?",
-    answer:
-      "Get your eSIM, Kokio alpha is now live in over 200 countries. Key milestones include the Dev and Ops work for beta features in Q1 2026 followed by a beta launch in Q2 alongside ongoing bug fixes and continuous improvements based on user feedback.",
-  },
-];
+import { faqsData } from "@/content/faqs";
 
 const Faqs = () => {
   return (
@@ -53,7 +11,7 @@ const Faqs = () => {
         </h2>
         <dl className="flex flex-col gap-14">
           {faqsData.map((faq) => (
-            <div key={faq.question} className="flex flex-col gap-2">
+            <div key={faq.id} className="flex flex-col gap-2">
               <dt className="font-heading text-2xl font-bold leading-[25px] text-cashmere-300 md:text-[1.75rem] md:leading-7">
                 {faq.question}
               </dt>
