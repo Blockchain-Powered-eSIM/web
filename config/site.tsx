@@ -51,7 +51,7 @@ export const siteConfig = {
     {
       icon: Blog,
       title: "Blogs",
-      href: "/blog",
+      href: "/blogs",
     },
   ],
 };

@@ -7,6 +7,15 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [{ source: "/:path*.md", destination: "/raw/:path*" }];
   },
+
+  // /blog moved to /blogs. Keep old links, RSS subscribers, and indexed
+  // search/AI-crawler results resolving instead of 404ing.
+  async redirects() {
+    return [
+      { source: "/blog", destination: "/blogs", permanent: true },
+      { source: "/blog/:slug*", destination: "/blogs/:slug*", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

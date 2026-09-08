@@ -26,7 +26,7 @@ const NOT_INDEXED = {
 };
 
 /** Routes with no prerendered output to look at. Not a gap, just not static. */
-const DYNAMIC_ROUTES = new Set(["/blog/rss.xml"]);
+const DYNAMIC_ROUTES = new Set(["/blogs/rss.xml"]);
 
 const failures = [];
 const warnings = [];

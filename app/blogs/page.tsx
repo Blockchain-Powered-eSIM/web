@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   description:
     "Everything about eSIMs, travel connectivity, and what we're building behind the scenes.",
   alternates: {
-    canonical: "/blog",
+    canonical: "/blogs",
     types: {
-      "application/rss+xml": [{ url: "/blog/rss.xml", title: "Kokio Blog" }],
-      "text/markdown": "/blog.md",
+      "application/rss+xml": [{ url: "/blogs/rss.xml", title: "Kokio Blog" }],
+      "text/markdown": "/blogs.md",
     },
   },
 };

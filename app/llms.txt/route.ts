@@ -43,7 +43,7 @@ ${link("Manifesto", "/manifesto", "why Kokio treats connectivity as a right and 
 ${link("Glossary", "/glossary", "eSIM, eUICC, SM-DP+, LPA, passkey, smart wallet and no-KYC defined")}
 
 ## Guides
-${posts.map((post) => link(post.title, `/blog/${post.slug}`, post.description)).join("\n")}
+${posts.map((post) => link(post.title, `/blogs/${post.slug}`, post.description)).join("\n")}
 
 ## Reference
 - [Documentation](${DOCS_URL}): architecture, mobile app flow, smart contract suite
@@ -51,15 +51,15 @@ ${posts.map((post) => link(post.title, `/blog/${post.slug}`, post.description)).
 - [X](${TWITTER_URL}): announcements
 ${link("Full text", "/llms-full.txt", "every page of this site as one markdown file")}
 
-Any page on this site is also readable as markdown by adding .md to its URL, for example ${absolute("/blog/where-your-sim-data-goes.md")}. The home page is ${absolute("/index.md")}.
+Any page on this site is also readable as markdown by adding .md to its URL, for example ${absolute("/blogs/where-your-sim-data-goes.md")}. The home page is ${absolute("/index.md")}.
 
 ## Legal
 ${link("Terms of Service", "/terms-of-service", "terms governing use of the app")}
 ${link("Privacy Policy", "/privacy-policy", "what Kokio does and does not collect")}
 
 ## Optional
-${link("Blog index", "/blog", "all posts")}
-${link("RSS", "/blog/rss.xml", "post feed")}
+${link("Blog index", "/blogs", "all posts")}
+${link("RSS", "/blogs/rss.xml", "post feed")}
 `;
 
   return new Response(body, {

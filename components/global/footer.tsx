@@ -33,7 +33,7 @@ export const socialLinks = [
   {
     icon: Blog,
     title: "Blogs",
-    href: "/blog",
+    href: "/blogs",
   },
 ];
 

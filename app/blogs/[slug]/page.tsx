@@ -34,14 +34,14 @@ export async function generateMetadata({
   const post = getPost(slug);
   if (!post) return {};
 
-  const url = `${siteConfig.url}/blog/${post.slug}`;
+  const url = `${siteConfig.url}/blogs/${post.slug}`;
 
   return {
     title: post.title,
     description: post.description,
     alternates: {
-      canonical: `/blog/${post.slug}`,
-      types: { "text/markdown": `/blog/${post.slug}.md` },
+      canonical: `/blogs/${post.slug}`,
+      types: { "text/markdown": `/blogs/${post.slug}.md` },
     },
     openGraph: {
       type: "article",
@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
   const headings = frontmatter.headings ?? [];
   const showToc = headings.length >= 5;
 
-  const url = `${siteConfig.url}/blog/${post.slug}`;
+  const url = `${siteConfig.url}/blogs/${post.slug}`;
   const heroUrl = `${siteConfig.url}${post.ogImage ?? post.hero}`;
 
   const jsonLd = {

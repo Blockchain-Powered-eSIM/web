@@ -71,7 +71,7 @@ function blogIndexSection(posts: Post[]): string {
     posts
       .map(
         (post) =>
-          `- **${post.title}** (/blog/${post.slug}, ${isoDay(post.date)}): ${post.description}`
+          `- **${post.title}** (/blogs/${post.slug}, ${isoDay(post.date)}): ${post.description}`
       )
       .join("\n"),
   ].join("\n\n");
@@ -118,13 +118,13 @@ export function pageSections(): Record<string, () => string> {
 
   return {
     "/": homeSection,
-    "/blog": () => blogIndexSection(posts),
+    "/blogs": () => blogIndexSection(posts),
     "/manifesto": manifestoSection,
     "/glossary": glossarySection,
     "/terms-of-service": () => legalDocumentToText(termsOfService),
     "/privacy-policy": () => legalDocumentToText(privacyPolicy),
     ...Object.fromEntries(
-      posts.map((post) => [`/blog/${post.slug}`, () => postSection(post)])
+      posts.map((post) => [`/blogs/${post.slug}`, () => postSection(post)])
     ),
   };
 }

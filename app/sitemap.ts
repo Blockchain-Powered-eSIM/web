@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // value for that, and weekly is the closer of the two neighbours, so a
       // crawler checks a little too often rather than missing a post. Revisit
       // once the real cadence is known: monthly if it slips, daily never.
-      url: new URL("/blog", siteConfig.url).href,
+      url: new URL("/blogs", siteConfig.url).href,
       lastModified: blogUpdated,
       changeFrequency: "weekly",
       priority: 0.8,
@@ -53,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     ...posts.map((post) => ({
-      url: new URL(`/blog/${post.slug}`, siteConfig.url).href,
+      url: new URL(`/blogs/${post.slug}`, siteConfig.url).href,
       lastModified: post.updated,
       changeFrequency: "monthly" as const,
       priority: 0.6,
