@@ -35,7 +35,7 @@ export default function BlogIndexPage() {
             className="h-20 w-auto md:h-24"
           />
           <p className="font-heading text-sm font-semibold uppercase tracking-wide text-cashmere-700">
-            Kokio Blog
+            Kokio Blogs
           </p>
           <h1 className="font-heading text-4xl font-bold text-outer-space-950 md:text-5xl">
             Guides, updates, and stories from Kokio
