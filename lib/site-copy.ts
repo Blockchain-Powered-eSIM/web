@@ -50,7 +50,7 @@ export const CANONICAL_DESCRIPTION =
  * there is nothing to read a date from. Bump this when the copy changes, not
  * when the styling does.
  */
-export const HOME_UPDATED = new Date("2026-09-07");
+export const HOME_UPDATED = new Date("2026-09-10");
 
 /**
  * Public launch target, and the notice the banner and the footer both render.
@@ -62,6 +62,16 @@ export const HOME_UPDATED = new Date("2026-09-07");
 export const LAUNCH_TARGET = "September 2026";
 
 export const LAUNCH_NOTICE = `${PRODUCT_NAME} launches in ${LAUNCH_TARGET}.`;
+
+/** Same slot as LAUNCH_NOTICE, for once `CTA_MODE` (config/site.tsx) flips to "live". */
+export const LIVE_NOTICE = `${PRODUCT_NAME} is live on iOS and Android.`;
+
+/**
+ * When the /live page's own content last changed substantively (copy, hero,
+ * steps), not styling. Same rationale as HOME_UPDATED above — read by the
+ * sitemap so it isn't stamped with build time.
+ */
+export const LIVE_UPDATED = new Date("2026-09-10");
 
 /** Same claims, trimmed to fit a `<meta name="description">` without truncation. */
 export const META_DESCRIPTION =

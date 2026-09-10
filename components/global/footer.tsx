@@ -10,8 +10,8 @@ import Blog from "@/assets/icons/blog.svg";
 import Twitter from "@/assets/icons/twitter.svg";
 import GitHub from "@/assets/icons/github.svg";
 import Docs from "@/assets/icons/docs.svg";
-import { TWITTER_URL } from "@/config/site";
-import { LAUNCH_NOTICE } from "@/lib/site-copy";
+import { CTA_MODE, TWITTER_URL } from "@/config/site";
+import { LAUNCH_NOTICE, LIVE_NOTICE } from "@/lib/site-copy";
 import SignUpButton from "@/components/sign-up-button";
 
 export const socialLinks = [
@@ -77,7 +77,7 @@ const Footer = () => {
       </div>
       <div className="container flex items-center justify-center px-4 py-4 text-center lg:max-w-[1200px]">
         <p className="text-lg font-light text-esim-black-50">
-          {LAUNCH_NOTICE} Follow us on{" "}
+          {CTA_MODE === "live" ? LIVE_NOTICE : LAUNCH_NOTICE} Follow us on{" "}
           <a
             href={TWITTER_URL}
             target="_blank"

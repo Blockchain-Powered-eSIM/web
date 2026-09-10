@@ -1,4 +1,5 @@
 import { featuresData } from "@/components/features";
+import { HERO, STEPS } from "@/components/live/content";
 import { roadMapData } from "@/components/road-map";
 import { setupData } from "@/components/setup";
 import { faqsData } from "@/content/faqs";
@@ -87,6 +88,23 @@ function postSection(post: Post): string {
   ].join("\n\n");
 }
 
+function liveSection(): string {
+  return [
+    `## ${HERO.title}`,
+    HERO.body,
+    STEPS.map((step) =>
+      [
+        `### ${step.index}: ${step.title}`,
+        step.summary,
+        step.items.map((item) => `- ${item}`).join("\n"),
+        step.callout ? `> ${step.callout.strong ? `**${step.callout.strong}** ` : ""}${step.callout.text}` : "",
+      ]
+        .filter(Boolean)
+        .join("\n\n")
+    ).join("\n\n"),
+  ].join("\n\n");
+}
+
 function glossarySection(): string {
   return [
     `Definitions of the eSIM, mobile network and wallet terms used across ${PRODUCT_NAME}.`,
@@ -118,6 +136,7 @@ export function pageSections(): Record<string, () => string> {
 
   return {
     "/": homeSection,
+    "/live": liveSection,
     "/blogs": () => blogIndexSection(posts),
     "/manifesto": manifestoSection,
     "/glossary": glossarySection,
