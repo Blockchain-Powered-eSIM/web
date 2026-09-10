@@ -5,7 +5,7 @@ import { legalConfig } from "@/config/legal";
 import { GLOSSARY_UPDATED } from "@/content/glossary";
 import { getAllPosts } from "@/lib/blog";
 import { getManifesto } from "@/lib/manifesto";
-import { HOME_UPDATED } from "@/lib/site-copy";
+import { HOME_UPDATED, LIVE_UPDATED } from "@/lib/site-copy";
 
 /**
  * Every lastModified here comes from the content itself, never from build time.
@@ -29,6 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: HOME_UPDATED,
       changeFrequency: "monthly",
       priority: 1,
+    },
+    {
+      url: new URL("/live", siteConfig.url).href,
+      lastModified: LIVE_UPDATED,
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       // Posts are aimed at roughly every two weeks. The sitemap spec has no

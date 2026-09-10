@@ -12,7 +12,7 @@ export const CTA_CONTENT = {
   live: {
     heading: "Try Kokio",
     body: "Tap. Authenticate. Connect.",
-    ctaLabel: "Get the app",
+    ctaLabel: "Try out the App today!",
     href: APP_URL,
     inlineText: "Ready to travel smarter?",
     inlineLabel: "Try Kokio",
