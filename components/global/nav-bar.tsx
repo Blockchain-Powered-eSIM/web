@@ -16,6 +16,7 @@ import {
 import { Menu } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { DialogDescription } from "@radix-ui/react-dialog";
+import { Button } from "@/components/ui/button";
 
 export const Links = () => {
   return siteConfig.socials.map((social) => {
@@ -94,12 +95,22 @@ const NavBar = () => {
             </DialogHeader>
             <div className="flex flex-col gap-6">
               <Links />
+              <Link href="/live">
+                <Button className="w-full bg-cashmere-500 hover:bg-cashmere-500/90">
+                  Try out the App today!
+                </Button>
+              </Link>
             </div>
           </DialogContent>
         </Dialog>
         {/* Desktop Nav */}
         <div className="hidden items-center gap-8 md:flex">
           <Links />
+          <Link href="/live">
+            <Button className="bg-cashmere-500 hover:bg-cashmere-500/90">
+              Try out the App today!
+            </Button>
+          </Link>
         </div>
       </nav>
     </div>

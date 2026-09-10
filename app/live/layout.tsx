@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   title: "Get Kokio — download & guide",
   description:
     "Download Kokio for iOS and Android, and see exactly how it works: sign in with a passkey, buy an eSIM, install it, and manage everything from a wallet only you control.",
+  alternates: {
+    canonical: "/live",
+    types: { "text/markdown": "/live.md" },
+  },
 };
 
 export default function LiveLayout({ children }: { children: ReactNode }) {
