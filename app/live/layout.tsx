@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Get Kokio — download & guide",
+  title: "Get Kokio & Usage Guide",
   description:
     "Download Kokio for iOS and Android, and see exactly how it works: sign in with a passkey, buy an eSIM, install it, and manage everything from a wallet only you control.",
   alternates: {

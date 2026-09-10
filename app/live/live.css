@@ -804,7 +804,7 @@
  * row is a link back to the site's homepage, same as a logo usually is. */
 .kokio-live .hero-title-row {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 14px;
   text-decoration: none;
   transition: opacity 0.15s;
@@ -816,11 +816,16 @@
   width: 40px;
   height: 40px;
   flex: none;
+  /* align-items: flex-end on the row lines up bottoms, but the heading's
+     line-height leaves empty space below its actual glyphs — this pulls the
+     mark back up so it lands on the text's visual baseline, not its box edge. */
+  margin-bottom: 23px;
 }
 @media (min-width: 640px) {
   .kokio-live .hero-title-mark {
     width: 52px;
     height: 52px;
+    margin-bottom: 29px;
   }
 }
 
