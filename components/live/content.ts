@@ -38,7 +38,7 @@ export const STEPS: StepContent[] = [
     alt: 0,
     title: "Onboarding",
     summary:
-      "Using biomterics (passkeys), Kokio never asks for your name, email, or any such personal information that can be used to indetify you irl.",
+      "Using biometrics (passkeys), Kokio never asks for your name, email, or any such personal information that can be used to indetify you irl.",
     items: [
       "Open Kokio, Tap **New User** create and sign-in using passkeys.",
       "Only use **Existing User** if you've reinstalled Kokio on the same device without deleting that `kokio.app` passkey from device password manager?",
@@ -120,7 +120,7 @@ export const STEPS: StepContent[] = [
       "The Orders tab shows the install status too, any time you want to check.",
     ],
     callout: {
-      text: 'Kokio do not any personal info, so it cannot share this QR via email or messages to you. Share it to yourself through a channel you can open and scan, like messaging it to another device.',
+      text: 'Kokio **does not store** any personal info, so it cannot share this QR via email or messages to you. Share it to yourself through a channel you can open and scan, like messaging it to another device.',
     },
     tryHint: "Switch tabs, or tap Copy.",
   },
@@ -134,8 +134,8 @@ export const STEPS: StepContent[] = [
       "A Device Wallet lives on your Home screen, the passkey never leaves your phone's own hardware.",
     items: [
       "Before you deploy one, Home shows a **Device Wallet** card with a simple prompt: tap to create it.",
-      "Once deployed, that same card shows your balance and a shortened wallet address, with quick links to copy it or open it on the block explorer.",
-      "It's running on the Base Sepolia testnet today, ahead of mainnet.",
+      "Once deployed, that same card shows your balance and a shortened wallet address, with quick links to copy it or open it in the block explorer.",
+      "It's live on Base Sepolia testnet today, ahead of mainnet.",
     ],
     callout: {
       text: "Wallet will be enabled soon for purchases and more.",
