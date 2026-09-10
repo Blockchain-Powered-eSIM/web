@@ -247,7 +247,7 @@ export function StepCheckoutVisual() {
               {couponState === "valid" ? (
                 <>
                   <span style={{ color: "var(--app-success)", fontSize: 12.5, fontWeight: 700 }}>
-                    Balance: $10.00 KOKIO
+                    Balance: $10.00 Kokio
                   </span>
                   <button
                     type="button"

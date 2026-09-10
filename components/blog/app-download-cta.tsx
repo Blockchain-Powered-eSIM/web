@@ -35,10 +35,10 @@ export function AppDownloadCTA() {
             aria-hidden="true"
             className="h-4 w-4"
           />
-          Koki&apos;o on iOS &amp; Android
+          Kokio on iOS &amp; Android
         </span>
         <p className="font-heading text-lg font-bold text-outer-space-950 md:text-xl">
-          Koki&apos;o is live.
+          Kokio is live.
         </p>
         <p className="max-w-md text-sm leading-relaxed text-outer-space-950/80 md:text-base">
           Pick a plan that fits how you travel in over 200 countries. Pay
