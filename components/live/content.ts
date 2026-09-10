@@ -38,7 +38,7 @@ export const STEPS: StepContent[] = [
     alt: 0,
     title: "Onboarding",
     summary:
-      "Using biomterics(passkeys), Kokio never asks for your name, email, or any such personal information that can be used to indetify you irl.",
+      "Using biomterics (passkeys), Kokio never asks for your name, email, or any such personal information that can be used to indetify you irl.",
     items: [
       "Open Kokio, Tap **New User** create and sign-in using passkeys.",
       "Only use **Existing User** if you've reinstalled Kokio on the same device without deleting that `kokio.app` passkey from device password manager?",
@@ -46,7 +46,7 @@ export const STEPS: StepContent[] = [
     ],
     callout: {
       strong: "Guard the passkey",
-      text: "A passkey synced through your platform's password manager can restore your account on a new or reinstalled device, but if the passkey itself is gone(if you delete it), or your manager doesn't sync, there's no way back in. Deleting your account (see in Step 07) is the one action that truly has no recovery, by anyone, ever.",
+      text: "A passkey synced through your platform's password manager can restore your account on a new or reinstalled device, but if the passkey itself is gone (if you delete it), or your manager doesn't sync, there's no way back in. Deleting your account (see in Step 07) is the one action that truly has no recovery, by anyone, ever.",
     },
     tryHint: 'Switch to "Sign in" below, then tap a button.',
   },
@@ -55,9 +55,9 @@ export const STEPS: StepContent[] = [
     index: "Step 02",
     sourceTag: "Explore",
     alt: 1,
-    title: "Pick a plan that suits your trip with well curated eSIM catalgoue with Local, Unlimited, Regional, Global and Special Plans",
+    title: "Explore plans",
     summary:
-      "Jump straight to the Shop tab.",
+      "Jump straight to the Shop tab. Pick a plan that suits your trip with well curated eSIM catalgoue with Local, Unlimited, Regional, Global and Special Plans",
     items: [
       'On Home, tap **Shop** or the cart icon in the tab bar, to open the shop.',
       "Tap **Countries**, **Regions**, **Global**, or **Special** to browse plans in that category.",
@@ -200,4 +200,17 @@ export const DELETE_ACCOUNT = {
     "You will need to remove your passkey yourself.",
   ],
   confirmLabel: "Type DELETE to confirm.",
+};
+
+export const CLOSING_TIPS = {
+  heading: "Activation & troubleshooting tips",
+  lead: "A few things worth knowing before and after you install, not covered in the steps above.",
+  items: [
+    "Most eSIMs install once. Remove it from your device and it cannot be installed again, so only remove one you are finished with.",
+    "Install on a stable connection, at home on Wi-Fi or a private hotspot, before you travel rather than on the move.",
+    "Label the eSIM as you install it, something like **Japan** or **Kokio**, so your device's SIM list stays easy to read.",
+    "On iPhone, activation runs through **Settings → Mobile Service**: pick the new eSIM, keep your primary line set for calls and iMessage, set the new eSIM for cellular data, then turn on data roaming.",
+    "Connectivity trouble? Toggle **Airplane Mode** off and on first, that clears most issues.",
+    "Still stuck? Turn off automatic network selection, pick the strongest network manually, and check the eSIM's coverage from its details in the Kokio app, since it can sometimes latch onto a weaker one.",
+  ],
 };

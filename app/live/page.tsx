@@ -3,7 +3,8 @@ import { LiveThemeProvider, ThemeToggle } from "@/components/live/theme-context"
 import { FlowProvider } from "@/components/live/flow-context";
 import { LiveHero, IOS_URL, ANDROID_URL } from "@/components/live/hero";
 import { StepSection } from "@/components/live/step-section";
-import { STEPS, SETTINGS_ABOUT, SETTINGS_CONTACT } from "@/components/live/content";
+import { STEPS, SETTINGS_ABOUT, SETTINGS_CONTACT, CLOSING_TIPS } from "@/components/live/content";
+import { RichText } from "@/components/live/rich-text";
 import { ManifestoCTA } from "@/components/blog/manifesto-cta";
 import { StepAuthVisual } from "@/components/live/step-auth";
 import { StepShopVisual } from "@/components/live/step-shop";
@@ -71,6 +72,20 @@ export default function LivePage() {
             );
           })}
         </main>
+
+        <section className="wrap closing-tips">
+          <h2>{CLOSING_TIPS.heading}</h2>
+          <p>{CLOSING_TIPS.lead}</p>
+          <ul>
+            {CLOSING_TIPS.items.map((item, i) => (
+              <li key={i}>
+                <span>
+                  <RichText text={item} />
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         <div className="wrap">
           <ManifestoCTA />

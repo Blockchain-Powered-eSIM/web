@@ -50,7 +50,7 @@ export const CANONICAL_DESCRIPTION =
  * there is nothing to read a date from. Bump this when the copy changes, not
  * when the styling does.
  */
-export const HOME_UPDATED = new Date("2026-09-07");
+export const HOME_UPDATED = new Date("2026-09-10");
 
 /**
  * Public launch target, and the notice the banner and the footer both render.

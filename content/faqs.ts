@@ -57,4 +57,22 @@ export const faqsData: Faq[] = [
     answer:
       "Kokio goes into public launch in September 2026, on the App Store and Google Play, with data plans in over 200 destinations. Around the launch, Kokio is testing regionally across Southeast Asia and with partner communities, and starting the road to mainnet. Later in 2026 come the device wallet, so checkout happens inside the app, referral links, partner discount codes, sponsored eSIM flows for events, and connectivity partnerships. Early 2027 adds distribution through physical hubs and coworking partnerships, privacy rails driven by what people ask for, and plans that need verified identity, built with identity partners so that Kokio never holds the identity itself. These are targets rather than promises.",
   },
+  {
+    id: "reinstall-esim",
+    question: "Can I reinstall my Kokio eSIM if I remove it?",
+    answer:
+      "No. Most eSIMs, including the ones Kokio issues, can only be installed once. Removing it from your device is final, so only remove an eSIM you are finished using.",
+  },
+  {
+    id: "activate-esim",
+    question: "How do I activate my Kokio eSIM after installing it?",
+    answer:
+      "On iPhone, open Settings, tap Mobile Service, and select the new eSIM. Give it a label such as the destination or Kokio, keep your primary line set for calls and iMessage, and set the new eSIM as your line for cellular or mobile data. Turn on data roaming and the eSIM is ready to use.",
+  },
+  {
+    id: "troubleshoot-connectivity",
+    question: "My Kokio eSIM won’t connect, what should I try?",
+    answer:
+      "Turn Airplane Mode off and on first, that resolves most connectivity issues. If it persists, turn off automatic network selection, manually choose the strongest available network, and check the eSIM’s coverage from its details inside the Kokio app, since it can sometimes stay connected to a weaker network than the one available.",
+  },
 ];
