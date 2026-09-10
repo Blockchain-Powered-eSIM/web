@@ -1,11 +1,18 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import Twitter from "@/assets/icons/twitter-fill.svg";
 import { TWITTER_URL } from "@/config/site";
 import { LAUNCH_NOTICE } from "@/lib/site-copy";
 
 const AnnouncementBanner = () => {
+
+  const pathname = usePathname();
+  if (pathname?.startsWith("/live")) return null;
+
   return (
     <div className="w-full bg-cashmere-500">
       <div className="container flex items-center justify-center gap-2 px-4 py-3 text-center">
